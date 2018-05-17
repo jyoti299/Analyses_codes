@@ -1,7 +1,7 @@
 # Prerequisites
 *.d
 
-# Compiled Object files
+# Compile Object files
 *.slo
 *.lo
 *.o
@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+
+*.root
