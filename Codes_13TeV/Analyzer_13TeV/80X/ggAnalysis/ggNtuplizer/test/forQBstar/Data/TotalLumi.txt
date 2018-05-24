@@ -1,0 +1,13 @@
+               DataSet Name                   |   Int. Lumi (in fb-1)   
+----------------------------------------------------------------------
+/SinglePhoton/Run2016B-23Sep2016-v3/MINIAOD   |         5.933
+/SinglePhoton/Run2016C-23Sep2016-v1/MINIAOD   |         2.646
+/SinglePhoton/Run2016D-23Sep2016-v1/MINIAOD   |         4.353
+/SinglePhoton/Run2016E-23Sep2016-v1/MINIAOD   |         4.117
+/SinglePhoton/Run2016F-23Sep2016-v1/MINIAOD   |         3.186
+/SinglePhoton/Run2016G-23Sep2016-v1/MINIAOD   |         7.721
+/SinglePhoton/Run2016H-PromptReco-v2/MINIAOD  |         8.636
+/SinglePhoton/Run2016H-PromptReco-v3/MINIAOD  |         0.221
+----------------------------------------------------------------------                              
+                           Total Lumi         =        36.813 (THIS IS THE NUMBER OBATINED AGTER UPDATING THE NORMTAG. SEE THE LINK:
+(https://mmm.cern.ch/owa/?ae=Item&a=Open&t=IPM.Note&id=RgAAAAAVYcc7ugiYQoBqvGptA5XEBwCB90QqZNMdSZ%2fbaeqz89oLAAAg%2fXNAAACB90QqZNMdSZ%2fbaeqz89oLAADX9I%2bWAAAJ&pspid=_1484548992455_609689898). SO THIS NUMVER IS OK.

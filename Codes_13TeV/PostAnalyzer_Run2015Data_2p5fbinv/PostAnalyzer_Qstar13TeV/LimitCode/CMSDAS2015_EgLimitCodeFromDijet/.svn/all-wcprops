@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015
+END
+fit.hh
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/fit.hh
+END
+BAT_init.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/BAT_init.sh
+END
+stats.cc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/stats.cc
+END
+BAT_init.csh
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/BAT_init.csh
+END
+fit.cc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/fit.cc
+END
+binneddata.hh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/binneddata.hh
+END
+statistics.hh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/statistics.hh
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/README.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/Makefile
+END
+binneddata.cc
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/binneddata.cc
+END
+statistics.cc
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/CMSDIJET/DijetLimitCode/!svn/ver/115/branches/CMSDAS2015/statistics.cc
+END

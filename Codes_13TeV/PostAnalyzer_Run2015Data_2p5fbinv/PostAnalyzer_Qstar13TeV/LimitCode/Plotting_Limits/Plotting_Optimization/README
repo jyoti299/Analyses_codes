@@ -1,0 +1,10 @@
+Here For plotting optimization for DEta and DPhi,
+Since i was getting wrong 2sigma cut for 1000 and 1200 mass point for DEta_2p0 (or DPhi_2p5 as both are same)(However, effect due to these are not much), and also fit failing for 4400 point (whhich is causing much difference)
+So I am using this DEta_2p0 values from varun's limit outputs. 
+So here the file, stats_DEta_2p0_full.log contains the numbers from varun's run. 
+
+Also, same problem occurs in DEta_2p2, but since right now no other file available so i am using this (one with wrong 2sigma for 1000 and 1200) 
+file for DEta_2p2. 
+
+However, in optimization, no need of 2sigma values occurs, still
+I have submitted the jobs for DEta_2p0 and DEta_2p2 again and the old results are in old/ dir inside the corresponding Limits_condor_outputs dirs.

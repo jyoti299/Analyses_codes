@@ -1,0 +1,4 @@
+BstarToGJ_M-500_f-0p5
+BstarToGJ_M-1000_f-0p5
+BstarToGJ_M-1500_f-0p5
+BstarToGJ_M-3500_f-0p5

@@ -1,0 +1,10 @@
+universe = vanilla
+Executable = /uscms_data/d3/rocky86/slc6_amd64_gcc491/Analyzer_13TeV/PostAnalyzer_Data/PA_Main/PA_JetHT/Job_DATA_JetHT.csh
+Requirements = Memory >= 199 &&OpSys == "LINUX"&& (Arch != "DUMMY" )&& Disk > 1000000
+Should_Transfer_Files = YES
+WhenToTransferOutput = ON_EXIT
+transfer_input_files = /uscms_data/d3/rocky86/slc6_amd64_gcc491/Analyzer_13TeV/PostAnalyzer_Data/PA_Main/PA_JetHT/DATA_JetHT.exe
+Output = condor_$(Cluster)_DATA_JetHT.stdout
+Error = condor_$(Cluster)_DATA_JetHT.stderr
+Log = condor_$(Cluster)_DATA_JetHT.log
+Queue 1

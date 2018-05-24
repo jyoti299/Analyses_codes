@@ -1,0 +1,3 @@
+setenv BATINSTALLDIR    $HOME
+setenv LD_LIBRARY_PATH  {$LD_LIBRARY_PATH}:{$BATINSTALLDIR}/lib
+setenv CPATH            {$BATINSTALLDIR}/include

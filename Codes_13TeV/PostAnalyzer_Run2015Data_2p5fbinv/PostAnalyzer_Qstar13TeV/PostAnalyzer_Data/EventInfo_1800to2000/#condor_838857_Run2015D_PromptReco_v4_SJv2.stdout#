@@ -1,0 +1,6 @@
+Total files in this set = 32
+Event table for events in invariant mass range 1700-2200 GeV/c2
+{f Evt No. } & {f Mass } & {f Photon Pt } & {f Jet Pt } & {f Photon eta } & {f Jet eta } & {f Photon phi } & {f Jet phi } & {f nPhotons (pt > 30) } & {f nPhotons (pt > 190) } & {f nJets } \ 
+473232962 & 2189.41  &  1229.04  &  946.654  &  0.456426  &  0.265922  &  -1.49547  &  1.547  &  1  &  1  &  4 \ 
+629780348 & 1823.6  &  640.371  &  609.772  &  -0.675846  &  1.19761  &  -2.95679  &  0.404482  &  1  &  1  &  9 \ 
+159658823 & 2023.55  &  969.516  &  994.57  &  -0.809245  &  -0.96605  &  -2.65843  &  0.528656  &  1  &  1  &  10 \ 

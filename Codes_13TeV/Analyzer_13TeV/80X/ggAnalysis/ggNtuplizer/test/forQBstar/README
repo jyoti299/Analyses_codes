@@ -1,0 +1,48 @@
+*****************************************
+First week of January:::: submitting crab jobs with the following settings and datasets.
+*****************************************
+::::::::::Datasets and settings::::::::::
+**********Datasets***********************
+Refer to twiki: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD
+DATA: Re-Reco-BCDEFG+PromptReco-H (will be changed in next iteration for Moriond17)
+MC: RunIISpring16MiniAODv2-PUSpring16_80X_mcRun2_asymptotic_2016_miniAODv2_v0/MINIAODSIM
+(The MC sample right now recommended are Spring16 ones, however, for Moriond17, the recommended are Summer16 samples which will be used later on 
+when these will be asked and recommended to use.)
+***********Global tags*******************
+Refer to twiki: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD
+DATA GT: 80X_dataRun2_2016SeptRePro_v4
+MC GT: 80X_mcRun2_asymptotic_2016_miniAODv2
+
+***********JSON**************************
+Refer to twiki: https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmV2016Analysis.
+Announcement of latest json: https://mmm.cern.ch/owa/?ae=Item&a=Open&t=IPM.Note&id=RgAAAAAVYcc7ugiYQoBqvGptA5XEBwCB90QqZNMdSZ%2fbaeqz89oLAAAg%2fXNAAACB90QqZNMdSZ%2fbaeqz89oLAADX9I91AAAA&pspid=_1483510466997_759531507.
+This corresponds to a total lumi of 36.46/fb
+
+**********JetEnergyCorrections***********
+Refer to twiki: https://twiki.cern.ch/twiki/bin/view/CMS/JECDataMC
+The jet energy corrections used in this set is : Spring16_23Sep2016AllV2_DATA for data
+and Spring16_25nsV10_MC for MC using sqlite files.
+This will be updated further and will have to be changed accordingly.
+Email for announcement: https://mmm.cern.ch/owa/?ae=Item&a=Open&t=IPM.Note&id=RgAAAAAVYcc7ugiYQoBqvGptA5XEBwCB90QqZNMdSZ%2fbaeqz89oLAAAAsIwBAACB90QqZNMdSZ%2fbaeqz89oLAADX84YBAAAJ&pspid=_1483510466997_759537586
+
+**********JetEnergyResolutions***********
+Refer to twiki: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookJetEnergyResolution
+                https://github.com/blinkseb/cmssw/blob/jer_fix_76x/JetMETCorrections/Modules/plugins/JetResolutionDemo.cc
+
+Email for this info: https://mmm.cern.ch/owa/?ae=Item&a=Open&t=IPM.Note&id=RgAAAAAVYcc7ugiYQoBqvGptA5XEBwCB90QqZNMdSZ%2fbaeqz89oLAAAP%2fjIjAACB90QqZNMdSZ%2fbaeqz89oLAADX8%2fR8AAAJ&pspid=_1483510466997_759533424
+                     https://mmm.cern.ch/owa/?ae=Item&a=Open&t=IPM.Note&id=RgAAAAAVYcc7ugiYQoBqvGptA5XEBwCB90QqZNMdSZ%2fbaeqz89oLAAAAsIwBAACB90QqZNMdSZ%2fbaeqz89oLAADX84VFAAAJ&pspid=_1483510466997_759537586
+
+The jer info is being added into the code in CMSSW_8_0_24_patch1. However, these scale factors are for ICHEP only and new factors will be available
+soon and so I will have to update it. 
+
+*********Photon energy scale and resolution*****
+Refer to twiki: https://twiki.cern.ch/twiki/bin/view/CMS/EGMSmearer
+
+The code including it is updated in CMSSW_8_0_24_patch1
+However, these corrections are still for ICHEP and will be updated.
+
+*********Solution for Slew-Rate problem in photons*****
+The solution for this is given in EGMSmearer twiki under section: ECAL scale and resolution corrections for Moriond 2017 (preliminary version)
+under NOTE.
+I have added these corrections also in CMSSW_8_0_24_patch1. and made two new branches with these corrections.
+

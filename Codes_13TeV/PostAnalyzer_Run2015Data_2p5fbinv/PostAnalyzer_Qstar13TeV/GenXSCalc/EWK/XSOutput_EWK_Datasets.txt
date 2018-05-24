@@ -1,0 +1,1070 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+Dataset= /WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+inputFiles= root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/721F20FE-8F4C-E511-8AB9-0025905A6084.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/7CB39C95-834C-E511-93DA-002590593876.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/7E4F1347-864C-E511-85C3-0025905B858E.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/84A54F66-7E4C-E511-B511-00259074AE32.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/8AF1C8B2-844C-E511-8FAA-0025905A60CE.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/8E862FCD-884C-E511-A9FB-0025905A4964.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/9CACCC5D-8B4C-E511-8C1F-0025905A48D8.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A2B3A653-9A4C-E511-8D31-0025905A60B2.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A46D3625-824C-E511-951B-0025905A60B8.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A4B3E06E-C04C-E511-8B1B-0025905A6068.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A801CA50-854C-E511-A398-003048FFD720.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A8D128C5-874C-E511-9D41-00259059391E.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/AAA8AE43-784C-E511-BA1A-20CF305B04F5.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/AC0FE789-864C-E511-B4D2-0025905A4964.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/ACC66594-8C4C-E511-90C7-0025905A48BC.root
+                                                     
+                                                     
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++LOG STARTS HERE FOR /WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+22-Feb-2016 09:12:13 CST  Initiating request to open file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/721F20FE-8F4C-E511-8AB9-0025905A6084.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:12:48 CST pre-events
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:12:50 CST  Successfully opened file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/721F20FE-8F4C-E511-8AB9-0025905A6084.root
+Begin processing the 1st record. Run 1, Event 2944377, LumiSection 5798 at 22-Feb-2016 09:13:11.787 CST
+Begin processing the 10001st record. Run 1, Event 13718851, LumiSection 27011 at 22-Feb-2016 09:13:29.053 CST
+22-Feb-2016 09:13:29 CST  Closed file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/721F20FE-8F4C-E511-8AB9-0025905A6084.root
+22-Feb-2016 09:13:29 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/7CB39C95-834C-E511-93DA-002590593876.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:14:02 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:14:03 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/7CB39C95-834C-E511-93DA-002590593876.root
+Begin processing the 20001st record. Run 1, Event 11412394, LumiSection 22470 at 22-Feb-2016 09:14:30.484 CST
+Begin processing the 30001st record. Run 1, Event 15823968, LumiSection 31155 at 22-Feb-2016 09:14:34.876 CST
+22-Feb-2016 09:14:35 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/7CB39C95-834C-E511-93DA-002590593876.root
+22-Feb-2016 09:14:35 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/7E4F1347-864C-E511-85C3-0025905B858E.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:14:35 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:14:36 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/7E4F1347-864C-E511-85C3-0025905B858E.root
+Begin processing the 40001st record. Run 1, Event 14761549, LumiSection 29064 at 22-Feb-2016 09:14:57.025 CST
+22-Feb-2016 09:14:57 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/7E4F1347-864C-E511-85C3-0025905B858E.root
+22-Feb-2016 09:14:57 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/84A54F66-7E4C-E511-B511-00259074AE32.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:15:33 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:15:34 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/84A54F66-7E4C-E511-B511-00259074AE32.root
+%MSG-w XrdAdaptor:  (NoModuleName) 22-Feb-2016 09:15:50 CST pre-events
+Data is now served from iihe.ac.be, T1_IT_CNAF instead of previous iihe.ac.be
+%MSG
+Begin processing the 50001st record. Run 1, Event 11948050, LumiSection 23524 at 22-Feb-2016 09:15:54.619 CST
+22-Feb-2016 09:15:55 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/84A54F66-7E4C-E511-B511-00259074AE32.root
+22-Feb-2016 09:15:55 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/8AF1C8B2-844C-E511-8FAA-0025905A60CE.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:16:31 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:16:32 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/8AF1C8B2-844C-E511-8FAA-0025905A60CE.root
+Begin processing the 60001st record. Run 1, Event 11822873, LumiSection 23278 at 22-Feb-2016 09:16:56.109 CST
+22-Feb-2016 09:16:59 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/8AF1C8B2-844C-E511-8FAA-0025905A60CE.root
+22-Feb-2016 09:16:59 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/8E862FCD-884C-E511-A9FB-0025905A4964.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:17:36 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:17:37 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/8E862FCD-884C-E511-A9FB-0025905A4964.root
+Begin processing the 70001st record. Run 1, Event 6815363, LumiSection 13419 at 22-Feb-2016 09:18:09.942 CST
+22-Feb-2016 09:18:13 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/8E862FCD-884C-E511-A9FB-0025905A4964.root
+22-Feb-2016 09:18:13 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/9CACCC5D-8B4C-E511-8C1F-0025905A48D8.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:18:51 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:18:52 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/9CACCC5D-8B4C-E511-8C1F-0025905A48D8.root
+Begin processing the 80001st record. Run 1, Event 3345703, LumiSection 6588 at 22-Feb-2016 09:19:23.441 CST
+Begin processing the 90001st record. Run 1, Event 14073093, LumiSection 27708 at 22-Feb-2016 09:19:27.859 CST
+22-Feb-2016 09:19:29 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/9CACCC5D-8B4C-E511-8C1F-0025905A48D8.root
+22-Feb-2016 09:19:29 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A2B3A653-9A4C-E511-8D31-0025905A60B2.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:20:05 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:20:06 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A2B3A653-9A4C-E511-8D31-0025905A60B2.root
+Begin processing the 100001st record. Run 1, Event 4956036, LumiSection 9758 at 22-Feb-2016 09:20:34.216 CST
+22-Feb-2016 09:20:37 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A2B3A653-9A4C-E511-8D31-0025905A60B2.root
+22-Feb-2016 09:20:37 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A46D3625-824C-E511-951B-0025905A60B8.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:21:14 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:21:15 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A46D3625-824C-E511-951B-0025905A60B8.root
+Begin processing the 110001st record. Run 1, Event 5086896, LumiSection 10016 at 22-Feb-2016 09:21:37.937 CST
+Begin processing the 120001st record. Run 1, Event 12251680, LumiSection 24122 at 22-Feb-2016 09:21:42.392 CST
+22-Feb-2016 09:21:44 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A46D3625-824C-E511-951B-0025905A60B8.root
+22-Feb-2016 09:21:44 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A4B3E06E-C04C-E511-8B1B-0025905A6068.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:22:21 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:22:22 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A4B3E06E-C04C-E511-8B1B-0025905A6068.root
+Begin processing the 130001st record. Run 1, Event 14142740, LumiSection 27845 at 22-Feb-2016 09:22:41.941 CST
+22-Feb-2016 09:22:43 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A4B3E06E-C04C-E511-8B1B-0025905A6068.root
+22-Feb-2016 09:22:43 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A801CA50-854C-E511-A398-003048FFD720.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:23:20 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:23:21 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A801CA50-854C-E511-A398-003048FFD720.root
+Begin processing the 140001st record. Run 1, Event 11538178, LumiSection 22717 at 22-Feb-2016 09:23:45.472 CST
+Begin processing the 150001st record. Run 1, Event 15786882, LumiSection 31082 at 22-Feb-2016 09:23:49.773 CST
+22-Feb-2016 09:23:50 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A801CA50-854C-E511-A398-003048FFD720.root
+22-Feb-2016 09:23:50 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A8D128C5-874C-E511-9D41-00259059391E.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:24:28 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:24:29 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A8D128C5-874C-E511-9D41-00259059391E.root
+Begin processing the 160001st record. Run 1, Event 12439308, LumiSection 24492 at 22-Feb-2016 09:25:05.485 CST
+22-Feb-2016 09:25:08 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/A8D128C5-874C-E511-9D41-00259059391E.root
+22-Feb-2016 09:25:08 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/AAA8AE43-784C-E511-BA1A-20CF305B04F5.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:25:45 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:25:46 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/AAA8AE43-784C-E511-BA1A-20CF305B04F5.root
+Begin processing the 170001st record. Run 1, Event 11082319, LumiSection 21820 at 22-Feb-2016 09:26:05.800 CST
+22-Feb-2016 09:26:09 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/AAA8AE43-784C-E511-BA1A-20CF305B04F5.root
+22-Feb-2016 09:26:09 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/AC0FE789-864C-E511-B4D2-0025905A4964.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:26:47 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:26:48 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/AC0FE789-864C-E511-B4D2-0025905A4964.root
+Begin processing the 180001st record. Run 1, Event 5091391, LumiSection 10025 at 22-Feb-2016 09:27:22.704 CST
+Begin processing the 190001st record. Run 1, Event 12631663, LumiSection 24870 at 22-Feb-2016 09:27:26.958 CST
+22-Feb-2016 09:27:29 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/AC0FE789-864C-E511-B4D2-0025905A4964.root
+22-Feb-2016 09:27:29 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/ACC66594-8C4C-E511-90C7-0025905A48BC.root
+%MSG-w XrdAdaptor:  file_open 22-Feb-2016 09:28:07 CST PostProcessEvent
+Data is served from iihe.ac.be instead of original site T2_US_Nebraska
+%MSG
+22-Feb-2016 09:28:08 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/ACC66594-8C4C-E511-90C7-0025905A48BC.root
+Begin processing the 200001st record. Run 1, Event 11149724, LumiSection 21953 at 22-Feb-2016 09:28:34.434 CST
+    332.988998      0.016207      0.035698             0
+    287.590419      0.013997      0.035698             1
+    231.277543      0.011256      0.035698             2
+    174.506493      0.008493      0.035698             3
+ 
+22-Feb-2016 09:28:37 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/60000/ACC66594-8C4C-E511-90C7-0025905A48BC.root
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Overall cross-section summary 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process		xsec_before [pb]		passed	nposw	nnegw	tried	nposw	nnegw 	xsec_match [pb]			accepted [%]	 event_eff [%]
+0		3.329e+02 +/- 4.623e-02		151772	151772	0	182317	182317	0	2.771e+02 +/- 2.937e-01		83.2 +/- 0.1	83.2 +/- 0.1
+1		2.876e+02 +/- 3.993e-02		35822	35822	0	157507	157507	0	6.541e+01 +/- 3.039e-01		22.7 +/- 0.1	22.7 +/- 0.1
+2		2.313e+02 +/- 3.212e-02		13419	13419	0	126701	126701	0	2.450e+01 +/- 2.000e-01		10.6 +/- 0.1	10.6 +/- 0.1
+3		1.745e+02 +/- 2.423e-02		5955	5955	0	96194	96194	0	1.080e+01 +/- 1.356e-01		6.2 +/- 0.1	6.2 +/- 0.1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Total		1.026e+03 +/- 7.314e-02		206968	206968	0	562719	562719	0	3.775e+02 +/- 6.603e-01		36.8 +/- 0.1	36.8 +/- 0.1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before matching: total cross section = 1.026e+03 +- 7.314e-02 pb
+After matching: total cross section = 3.775e+02 +- 6.603e-01 pb
+Filter efficiency (taking into account weights)= (206968) / (206968) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (206968) / (206968) = 1.000e+00 +- 0.000e+00
+After filter: final cross section = 3.775e+02 +- 6.603e-01 pb
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                      15       15
+    2 XrdAdaptor           -w (NoModuleName)                         1        1
+    3 XrdAdaptor           -w file_open                             15       15
+    4 fileAction           -s file_close                            15       15
+    5 fileAction           -s file_open                             30       30
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostEndRun       PostEndRun       PostEndRun
+    2 XrdAdaptor           pre-events                        
+    3 XrdAdaptor           pre-events       PostProcessEvent PostProcessEvent
+    4 fileAction           PostProcessEvent PostProcessEvent PostEndRun
+    5 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                31                  31
+System                 45                  45
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++LOG ENDS HERE FOR /WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+Dataset= /ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+inputFiles= root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/00AA91B1-F558-E511-A8FD-003048344BA6.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/029896DA-FA58-E511-9D51-1CC1DE18CB10.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/048209E7-F858-E511-B9BC-D4AE526A0419.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/04C727CC-0559-E511-9A6C-24BE05C45BF1.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/06111C85-EE58-E511-B2A1-008CFA064774.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/065535F6-0659-E511-B4D3-5065F3812291.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/06735289-0B59-E511-870B-0002C90F6792.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0A391619-FD58-E511-98C1-002590EFF972.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0ACF1577-EB58-E511-AE95-008CFA198258.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0C6B4815-1359-E511-9E39-0002C92DB418.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0CB8019B-1859-E511-8022-24BE05C6D5B1.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0CF45C66-FC58-E511-BBB3-00259073E31C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10012365-1759-E511-8AD0-5065F3816251.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1042F366-F558-E511-8717-5065F381E151.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1089668F-F958-E511-AF99-D4AE526A0A9A.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/126E67BD-0659-E511-A383-0002C92A1030.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14180DC8-0959-E511-8219-B8CA3A70BAC8.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180C4F9D-1859-E511-8EE8-24BE05C44BB1.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/18B87F20-E658-E511-B79A-0025904C66A2.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A48EC94-F058-E511-A1FE-D4AE5269F611.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1ACFCB95-0B59-E511-8310-F45214C748CA.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1E2BB3A3-0B59-E511-9AFF-0002C92A1030.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2007D982-405A-E511-8ED5-842B2B181B18.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/20C30117-2359-E511-B31E-0002C90F8094.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/283AFD8D-CC59-E511-AA77-00304865C338.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2864A777-2359-E511-ACF8-0002C90F7F7A.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/28B9BE48-2259-E511-8DCA-0002C92DB464.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2A438F88-F958-E511-A840-B8CA3A70B608.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2A4B6EAD-0B59-E511-9182-0002C92DB4CC.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2AA40B9D-1159-E511-8C0D-24BE05BDBE61.root
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++LOG STARTS HERE FOR /ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+20-Feb-2016 13:40:10 CST  Initiating request to open file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/00AA91B1-F558-E511-A8FD-003048344BA6.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:40:49 CST pre-events
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:40:51 CST  Successfully opened file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/00AA91B1-F558-E511-A8FD-003048344BA6.root
+Begin processing the 1st record. Run 1, Event 1632386, LumiSection 4889 at 20-Feb-2016 13:42:08.218 CST
+Begin processing the 10001st record. Run 1, Event 7700714, LumiSection 23059 at 20-Feb-2016 13:42:21.089 CST
+20-Feb-2016 13:42:22 CST  Closed file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/00AA91B1-F558-E511-A8FD-003048344BA6.root
+20-Feb-2016 13:42:22 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/029896DA-FA58-E511-9D51-1CC1DE18CB10.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:43:00 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:43:01 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/029896DA-FA58-E511-9D51-1CC1DE18CB10.root
+Begin processing the 20001st record. Run 1, Event 1529947, LumiSection 4581 at 20-Feb-2016 13:43:38.576 CST
+20-Feb-2016 13:43:41 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/029896DA-FA58-E511-9D51-1CC1DE18CB10.root
+20-Feb-2016 13:43:41 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/048209E7-F858-E511-B9BC-D4AE526A0419.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:44:18 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:44:19 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/048209E7-F858-E511-B9BC-D4AE526A0419.root
+Begin processing the 30001st record. Run 1, Event 1355218, LumiSection 4058 at 20-Feb-2016 13:45:05.705 CST
+Begin processing the 40001st record. Run 1, Event 8483916, LumiSection 25405 at 20-Feb-2016 13:45:10.783 CST
+20-Feb-2016 13:45:11 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/048209E7-F858-E511-B9BC-D4AE526A0419.root
+20-Feb-2016 13:45:11 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/04C727CC-0559-E511-9A6C-24BE05C45BF1.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:45:48 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:45:49 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/04C727CC-0559-E511-9A6C-24BE05C45BF1.root
+Begin processing the 50001st record. Run 1, Event 5819586, LumiSection 17426 at 20-Feb-2016 13:46:24.458 CST
+20-Feb-2016 13:46:24 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/04C727CC-0559-E511-9A6C-24BE05C45BF1.root
+20-Feb-2016 13:46:24 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/06111C85-EE58-E511-B2A1-008CFA064774.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:47:00 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:47:01 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/06111C85-EE58-E511-B2A1-008CFA064774.root
+Begin processing the 60001st record. Run 1, Event 6350762, LumiSection 19017 at 20-Feb-2016 13:47:43.843 CST
+20-Feb-2016 13:47:45 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/06111C85-EE58-E511-B2A1-008CFA064774.root
+20-Feb-2016 13:47:45 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/065535F6-0659-E511-B4D3-5065F3812291.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:48:22 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:48:24 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/065535F6-0659-E511-B4D3-5065F3812291.root
+Begin processing the 70001st record. Run 1, Event 7288848, LumiSection 21826 at 20-Feb-2016 13:48:56.768 CST
+20-Feb-2016 13:48:59 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/065535F6-0659-E511-B4D3-5065F3812291.root
+20-Feb-2016 13:48:59 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/06735289-0B59-E511-870B-0002C90F6792.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:49:35 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:49:36 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/06735289-0B59-E511-870B-0002C90F6792.root
+Begin processing the 80001st record. Run 1, Event 1782004, LumiSection 5336 at 20-Feb-2016 13:50:25.045 CST
+Begin processing the 90001st record. Run 1, Event 3484747, LumiSection 10435 at 20-Feb-2016 13:50:30.139 CST
+20-Feb-2016 13:50:32 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/06735289-0B59-E511-870B-0002C90F6792.root
+20-Feb-2016 13:50:32 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0A391619-FD58-E511-98C1-002590EFF972.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:51:09 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:51:10 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0A391619-FD58-E511-98C1-002590EFF972.root
+Begin processing the 100001st record. Run 1, Event 6865481, LumiSection 20558 at 20-Feb-2016 13:51:47.063 CST
+20-Feb-2016 13:51:49 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0A391619-FD58-E511-98C1-002590EFF972.root
+20-Feb-2016 13:51:49 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0ACF1577-EB58-E511-AE95-008CFA198258.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:52:25 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:52:26 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0ACF1577-EB58-E511-AE95-008CFA198258.root
+Begin processing the 110001st record. Run 1, Event 3666222, LumiSection 10978 at 20-Feb-2016 13:52:59.393 CST
+20-Feb-2016 13:53:03 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0ACF1577-EB58-E511-AE95-008CFA198258.root
+20-Feb-2016 13:53:03 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0C6B4815-1359-E511-9E39-0002C92DB418.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:53:40 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:53:41 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0C6B4815-1359-E511-9E39-0002C92DB418.root
+Begin processing the 120001st record. Run 1, Event 624009, LumiSection 1869 at 20-Feb-2016 13:54:13.961 CST
+Begin processing the 130001st record. Run 1, Event 3580746, LumiSection 10723 at 20-Feb-2016 13:54:19.032 CST
+20-Feb-2016 13:54:22 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0C6B4815-1359-E511-9E39-0002C92DB418.root
+20-Feb-2016 13:54:22 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0CB8019B-1859-E511-8022-24BE05C6D5B1.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:54:59 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:55:00 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0CB8019B-1859-E511-8022-24BE05C6D5B1.root
+Begin processing the 140001st record. Run 1, Event 3528958, LumiSection 10567 at 20-Feb-2016 13:55:41.156 CST
+Begin processing the 150001st record. Run 1, Event 4782411, LumiSection 14321 at 20-Feb-2016 13:55:46.227 CST
+20-Feb-2016 13:55:48 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0CB8019B-1859-E511-8022-24BE05C6D5B1.root
+20-Feb-2016 13:55:48 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0CF45C66-FC58-E511-BBB3-00259073E31C.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:56:25 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:56:26 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0CF45C66-FC58-E511-BBB3-00259073E31C.root
+%MSG-w XrdAdaptor:  (NoModuleName) 20-Feb-2016 13:56:46 CST pre-events
+Data is now served from knu.ac.kr, T1_IT_CNAF instead of previous knu.ac.kr
+%MSG
+Begin processing the 160001st record. Run 1, Event 3081208, LumiSection 9227 at 20-Feb-2016 13:56:58.946 CST
+20-Feb-2016 13:57:03 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0CF45C66-FC58-E511-BBB3-00259073E31C.root
+20-Feb-2016 13:57:03 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10012365-1759-E511-8AD0-5065F3816251.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:57:39 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:57:40 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10012365-1759-E511-8AD0-5065F3816251.root
+Begin processing the 170001st record. Run 1, Event 5650202, LumiSection 16919 at 20-Feb-2016 13:58:25.043 CST
+Begin processing the 180001st record. Run 1, Event 5858341, LumiSection 17542 at 20-Feb-2016 13:58:30.126 CST
+20-Feb-2016 13:58:34 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10012365-1759-E511-8AD0-5065F3816251.root
+20-Feb-2016 13:58:34 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1042F366-F558-E511-8717-5065F381E151.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 13:59:12 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 13:59:13 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1042F366-F558-E511-8717-5065F381E151.root
+Begin processing the 190001st record. Run 1, Event 236896, LumiSection 710 at 20-Feb-2016 13:59:43.748 CST
+Begin processing the 200001st record. Run 1, Event 5733746, LumiSection 17169 at 20-Feb-2016 13:59:48.849 CST
+20-Feb-2016 13:59:49 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1042F366-F558-E511-8717-5065F381E151.root
+20-Feb-2016 13:59:49 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1089668F-F958-E511-AF99-D4AE526A0A9A.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:00:26 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:00:27 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1089668F-F958-E511-AF99-D4AE526A0A9A.root
+Begin processing the 210001st record. Run 1, Event 1434806, LumiSection 4296 at 20-Feb-2016 14:01:05.255 CST
+20-Feb-2016 14:01:07 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1089668F-F958-E511-AF99-D4AE526A0A9A.root
+20-Feb-2016 14:01:07 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/126E67BD-0659-E511-A383-0002C92A1030.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:01:47 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:01:48 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/126E67BD-0659-E511-A383-0002C92A1030.root
+Begin processing the 220001st record. Run 1, Event 2644633, LumiSection 7919 at 20-Feb-2016 14:02:15.811 CST
+20-Feb-2016 14:02:20 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/126E67BD-0659-E511-A383-0002C92A1030.root
+20-Feb-2016 14:02:20 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14180DC8-0959-E511-8219-B8CA3A70BAC8.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:02:57 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:02:58 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14180DC8-0959-E511-8219-B8CA3A70BAC8.root
+Begin processing the 230001st record. Run 1, Event 452089, LumiSection 1354 at 20-Feb-2016 14:03:25.433 CST
+Begin processing the 240001st record. Run 1, Event 4763923, LumiSection 14265 at 20-Feb-2016 14:03:30.506 CST
+20-Feb-2016 14:03:34 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14180DC8-0959-E511-8219-B8CA3A70BAC8.root
+20-Feb-2016 14:03:34 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180C4F9D-1859-E511-8EE8-24BE05C44BB1.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:04:12 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:04:13 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180C4F9D-1859-E511-8EE8-24BE05C44BB1.root
+Begin processing the 250001st record. Run 1, Event 2030800, LumiSection 6081 at 20-Feb-2016 14:04:36.830 CST
+20-Feb-2016 14:04:40 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180C4F9D-1859-E511-8EE8-24BE05C44BB1.root
+20-Feb-2016 14:04:40 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/18B87F20-E658-E511-B79A-0025904C66A2.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:05:19 CST PostProcessEvent
+Data is served from jinr-t1.ru instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:05:20 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/18B87F20-E658-E511-B79A-0025904C66A2.root
+%MSG-w XrdAdaptor:  (NoModuleName) 20-Feb-2016 14:05:26 CST pre-events
+Data is now served from jinr-t1.ru, knu.ac.kr instead of previous jinr-t1.ru
+%MSG
+Begin processing the 260001st record. Run 1, Event 5873574, LumiSection 17588 at 20-Feb-2016 14:05:48.973 CST
+20-Feb-2016 14:05:53 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/18B87F20-E658-E511-B79A-0025904C66A2.root
+20-Feb-2016 14:05:53 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A48EC94-F058-E511-A1FE-D4AE5269F611.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:06:30 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:06:31 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A48EC94-F058-E511-A1FE-D4AE5269F611.root
+Begin processing the 270001st record. Run 1, Event 485659, LumiSection 1454 at 20-Feb-2016 14:07:01.025 CST
+Begin processing the 280001st record. Run 1, Event 1409921, LumiSection 4222 at 20-Feb-2016 14:07:06.135 CST
+20-Feb-2016 14:07:08 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A48EC94-F058-E511-A1FE-D4AE5269F611.root
+20-Feb-2016 14:07:08 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1ACFCB95-0B59-E511-8310-F45214C748CA.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:07:45 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:07:46 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1ACFCB95-0B59-E511-8310-F45214C748CA.root
+Begin processing the 290001st record. Run 1, Event 1759969, LumiSection 5271 at 20-Feb-2016 14:08:30.532 CST
+Begin processing the 300001st record. Run 1, Event 1885881, LumiSection 5648 at 20-Feb-2016 14:08:35.637 CST
+20-Feb-2016 14:08:37 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1ACFCB95-0B59-E511-8310-F45214C748CA.root
+20-Feb-2016 14:08:37 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1E2BB3A3-0B59-E511-9AFF-0002C92A1030.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:09:15 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:09:16 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1E2BB3A3-0B59-E511-9AFF-0002C92A1030.root
+Begin processing the 310001st record. Run 1, Event 7624905, LumiSection 22832 at 20-Feb-2016 14:09:52.995 CST
+Begin processing the 320001st record. Run 1, Event 8375795, LumiSection 25080 at 20-Feb-2016 14:09:58.117 CST
+20-Feb-2016 14:09:58 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1E2BB3A3-0B59-E511-9AFF-0002C92A1030.root
+20-Feb-2016 14:09:58 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2007D982-405A-E511-8ED5-842B2B181B18.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:10:36 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:10:37 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2007D982-405A-E511-8ED5-842B2B181B18.root
+20-Feb-2016 14:10:53 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2007D982-405A-E511-8ED5-842B2B181B18.root
+20-Feb-2016 14:10:53 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/20C30117-2359-E511-B31E-0002C90F8094.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:11:30 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:11:31 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/20C30117-2359-E511-B31E-0002C90F8094.root
+Begin processing the 330001st record. Run 1, Event 2614863, LumiSection 7830 at 20-Feb-2016 14:12:04.588 CST
+Begin processing the 340001st record. Run 1, Event 3125542, LumiSection 9359 at 20-Feb-2016 14:12:09.648 CST
+20-Feb-2016 14:12:09 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/20C30117-2359-E511-B31E-0002C90F8094.root
+20-Feb-2016 14:12:09 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/283AFD8D-CC59-E511-AA77-00304865C338.root
+%MSG-w XrdAdaptor:  file_open 20-Feb-2016 14:12:46 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+20-Feb-2016 14:12:47 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/283AFD8D-CC59-E511-AA77-00304865C338.root
+    112.109480      0.181436    347.910000             0
+     84.765107      0.188130    347.910000             1
+ 
+20-Feb-2016 14:13:15 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/283AFD8D-CC59-E511-AA77-00304865C338.root
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Overall cross-section summary 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process		xsec_before [pb]		passed	nposw	nnegw	tried	nposw	nnegw 	xsec_match [pb]			accepted [%]	 event_eff [%]
+0		1.121e+02 +/- 1.814e-01		207994	186169	21825	270497	242615	27882	8.580e+01 +/- 1.800e-01		76.5 +/- 0.1	76.9 +/- 0.1
+1		8.477e+01 +/- 1.881e-01		139357	106398	32959	392815	278252	114563	3.803e+01 +/- 1.793e-01		44.9 +/- 0.2	35.5 +/- 0.1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Total		1.969e+02 +/- 2.614e-01		347351	292567	54784	663312	520867	142445	1.237e+02 +/- 2.715e-01		62.8 +/- 0.1	52.4 +/- 0.1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before matching: total cross section = 1.969e+02 +- 2.614e-01 pb
+After matching: total cross section = 1.237e+02 +- 2.715e-01 pb
+Filter efficiency (taking into account weights)= (8.27271e+07) / (8.27271e+07) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (347351) / (347351) = 1.000e+00 +- 0.000e+00
+After filter: final cross section = 1.237e+02 +- 2.715e-01 pb
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                      13       13
+    2 XrdAdaptor           -w (NoModuleName)                         2        2
+    3 XrdAdaptor           -w file_open                             25       25
+    4 fileAction           -s file_close                            25       25
+    5 fileAction           -s file_open                             50       50
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostEndRun       PostEndRun       PostEndRun
+    2 XrdAdaptor           pre-events       pre-events       
+    3 XrdAdaptor           pre-events       PostProcessEvent PostProcessEvent
+    4 fileAction           PostProcessEvent PostProcessEvent PostEndRun
+    5 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                40                  40
+System                 75                  75
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++LOG ENDS HERE FOR /ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+Dataset= /WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+inputFiles= root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/00682F91-475D-E511-8516-000F5327349C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/007E3B19-C55D-E511-B18D-0025905B8592.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/008F0803-D05D-E511-B926-008CFA197B74.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/00EC316F-605D-E511-ACA5-002590D600F2.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/02C70647-4A5D-E511-859D-0025904A96BC.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0444C926-6F5D-E511-937C-5065F3815281.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0450BEEA-9F5D-E511-BCFF-008CFA1112E4.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0629B42B-7F5D-E511-904B-000F532734A4.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/063D2C88-AF5D-E511-9D07-782BCB6A4BB8.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0690F69A-9D5D-E511-B6A7-0025905A60BE.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/069207E1-5D5D-E511-825D-002618943898.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/069D1A41-625D-E511-9AB8-0025905A608C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/06DE60F4-6D5D-E511-A9E2-0025905A6084.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0814D7C3-9A5D-E511-B2C8-000F5327349C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08513FEC-9F5D-E511-9CB1-008CFA11139C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08E7FCC3-C45D-E511-812A-0025905B8592.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0A70D4EA-775D-E511-B7BE-AC853D9DAC2B.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0AE24A65-6F5D-E511-BDD8-00259048B754.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0C17D953-5C5D-E511-BCD9-24BE05C44BB1.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0C8441CA-3D5D-E511-8350-008CFA5D275C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E23F59F-C75D-E511-BBF4-002590596498.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E557971-B35D-E511-98F2-782BCB40899C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E678D1A-765D-E511-A20D-782BCB408A71.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0EC97692-DF5D-E511-845F-0002C92DB4CC.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10410004-985D-E511-BA55-B083FED7685B.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/105AA31F-A25D-E511-B06B-0002C92DB418.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10BAFAF6-9F5D-E511-B7A9-782BCB27BBB8.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10FB8020-B45D-E511-A743-782BCB407CFD.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/120F4E28-BF5D-E511-8250-B8CA3A70A520.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/12D00C00-3B5D-E511-A85E-24BE05C38C91.root
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++LOG STARTS HERE FOR /WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+19-Feb-2016 06:09:09 CST  Initiating request to open file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/00682F91-475D-E511-8516-000F5327349C.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:11:16 CST pre-events
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:11:18 CST  Successfully opened file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/00682F91-475D-E511-8516-000F5327349C.root
+Begin processing the 1st record. Run 1, Event 124781880, LumiSection 233307 at 19-Feb-2016 06:11:45.758 CST
+Begin processing the 10001st record. Run 1, Event 172633670, LumiSection 322776 at 19-Feb-2016 06:12:02.205 CST
+19-Feb-2016 06:12:03 CST  Closed file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/00682F91-475D-E511-8516-000F5327349C.root
+19-Feb-2016 06:12:03 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/007E3B19-C55D-E511-B18D-0025905B8592.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:12:42 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:12:43 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/007E3B19-C55D-E511-B18D-0025905B8592.root
+Begin processing the 20001st record. Run 1, Event 156548265, LumiSection 292700 at 19-Feb-2016 06:13:29.447 CST
+19-Feb-2016 06:13:32 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/007E3B19-C55D-E511-B18D-0025905B8592.root
+19-Feb-2016 06:13:32 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/008F0803-D05D-E511-B926-008CFA197B74.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:14:09 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:14:10 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/008F0803-D05D-E511-B926-008CFA197B74.root
+Begin processing the 30001st record. Run 1, Event 31847362, LumiSection 59546 at 19-Feb-2016 06:14:37.096 CST
+19-Feb-2016 06:14:40 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/008F0803-D05D-E511-B926-008CFA197B74.root
+19-Feb-2016 06:14:40 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/00EC316F-605D-E511-ACA5-002590D600F2.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:15:17 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:15:20 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/00EC316F-605D-E511-ACA5-002590D600F2.root
+Begin processing the 40001st record. Run 1, Event 32818824, LumiSection 61362 at 19-Feb-2016 06:15:53.950 CST
+19-Feb-2016 06:15:58 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/00EC316F-605D-E511-ACA5-002590D600F2.root
+19-Feb-2016 06:15:58 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/02C70647-4A5D-E511-859D-0025904A96BC.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:16:35 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:16:36 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/02C70647-4A5D-E511-859D-0025904A96BC.root
+Begin processing the 50001st record. Run 1, Event 10169966, LumiSection 19015 at 19-Feb-2016 06:17:07.856 CST
+Begin processing the 60001st record. Run 1, Event 89059891, LumiSection 166517 at 19-Feb-2016 06:17:12.996 CST
+19-Feb-2016 06:17:14 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/02C70647-4A5D-E511-859D-0025904A96BC.root
+19-Feb-2016 06:17:14 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0444C926-6F5D-E511-937C-5065F3815281.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:17:51 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:17:52 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0444C926-6F5D-E511-937C-5065F3815281.root
+Begin processing the 70001st record. Run 1, Event 130520116, LumiSection 244035 at 19-Feb-2016 06:18:33.369 CST
+19-Feb-2016 06:18:37 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0444C926-6F5D-E511-937C-5065F3815281.root
+19-Feb-2016 06:18:37 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0450BEEA-9F5D-E511-BCFF-008CFA1112E4.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:19:15 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:19:16 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0450BEEA-9F5D-E511-BCFF-008CFA1112E4.root
+Begin processing the 80001st record. Run 1, Event 15075154, LumiSection 28187 at 19-Feb-2016 06:19:53.046 CST
+Begin processing the 90001st record. Run 1, Event 54456730, LumiSection 101819 at 19-Feb-2016 06:19:58.157 CST
+19-Feb-2016 06:20:02 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0450BEEA-9F5D-E511-BCFF-008CFA1112E4.root
+19-Feb-2016 06:20:02 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0629B42B-7F5D-E511-904B-000F532734A4.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:20:44 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:20:45 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0629B42B-7F5D-E511-904B-000F532734A4.root
+Begin processing the 100001st record. Run 1, Event 120512653, LumiSection 225324 at 19-Feb-2016 06:21:13.665 CST
+Begin processing the 110001st record. Run 1, Event 177098887, LumiSection 331124 at 19-Feb-2016 06:21:18.668 CST
+19-Feb-2016 06:21:19 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0629B42B-7F5D-E511-904B-000F532734A4.root
+19-Feb-2016 06:21:19 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/063D2C88-AF5D-E511-9D07-782BCB6A4BB8.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:21:55 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:21:56 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/063D2C88-AF5D-E511-9D07-782BCB6A4BB8.root
+Begin processing the 120001st record. Run 1, Event 130042248, LumiSection 243142 at 19-Feb-2016 06:22:42.211 CST
+Begin processing the 130001st record. Run 1, Event 161992944, LumiSection 302880 at 19-Feb-2016 06:22:47.283 CST
+19-Feb-2016 06:22:48 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/063D2C88-AF5D-E511-9D07-782BCB6A4BB8.root
+19-Feb-2016 06:22:48 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0690F69A-9D5D-E511-B6A7-0025905A60BE.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:23:25 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:23:26 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0690F69A-9D5D-E511-B6A7-0025905A60BE.root
+Begin processing the 140001st record. Run 1, Event 78623429, LumiSection 147004 at 19-Feb-2016 06:24:06.778 CST
+19-Feb-2016 06:24:08 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0690F69A-9D5D-E511-B6A7-0025905A60BE.root
+19-Feb-2016 06:24:08 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/069207E1-5D5D-E511-825D-002618943898.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:24:45 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:24:46 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/069207E1-5D5D-E511-825D-002618943898.root
+Begin processing the 150001st record. Run 1, Event 74112465, LumiSection 138569 at 19-Feb-2016 06:25:18.950 CST
+19-Feb-2016 06:25:22 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/069207E1-5D5D-E511-825D-002618943898.root
+19-Feb-2016 06:25:22 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/069D1A41-625D-E511-9AB8-0025905A608C.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:25:59 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:26:00 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/069D1A41-625D-E511-9AB8-0025905A608C.root
+Begin processing the 160001st record. Run 1, Event 49276525, LumiSection 92133 at 19-Feb-2016 06:26:29.759 CST
+19-Feb-2016 06:26:33 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/069D1A41-625D-E511-9AB8-0025905A608C.root
+19-Feb-2016 06:26:33 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/06DE60F4-6D5D-E511-A9E2-0025905A6084.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:27:11 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:27:12 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/06DE60F4-6D5D-E511-A9E2-0025905A6084.root
+Begin processing the 170001st record. Run 1, Event 37099045, LumiSection 69365 at 19-Feb-2016 06:27:51.227 CST
+Begin processing the 180001st record. Run 1, Event 161830134, LumiSection 302576 at 19-Feb-2016 06:27:56.279 CST
+19-Feb-2016 06:28:00 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/06DE60F4-6D5D-E511-A9E2-0025905A6084.root
+19-Feb-2016 06:28:00 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0814D7C3-9A5D-E511-B2C8-000F5327349C.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:28:37 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:28:38 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0814D7C3-9A5D-E511-B2C8-000F5327349C.root
+Begin processing the 190001st record. Run 1, Event 127264342, LumiSection 237948 at 19-Feb-2016 06:29:11.247 CST
+19-Feb-2016 06:29:16 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0814D7C3-9A5D-E511-B2C8-000F5327349C.root
+19-Feb-2016 06:29:16 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08513FEC-9F5D-E511-9CB1-008CFA11139C.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:29:54 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:29:55 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08513FEC-9F5D-E511-9CB1-008CFA11139C.root
+Begin processing the 200001st record. Run 1, Event 19478241, LumiSection 36419 at 19-Feb-2016 06:30:40.518 CST
+Begin processing the 210001st record. Run 1, Event 41040748, LumiSection 76735 at 19-Feb-2016 06:30:45.574 CST
+Begin processing the 220001st record. Run 1, Event 85107452, LumiSection 159127 at 19-Feb-2016 06:30:50.629 CST
+19-Feb-2016 06:30:50 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08513FEC-9F5D-E511-9CB1-008CFA11139C.root
+19-Feb-2016 06:30:50 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08E7FCC3-C45D-E511-812A-0025905B8592.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:31:27 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:31:28 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08E7FCC3-C45D-E511-812A-0025905B8592.root
+Begin processing the 230001st record. Run 1, Event 170698775, LumiSection 319158 at 19-Feb-2016 06:32:12.506 CST
+Begin processing the 240001st record. Run 1, Event 194755442, LumiSection 364137 at 19-Feb-2016 06:32:17.568 CST
+19-Feb-2016 06:32:18 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/08E7FCC3-C45D-E511-812A-0025905B8592.root
+19-Feb-2016 06:32:18 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0A70D4EA-775D-E511-B7BE-AC853D9DAC2B.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:32:56 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:32:57 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0A70D4EA-775D-E511-B7BE-AC853D9DAC2B.root
+Begin processing the 250001st record. Run 1, Event 180069462, LumiSection 336678 at 19-Feb-2016 06:33:27.501 CST
+19-Feb-2016 06:33:29 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0A70D4EA-775D-E511-B7BE-AC853D9DAC2B.root
+19-Feb-2016 06:33:29 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0AE24A65-6F5D-E511-BDD8-00259048B754.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:34:07 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:34:08 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0AE24A65-6F5D-E511-BDD8-00259048B754.root
+Begin processing the 260001st record. Run 1, Event 73645284, LumiSection 137696 at 19-Feb-2016 06:34:46.029 CST
+19-Feb-2016 06:34:48 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0AE24A65-6F5D-E511-BDD8-00259048B754.root
+19-Feb-2016 06:34:48 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0C17D953-5C5D-E511-BCD9-24BE05C44BB1.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:35:25 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:35:26 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0C17D953-5C5D-E511-BCD9-24BE05C44BB1.root
+Begin processing the 270001st record. Run 1, Event 51384588, LumiSection 96075 at 19-Feb-2016 06:36:22.547 CST
+Begin processing the 280001st record. Run 1, Event 162190519, LumiSection 303250 at 19-Feb-2016 06:36:27.629 CST
+19-Feb-2016 06:36:29 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0C17D953-5C5D-E511-BCD9-24BE05C44BB1.root
+19-Feb-2016 06:36:29 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0C8441CA-3D5D-E511-8350-008CFA5D275C.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:37:07 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:37:08 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0C8441CA-3D5D-E511-8350-008CFA5D275C.root
+Begin processing the 290001st record. Run 1, Event 53871141, LumiSection 100724 at 19-Feb-2016 06:37:44.774 CST
+19-Feb-2016 06:37:46 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0C8441CA-3D5D-E511-8350-008CFA5D275C.root
+19-Feb-2016 06:37:46 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E23F59F-C75D-E511-BBF4-002590596498.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:38:23 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:38:24 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E23F59F-C75D-E511-BBF4-002590596498.root
+Begin processing the 300001st record. Run 1, Event 131107835, LumiSection 245134 at 19-Feb-2016 06:39:08.118 CST
+19-Feb-2016 06:39:12 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E23F59F-C75D-E511-BBF4-002590596498.root
+19-Feb-2016 06:39:12 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E557971-B35D-E511-98F2-782BCB40899C.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:39:49 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:39:50 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E557971-B35D-E511-98F2-782BCB40899C.root
+Begin processing the 310001st record. Run 1, Event 120645095, LumiSection 225572 at 19-Feb-2016 06:40:41.926 CST
+Begin processing the 320001st record. Run 1, Event 135062274, LumiSection 252528 at 19-Feb-2016 06:40:46.974 CST
+19-Feb-2016 06:40:50 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E557971-B35D-E511-98F2-782BCB40899C.root
+19-Feb-2016 06:40:50 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E678D1A-765D-E511-A20D-782BCB408A71.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:41:27 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:41:28 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E678D1A-765D-E511-A20D-782BCB408A71.root
+Begin processing the 330001st record. Run 1, Event 141101398, LumiSection 263819 at 19-Feb-2016 06:42:14.261 CST
+19-Feb-2016 06:42:19 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0E678D1A-765D-E511-A20D-782BCB408A71.root
+19-Feb-2016 06:42:19 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0EC97692-DF5D-E511-845F-0002C92DB4CC.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:42:56 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:42:58 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0EC97692-DF5D-E511-845F-0002C92DB4CC.root
+Begin processing the 340001st record. Run 1, Event 27498605, LumiSection 51415 at 19-Feb-2016 06:43:36.950 CST
+Begin processing the 350001st record. Run 1, Event 128294062, LumiSection 239873 at 19-Feb-2016 06:43:42.024 CST
+19-Feb-2016 06:43:44 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/0EC97692-DF5D-E511-845F-0002C92DB4CC.root
+19-Feb-2016 06:43:44 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10410004-985D-E511-BA55-B083FED7685B.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:44:20 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:44:21 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10410004-985D-E511-BA55-B083FED7685B.root
+Begin processing the 360001st record. Run 1, Event 146368862, LumiSection 273668 at 19-Feb-2016 06:44:59.271 CST
+19-Feb-2016 06:45:03 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10410004-985D-E511-BA55-B083FED7685B.root
+19-Feb-2016 06:45:03 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/105AA31F-A25D-E511-B06B-0002C92DB418.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:45:40 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:45:41 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/105AA31F-A25D-E511-B06B-0002C92DB418.root
+Begin processing the 370001st record. Run 1, Event 41081143, LumiSection 76810 at 19-Feb-2016 06:46:04.230 CST
+Begin processing the 380001st record. Run 1, Event 89199790, LumiSection 166778 at 19-Feb-2016 06:46:09.315 CST
+19-Feb-2016 06:46:09 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/105AA31F-A25D-E511-B06B-0002C92DB418.root
+19-Feb-2016 06:46:09 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10BAFAF6-9F5D-E511-B7A9-782BCB27BBB8.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:46:47 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:46:48 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10BAFAF6-9F5D-E511-B7A9-782BCB27BBB8.root
+Begin processing the 390001st record. Run 1, Event 163317232, LumiSection 305356 at 19-Feb-2016 06:47:24.583 CST
+19-Feb-2016 06:47:27 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10BAFAF6-9F5D-E511-B7A9-782BCB27BBB8.root
+19-Feb-2016 06:47:27 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10FB8020-B45D-E511-A743-782BCB407CFD.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:48:04 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:48:06 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10FB8020-B45D-E511-A743-782BCB407CFD.root
+Begin processing the 400001st record. Run 1, Event 130679135, LumiSection 244333 at 19-Feb-2016 06:48:43.554 CST
+19-Feb-2016 06:48:48 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/10FB8020-B45D-E511-A743-782BCB407CFD.root
+19-Feb-2016 06:48:48 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/120F4E28-BF5D-E511-8250-B8CA3A70A520.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:49:27 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:49:29 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/120F4E28-BF5D-E511-8250-B8CA3A70A520.root
+Begin processing the 410001st record. Run 1, Event 13716248, LumiSection 25646 at 19-Feb-2016 06:50:05.105 CST
+Begin processing the 420001st record. Run 1, Event 74767614, LumiSection 139794 at 19-Feb-2016 06:50:10.165 CST
+19-Feb-2016 06:50:14 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/120F4E28-BF5D-E511-8250-B8CA3A70A520.root
+19-Feb-2016 06:50:14 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/12D00C00-3B5D-E511-A85E-24BE05C38C91.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:50:53 CST PostProcessEvent
+Data is served from knu.ac.kr instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:50:54 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/12D00C00-3B5D-E511-A85E-24BE05C38C91.root
+Begin processing the 430001st record. Run 1, Event 13312327, LumiSection 24891 at 19-Feb-2016 06:51:17.098 CST
+  29757.457763      0.712520     13.495375             0
+  19910.996983      0.476779     13.495375             1
+  13142.401813      0.314701     13.495375             2
+   9043.676850      0.216585     13.495375             3
+   6629.171677      0.158795     13.495375             4
+  22057.151520      0.528143     13.495375             5
+  14734.808206      0.352833     13.495375             6
+   9510.662741      0.227744     13.495375             7
+   6321.432770      0.151398     13.495375             8
+   4557.499936      0.109191     13.495375             9
+ 
+19-Feb-2016 06:51:21 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/00000/12D00C00-3B5D-E511-A85E-24BE05C38C91.root
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Overall cross-section summary 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process		xsec_before [pb]		passed	nposw	nnegw	tried	nposw	nnegw 	xsec_match [pb]			accepted [%]	 event_eff [%]
+0		2.976e+04 +/- 2.116e+00		180947	180947	0	258711	258711	0	2.081e+04 +/- 2.686e+01		69.9 +/- 0.1	69.9 +/- 0.1
+1		1.992e+04 +/- 1.416e+00		48543	48543	0	174476	174476	0	5.541e+03 +/- 2.137e+01		27.8 +/- 0.1	27.8 +/- 0.1
+2		1.314e+04 +/- 9.346e-01		15938	15938	0	113896	113896	0	1.839e+03 +/- 1.351e+01		14.0 +/- 0.1	14.0 +/- 0.1
+3		9.045e+03 +/- 6.434e-01		4878	4878	0	79285	79285	0	5.565e+02 +/- 7.719e+00		6.2 +/- 0.1	6.2 +/- 0.1
+4		6.632e+03 +/- 4.718e-01		2452	2452	0	58260	58260	0	2.791e+02 +/- 5.517e+00		4.2 +/- 0.1	4.2 +/- 0.1
+5		2.206e+04 +/- 1.569e+00		133978	133978	0	192113	192113	0	1.538e+04 +/- 2.314e+01		69.7 +/- 0.1	69.7 +/- 0.1
+6		1.473e+04 +/- 1.048e+00		35649	35649	0	128398	128398	0	4.090e+03 +/- 1.841e+01		27.8 +/- 0.1	27.8 +/- 0.1
+7		9.506e+03 +/- 6.761e-01		11616	11616	0	82822	82822	0	1.333e+03 +/- 1.147e+01		14.0 +/- 0.1	14.0 +/- 0.1
+8		6.320e+03 +/- 4.496e-01		3419	3419	0	55205	55205	0	3.914e+02 +/- 6.483e+00		6.2 +/- 0.1	6.2 +/- 0.1
+9		4.556e+03 +/- 3.242e-01		1711	1711	0	39738	39738	0	1.962e+02 +/- 4.639e+00		4.3 +/- 0.1	4.3 +/- 0.1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Total		1.357e+05 +/- 3.510e+00		439131	439131	0	1182904	1182904	0	5.036e+04 +/- 6.028e+01		37.1 +/- 0.0	37.1 +/- 0.0
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before matching: total cross section = 1.357e+05 +- 3.510e+00 pb
+After matching: total cross section = 5.036e+04 +- 6.028e+01 pb
+Filter efficiency (taking into account weights)= (439131) / (439131) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (439131) / (439131) = 1.000e+00 +- 0.000e+00
+After filter: final cross section = 5.036e+04 +- 6.028e+01 pb
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                      21       21
+    2 XrdAdaptor           -w file_open                             30       30
+    3 fileAction           -s file_close                            30       30
+    4 fileAction           -s file_open                             60       60
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostEndRun       PostEndRun       PostEndRun
+    2 XrdAdaptor           pre-events       PostProcessEvent PostProcessEvent
+    3 fileAction           PostProcessEvent PostProcessEvent PostEndRun
+    4 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                51                  51
+System                 90                  90
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++LOG ENDS HERE FOR /WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+Dataset= /ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+inputFiles= root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/009A683D-5E70-E511-9875-002618943918.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/044448AC-B071-E511-BDAA-842B2B2B0D2E.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/089BB534-9771-E511-97DC-A0000420FE80.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0E54C86F-B771-E511-8AF9-003048FFCC18.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10A018BC-A971-E511-A738-D4AE526DF550.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10B11368-C471-E511-A682-F45214C748D6.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1202EF13-0C73-E511-A490-90B11C27F383.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14882AE3-BB71-E511-91E1-0025905A60CA.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180E5B55-DF71-E511-9473-842B2B61B189.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/18453F0C-DA72-E511-9BCF-0025905B8562.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A30D31B-B471-E511-8B65-B083FED764C0.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A33C73F-0B73-E511-89E6-008CFA166014.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A5F0085-B771-E511-8B81-F45214C748C4.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1CB0F7B7-A871-E511-84BB-B083FED02AD1.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/208FF6F1-6D72-E511-945A-0025905938B4.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/220ED62E-1C72-E511-98DA-0025905B859E.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/22A56970-B071-E511-8BF6-F45214C748C4.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2A68BB53-8871-E511-A2C3-0002C90A36B4.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2CA9B8AF-B471-E511-B85B-F45214C74880.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3004CD5C-9E71-E511-9105-0025905A6094.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32D70F25-BE71-E511-ADEC-0025905A60B6.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32E38472-9571-E511-9961-5065F3812271.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3EE1756D-9670-E511-8072-842B2B181F9F.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42688B03-7772-E511-BFA5-0025905A6132.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42F0829A-C071-E511-8AC7-0025905B860C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/44DA210B-5B72-E511-ABD9-0025904C516E.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/466375C7-B671-E511-8080-0025905A60CA.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46A9223E-F771-E511-8C44-842B2B61B189.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46AFDDF1-6372-E511-8B42-0025905A608C.root,root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/4AD488AD-5D70-E511-BEB6-B8CA3A708F98.root
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++LOG STARTS HERE FOR /ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+19-Feb-2016 06:51:51 CST  Initiating request to open file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/009A683D-5E70-E511-9875-002618943918.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:52:29 CST pre-events
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:52:30 CST  Successfully opened file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/009A683D-5E70-E511-9875-002618943918.root
+[2016-02-19 06:52:35.720141 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/009A683D-5E70-E511-9875-002618943918.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 1st record. Run 1, Event 722787, LumiSection 4147 at 19-Feb-2016 06:52:50.716 CST
+19-Feb-2016 06:53:01 CST  Closed file file:root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/009A683D-5E70-E511-9875-002618943918.root
+19-Feb-2016 06:53:01 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/044448AC-B071-E511-BDAA-842B2B2B0D2E.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:53:37 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:53:37 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/044448AC-B071-E511-BDAA-842B2B2B0D2E.root
+[2016-02-19 06:53:42.850694 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/044448AC-B071-E511-BDAA-842B2B2B0D2E.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 10001st record. Run 1, Event 2002185, LumiSection 11485 at 19-Feb-2016 06:54:02.086 CST
+19-Feb-2016 06:54:04 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/044448AC-B071-E511-BDAA-842B2B2B0D2E.root
+19-Feb-2016 06:54:04 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/089BB534-9771-E511-97DC-A0000420FE80.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:54:40 CST PostProcessEvent
+Data is served from oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:54:41 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/089BB534-9771-E511-97DC-A0000420FE80.root
+[2016-02-19 06:54:46.773136 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/089BB534-9771-E511-97DC-A0000420FE80.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,koffer.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 20001st record. Run 1, Event 8670252, LumiSection 49734 at 19-Feb-2016 06:55:00.706 CST
+19-Feb-2016 06:55:02 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/089BB534-9771-E511-97DC-A0000420FE80.root
+19-Feb-2016 06:55:02 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0E54C86F-B771-E511-8AF9-003048FFCC18.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:55:38 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:55:39 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0E54C86F-B771-E511-8AF9-003048FFCC18.root
+[2016-02-19 06:55:44.587296 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0E54C86F-B771-E511-8AF9-003048FFCC18.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk01.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 30001st record. Run 1, Event 7112144, LumiSection 40796 at 19-Feb-2016 06:56:03.933 CST
+19-Feb-2016 06:56:05 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/0E54C86F-B771-E511-8AF9-003048FFCC18.root
+19-Feb-2016 06:56:05 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10A018BC-A971-E511-A738-D4AE526DF550.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:56:41 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:56:41 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10A018BC-A971-E511-A738-D4AE526DF550.root
+[2016-02-19 06:56:46.725814 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10A018BC-A971-E511-A738-D4AE526DF550.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk01.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 40001st record. Run 1, Event 9412884, LumiSection 53994 at 19-Feb-2016 06:57:12.779 CST
+19-Feb-2016 06:57:15 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10A018BC-A971-E511-A738-D4AE526DF550.root
+19-Feb-2016 06:57:15 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10B11368-C471-E511-A682-F45214C748D6.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:57:51 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:57:52 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10B11368-C471-E511-A682-F45214C748D6.root
+[2016-02-19 06:57:56.606010 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10B11368-C471-E511-A682-F45214C748D6.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk01.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 50001st record. Run 1, Event 9164676, LumiSection 52570 at 19-Feb-2016 06:58:14.152 CST
+19-Feb-2016 06:58:15 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/10B11368-C471-E511-A682-F45214C748D6.root
+19-Feb-2016 06:58:15 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1202EF13-0C73-E511-A490-90B11C27F383.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:58:51 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:58:52 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1202EF13-0C73-E511-A490-90B11C27F383.root
+[2016-02-19 06:58:57.588278 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1202EF13-0C73-E511-A490-90B11C27F383.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk03.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+19-Feb-2016 06:59:06 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1202EF13-0C73-E511-A490-90B11C27F383.root
+19-Feb-2016 06:59:06 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14882AE3-BB71-E511-91E1-0025905A60CA.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 06:59:42 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 06:59:43 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14882AE3-BB71-E511-91E1-0025905A60CA.root
+[2016-02-19 06:59:48.291644 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14882AE3-BB71-E511-91E1-0025905A60CA.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 60001st record. Run 1, Event 6824852, LumiSection 39149 at 19-Feb-2016 07:00:06.982 CST
+19-Feb-2016 07:00:08 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/14882AE3-BB71-E511-91E1-0025905A60CA.root
+19-Feb-2016 07:00:08 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180E5B55-DF71-E511-9473-842B2B61B189.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:00:45 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:00:46 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180E5B55-DF71-E511-9473-842B2B61B189.root
+[2016-02-19 07:00:50.929451 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180E5B55-DF71-E511-9473-842B2B61B189.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 70001st record. Run 1, Event 9396921, LumiSection 53902 at 19-Feb-2016 07:01:13.301 CST
+19-Feb-2016 07:01:15 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/180E5B55-DF71-E511-9473-842B2B61B189.root
+19-Feb-2016 07:01:15 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/18453F0C-DA72-E511-9BCF-0025905B8562.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:03:49 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:03:49 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/18453F0C-DA72-E511-9BCF-0025905B8562.root
+Begin processing the 80001st record. Run 1, Event 6381658, LumiSection 36607 at 19-Feb-2016 07:04:15.712 CST
+19-Feb-2016 07:04:16 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/18453F0C-DA72-E511-9BCF-0025905B8562.root
+19-Feb-2016 07:04:16 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A30D31B-B471-E511-8B65-B083FED764C0.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:05:20 CST PostProcessEvent
+Data is served from oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:05:21 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A30D31B-B471-E511-8B65-B083FED764C0.root
+Begin processing the 90001st record. Run 1, Event 7887515, LumiSection 45244 at 19-Feb-2016 07:05:49.365 CST
+19-Feb-2016 07:05:51 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A30D31B-B471-E511-8B65-B083FED764C0.root
+19-Feb-2016 07:05:51 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A33C73F-0B73-E511-89E6-008CFA166014.root
+%MSG-w XrdAdaptorInternal:  file_open 19-Feb-2016 07:08:51 CST PostProcessEvent
+Failed to open file at URL root://xrootd.unl.edu:1094//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A33C73F-0B73-E511-89E6-008CFA166014.root.
+%MSG
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:10:17 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:10:18 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A33C73F-0B73-E511-89E6-008CFA166014.root
+[2016-02-19 07:10:23.431522 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A33C73F-0B73-E511-89E6-008CFA166014.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at,, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+19-Feb-2016 07:10:40 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A33C73F-0B73-E511-89E6-008CFA166014.root
+19-Feb-2016 07:10:40 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A5F0085-B771-E511-8B81-F45214C748C4.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:13:01 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:13:02 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A5F0085-B771-E511-8B81-F45214C748C4.root
+Begin processing the 100001st record. Run 1, Event 1504609, LumiSection 8631 at 19-Feb-2016 07:13:22.370 CST
+19-Feb-2016 07:13:26 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1A5F0085-B771-E511-8B81-F45214C748C4.root
+19-Feb-2016 07:13:26 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1CB0F7B7-A871-E511-84BB-B083FED02AD1.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:14:06 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:14:07 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1CB0F7B7-A871-E511-84BB-B083FED02AD1.root
+Begin processing the 110001st record. Run 1, Event 2876747, LumiSection 16502 at 19-Feb-2016 07:14:34.163 CST
+Begin processing the 120001st record. Run 1, Event 7951141, LumiSection 45609 at 19-Feb-2016 07:14:39.211 CST
+19-Feb-2016 07:14:40 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/1CB0F7B7-A871-E511-84BB-B083FED02AD1.root
+19-Feb-2016 07:14:40 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/208FF6F1-6D72-E511-945A-0025905938B4.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:16:00 CST PostProcessEvent
+Data is served from oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:16:01 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/208FF6F1-6D72-E511-945A-0025905938B4.root
+Begin processing the 130001st record. Run 1, Event 9955156, LumiSection 57104 at 19-Feb-2016 07:16:27.114 CST
+19-Feb-2016 07:16:27 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/208FF6F1-6D72-E511-945A-0025905938B4.root
+19-Feb-2016 07:16:27 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/220ED62E-1C72-E511-98DA-0025905B859E.root
+[2016-02-19 07:18:26.714232 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/208FF6F1-6D72-E511-945A-0025905938B4.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,ds01.oeaw.ac.at, mode: 0460, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:18:33 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:18:34 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/220ED62E-1C72-E511-98DA-0025905B859E.root
+[2016-02-19 07:18:38.657263 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/220ED62E-1C72-E511-98DA-0025905B859E.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+19-Feb-2016 07:18:58 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/220ED62E-1C72-E511-98DA-0025905B859E.root
+19-Feb-2016 07:18:58 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/22A56970-B071-E511-8BF6-F45214C748C4.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:19:35 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:19:36 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/22A56970-B071-E511-8BF6-F45214C748C4.root
+[2016-02-19 07:19:40.849876 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/22A56970-B071-E511-8BF6-F45214C748C4.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 140001st record. Run 1, Event 7773309, LumiSection 44589 at 19-Feb-2016 07:19:58.313 CST
+19-Feb-2016 07:20:02 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/22A56970-B071-E511-8BF6-F45214C748C4.root
+19-Feb-2016 07:20:02 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2A68BB53-8871-E511-A2C3-0002C90A36B4.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:20:38 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:20:38 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2A68BB53-8871-E511-A2C3-0002C90A36B4.root
+[2016-02-19 07:20:43.726396 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2A68BB53-8871-E511-A2C3-0002C90A36B4.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 150001st record. Run 1, Event 7791754, LumiSection 44695 at 19-Feb-2016 07:21:05.076 CST
+19-Feb-2016 07:21:07 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2A68BB53-8871-E511-A2C3-0002C90A36B4.root
+19-Feb-2016 07:21:07 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2CA9B8AF-B471-E511-B85B-F45214C74880.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:21:43 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:21:44 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2CA9B8AF-B471-E511-B85B-F45214C74880.root
+[2016-02-19 07:21:49.499547 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2CA9B8AF-B471-E511-B85B-F45214C74880.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk01.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 160001st record. Run 1, Event 7835026, LumiSection 44943 at 19-Feb-2016 07:22:07.456 CST
+19-Feb-2016 07:22:09 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/2CA9B8AF-B471-E511-B85B-F45214C74880.root
+19-Feb-2016 07:22:09 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3004CD5C-9E71-E511-9105-0025905A6094.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:22:45 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:22:46 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3004CD5C-9E71-E511-9105-0025905A6094.root
+[2016-02-19 07:22:51.406343 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3004CD5C-9E71-E511-9105-0025905A6094.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 170001st record. Run 1, Event 7114257, LumiSection 40809 at 19-Feb-2016 07:23:16.471 CST
+19-Feb-2016 07:23:17 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3004CD5C-9E71-E511-9105-0025905A6094.root
+19-Feb-2016 07:23:17 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32D70F25-BE71-E511-ADEC-0025905A60B6.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:23:54 CST PostProcessEvent
+Data is served from oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:23:55 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32D70F25-BE71-E511-ADEC-0025905A60B6.root
+[2016-02-19 07:24:00.541250 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32D70F25-BE71-E511-ADEC-0025905A60B6.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,koffer.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+19-Feb-2016 07:24:24 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32D70F25-BE71-E511-ADEC-0025905A60B6.root
+19-Feb-2016 07:24:24 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32E38472-9571-E511-9961-5065F3812271.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:25:01 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:25:02 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32E38472-9571-E511-9961-5065F3812271.root
+[2016-02-19 07:25:06.788733 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32E38472-9571-E511-9961-5065F3812271.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 180001st record. Run 1, Event 7783828, LumiSection 44650 at 19-Feb-2016 07:25:27.959 CST
+19-Feb-2016 07:25:31 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/32E38472-9571-E511-9961-5065F3812271.root
+19-Feb-2016 07:25:31 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3EE1756D-9670-E511-8072-842B2B181F9F.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:26:08 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:26:09 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3EE1756D-9670-E511-8072-842B2B181F9F.root
+[2016-02-19 07:26:13.851897 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3EE1756D-9670-E511-8072-842B2B181F9F.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk01.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 190001st record. Run 1, Event 2348583, LumiSection 13472 at 19-Feb-2016 07:26:32.717 CST
+19-Feb-2016 07:26:35 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/3EE1756D-9670-E511-8072-842B2B181F9F.root
+19-Feb-2016 07:26:35 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42688B03-7772-E511-BFA5-0025905A6132.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:27:11 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:27:12 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42688B03-7772-E511-BFA5-0025905A6132.root
+[2016-02-19 07:27:17.487285 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42688B03-7772-E511-BFA5-0025905A6132.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk03.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 200001st record. Run 1, Event 3503507, LumiSection 20097 at 19-Feb-2016 07:27:46.520 CST
+Begin processing the 210001st record. Run 1, Event 9073997, LumiSection 52050 at 19-Feb-2016 07:27:51.672 CST
+19-Feb-2016 07:27:51 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42688B03-7772-E511-BFA5-0025905A6132.root
+19-Feb-2016 07:27:51 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42F0829A-C071-E511-8AC7-0025905B860C.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:28:28 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:28:29 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42F0829A-C071-E511-8AC7-0025905B860C.root
+[2016-02-19 07:28:33.772170 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42F0829A-C071-E511-8AC7-0025905B860C.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk01.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+19-Feb-2016 07:28:59 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/42F0829A-C071-E511-8AC7-0025905B860C.root
+19-Feb-2016 07:28:59 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/44DA210B-5B72-E511-ABD9-0025904C516E.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:29:35 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:29:36 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/44DA210B-5B72-E511-ABD9-0025904C516E.root
+[2016-02-19 07:29:40.810792 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/44DA210B-5B72-E511-ABD9-0025904C516E.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk01.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 220001st record. Run 1, Event 7543085, LumiSection 43268 at 19-Feb-2016 07:29:51.692 CST
+19-Feb-2016 07:29:52 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/44DA210B-5B72-E511-ABD9-0025904C516E.root
+19-Feb-2016 07:29:52 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/466375C7-B671-E511-8080-0025905A60CA.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:30:29 CST PostProcessEvent
+Data is served from oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:30:30 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/466375C7-B671-E511-8080-0025905A60CA.root
+[2016-02-19 07:30:36.040786 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/466375C7-B671-E511-8080-0025905A60CA.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,truhe.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 230001st record. Run 1, Event 9664452, LumiSection 55437 at 19-Feb-2016 07:31:02.892 CST
+19-Feb-2016 07:31:03 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/466375C7-B671-E511-8080-0025905A60CA.root
+19-Feb-2016 07:31:03 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46A9223E-F771-E511-8C44-842B2B61B189.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:31:39 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:31:40 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46A9223E-F771-E511-8C44-842B2B61B189.root
+[2016-02-19 07:31:45.523024 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46A9223E-F771-E511-8C44-842B2B61B189.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+19-Feb-2016 07:32:02 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46A9223E-F771-E511-8C44-842B2B61B189.root
+19-Feb-2016 07:32:02 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46AFDDF1-6372-E511-8B42-0025905A608C.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:32:38 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:32:39 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46AFDDF1-6372-E511-8B42-0025905A608C.root
+[2016-02-19 07:32:43.851585 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46AFDDF1-6372-E511-8B42-0025905A608C.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk01.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 240001st record. Run 1, Event 3252058, LumiSection 18655 at 19-Feb-2016 07:33:05.257 CST
+19-Feb-2016 07:33:09 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/46AFDDF1-6372-E511-8B42-0025905A608C.root
+19-Feb-2016 07:33:09 CST  Initiating request to open file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/4AD488AD-5D70-E511-BEB6-B8CA3A708F98.root
+%MSG-w XrdAdaptor:  file_open 19-Feb-2016 07:33:47 CST PostProcessEvent
+Data is served from hephy.oeaw.ac.at instead of original site T2_US_Nebraska
+%MSG
+19-Feb-2016 07:33:48 CST  Successfully opened file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/4AD488AD-5D70-E511-BEB6-B8CA3A708F98.root
+[2016-02-19 07:33:52.844443 -0600][Error  ][XRootD            ] [hephyse.oeaw.ac.at:11001] Handling error while processing kXR_open (file: /store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/4AD488AD-5D70-E511-BEB6-B8CA3A708F98.root?tried=+1213xrootd.ba1213llrxrd-redir.in2p3.fr1213xrootd-redic.pi.infn.it,+1213cmsxrootd1.fnal.gov1213xrootd.unl.edu,disk07.hephy.oeaw.ac.at, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+Begin processing the 250001st record. Run 1, Event 1628776, LumiSection 9343 at 19-Feb-2016 07:34:09.285 CST
+19-Feb-2016 07:34:11 CST  Closed file root://xrootd.unl.edu//store/mc/RunIISpring15DR74/ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/AODSIM/Asympt25ns_MCRUN2_74_V9-v1/10000/4AD488AD-5D70-E511-BEB6-B8CA3A708F98.root
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+Before Filtrer: total cross section = 5.813e+03 +- 6.257e+00 pb
+Filter efficiency (taking into account weights)= (43.3308) / (43.3308) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (255154) / (255154) = 1.000e+00 +- 0.000e+00
+After filter: final cross section = 5.813e+03 +- 6.257e+00 pb
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                       5        5
+    2 XrdAdaptor           -w file_open                             30       30
+    3 XrdAdaptorInternal   -w file_open                              1        1
+    4 fileAction           -s file_close                            30       30
+    5 fileAction           -s file_open                             60       60
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostEndRun       PostEndRun       PostEndRun
+    2 XrdAdaptor           pre-events       PostProcessEvent PostProcessEvent
+    3 XrdAdaptorInternal   PostProcessEvent                  
+    4 fileAction           PostProcessEvent PostProcessEvent PostEndRun
+    5 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                36                  36
+System                 90                  90
+                                                     
+                                                     
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++LOG ENDS HERE FOR /ZJets_Pt-0to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/AODSIM
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     

@@ -1,0 +1,4 @@
+Some samples in mass bins like:
+/DYJetsToLL_M-1000to1500_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM
+are available for Summer16 campaign (the currently used pt bins ones are also available for Summer16)
+So these can also be tried to use for next iteration.

@@ -1,0 +1,987 @@
+
++--------------------------------------------------------------+
+| BAT 0.9.2                                                    |
+|                                                              |
+| Copyright (C) 2007-2012, Daniel Kollar and Kevin Kroeninger, |
+| all rights reserved.                                         |
+| For the licensing terms see doc/COPYING                      |
+| For documentation see http://www.mppmu.mpg.de/bat            |
++--------------------------------------------------------------+
+
+********************** pe=0 (data) **********************
+ **********
+ **    1 **SET ERRDEF         0.5
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 xs           0.00000e+00  1.00000e-03   -1.00000e+03  1.00000e+03
+     2 lumi         2.67055e+03  7.21050e+01    0.00000e+00  5.00000e+03
+     3 jes          1.00000e+00  1.25000e-02    0.00000e+00  2.00000e+00
+     4 jer          1.00000e+00  1.00000e-01    0.00000e+00  2.00000e+00
+     5 p0           5.32041e-03  1.00000e-06    1.00000e-20  1.00000e-02
+     6 p1           1.62370e+01  1.00000e-01   -9.99900e+03  9.99900e+03
+     7 p2           2.95091e+00  1.00000e-02   -9.99900e+03  9.99900e+03
+     8 p3          -2.07558e-01  1.00000e-02   -9.99900e+03  9.99900e+03
+     9 p4           0.00000e+00  1.00000e-02   -9.99900e+03  9.99900e+03
+    10 p5           0.00000e+00  1.00000e-03   -9.99900e+03  9.99900e+03
+    11 n0           0.00000e+00  1.00000e+00   -1.00000e+02  1.00000e+02
+    12 n1           0.00000e+00  1.00000e+00   -1.00000e+02  1.00000e+02
+    13 n2           0.00000e+00  1.00000e+00   -1.00000e+02  1.00000e+02
+    14 n3           0.00000e+00  1.00000e+00   -1.00000e+02  1.00000e+02
+    15 n4           0.00000e+00  1.00000e+00   -1.00000e+02  1.00000e+02
+    16 n5           0.00000e+00  1.00000e+00   -1.00000e+02  1.00000e+02
+ **********
+ **    2 **FIX           1
+ **********
+ **********
+ **    3 **FIX           2
+ **********
+ **********
+ **    4 **FIX           3
+ **********
+ **********
+ **    5 **FIX           4
+ **********
+ **********
+ **    6 **FIX           9
+ **********
+ **********
+ **    7 **FIX          10
+ **********
+ **********
+ **    8 **FIX          11
+ **********
+ **********
+ **    9 **FIX          12
+ **********
+ **********
+ **   10 **FIX          13
+ **********
+ **********
+ **   11 **FIX          14
+ **********
+ **********
+ **   12 **FIX          15
+ **********
+ **********
+ **   13 **FIX          16
+ **********
+ **********
+ **   14 **SET PRINT           3
+ **********
+ **********
+ **   15 **SET STR            2
+ **********
+ NOW USING STRATEGY  2: MAKE SURE MINIMUM TRUE, ERRORS CORRECT  
+ **********
+ **   16 **MIGRAD       2e+04
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  2.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+   START COVARIANCE MATRIX CALCULATION.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -1.3852e-03  1.3145e-03  9.4573e-02  3.9055e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.005291 TO DIAGONAL.
+ FCN=131.775 FROM HESSE     STATUS=NOT POSDEF     31 CALLS          32 TOTAL
+                     EDM=0.00333924    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.32041e-03   5.91603e-04   2.04420e-03   7.31426e+00
+   6  p1           1.62370e+01   5.52737e-01   3.16267e-06  -6.32077e+03
+   7  p2           2.95091e+00   4.31917e-02   8.57353e-08   2.00878e+05
+   8  p3          -2.07558e-01   1.14059e-02   3.12566e-08  -5.18799e+05
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      5      6      7      8
+        5  0.99663   1.000  0.700 -0.557  0.222
+        6  0.97447   0.700  1.000 -0.011  0.451
+        7  0.99696  -0.557 -0.011  1.000  0.657
+        8  0.99420   0.222  0.451  0.657  1.000
+ ERR MATRIX NOT POS-DEF
+ FCN=131.771 FROM MIGRAD    STATUS=PROGRESS       40 CALLS          41 TOTAL
+                     EDM=6.62931e-05    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.31419e-03   5.91649e-04  -1.24660e-03   5.87874e-02
+   6  p1           1.62466e+01   5.52737e-01   9.62074e-07  -3.74109e+01
+   7  p2           2.95095e+00   4.31917e-02   4.40325e-09   5.21596e+01
+   8  p3          -2.07705e-01   1.14059e-02  -1.47186e-08   8.18492e+03
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ RELATIVE CHANGE IN COV. MATRIX=  0.4 per cent
+ FCN=131.771 FROM MIGRAD    STATUS=PROGRESS       51 CALLS          52 TOTAL
+                     EDM=0.000193122    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.28657e-03   5.98898e-04  -5.53469e-03  -1.00977e+00
+   6  p1           1.62242e+01   5.41942e-01  -2.24366e-06   1.14019e+03
+   7  p2           2.95031e+00   4.31747e-02  -6.46352e-08  -2.56330e+04
+   8  p3          -2.08420e-01   1.16320e-02  -7.15325e-08   6.52724e+04
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ RELATIVE CHANGE IN COV. MATRIX= 17.8 per cent
+ FCN=131.77 FROM MIGRAD    STATUS=PROGRESS       61 CALLS          62 TOTAL
+                     EDM=3.02615e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25805e-03   1.23112e-03  -5.71110e-03  -1.26750e-01
+   6  p1           1.61863e+01   1.18935e+00  -3.78613e-06   8.23229e+01
+   7  p2           2.94929e+00   5.23921e-02  -1.01639e-07  -3.46817e+03
+   8  p3          -2.09173e-01   3.06755e-02  -7.52795e-08   1.05610e+04
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ RELATIVE CHANGE IN COV. MATRIX= 15.7 per cent
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+   START COVARIANCE MATRIX CALCULATION.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -3.2919e-05  5.3537e-04  9.2881e-02  3.9066e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.003940 TO DIAGONAL.
+ FCN=131.77 FROM MIGRAD    STATUS=CONVERGED      84 CALLS          85 TOTAL
+                     EDM=3.2949e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25805e-03   6.34727e-04   7.70524e-05  -1.26729e-01
+   6  p1           1.61863e+01   6.24254e-01   9.88846e-08   8.23316e+01
+   7  p2           2.94929e+00   4.40153e-02   2.68008e-09  -3.46845e+03
+   8  p3          -2.09173e-01   1.34836e-02   9.77049e-10   1.05617e+04
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  26    NPAR=  4    ERR DEF=0.5
+  4.051e-07  3.019e-04 -1.171e-05  3.224e-06 
+  3.019e-04  3.897e-01  1.761e-03  4.713e-03 
+ -1.171e-05  1.761e-03  1.937e-03  3.913e-04 
+  3.224e-06  4.713e-03  3.913e-04  1.818e-04 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      5      6      7      8
+        5  0.99714   1.000  0.760 -0.418  0.376
+        6  0.97999   0.760  1.000  0.064  0.560
+        7  0.99707  -0.418  0.064  1.000  0.659
+        8  0.99585   0.376  0.560  0.659  1.000
+ ERR MATRIX NOT POS-DEF
+Fit status: CONVERGED 
+Fitted signal xs: 0 +/- 0
+ **********
+ **   17 **FIX           1
+ **********
+ PARAMETER    1  ALREADY FIXED. IGNORED.
+ FCN=131.77 FROM FIX         STATUS=CONVERGED       0 CALLS          85 TOTAL
+                     EDM=3.2949e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25805e-03   6.34727e-04   7.70524e-05  -1.26729e-01
+   6  p1           1.61863e+01   6.24254e-01   9.88846e-08   8.23316e+01
+   7  p2           2.94929e+00   4.40153e-02   2.68008e-09  -3.46845e+03
+   8  p3          -2.09173e-01   1.34836e-02   9.77049e-10   1.05617e+04
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ **********
+ **   18 **SET PRINT           3
+ **********
+ **********
+ **   19 **SET STR            2
+ **********
+ NOW USING STRATEGY  2: MAKE SURE MINIMUM TRUE, ERRORS CORRECT  
+ **********
+ **   20 **MIGRAD       2e+04
+ **********
+ START MIGRAD MINIMIZATION.  STRATEGY  2.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+   START COVARIANCE MATRIX CALCULATION.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -4.7465e-06  5.0703e-04  9.2838e-02  3.9067e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.003911 TO DIAGONAL.
+ FCN=131.77 FROM HESSE     STATUS=NOT POSDEF     23 CALLS         108 TOTAL
+                     EDM=1.64881e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25805e-03   6.37089e-04   1.54105e-05  -1.26728e-01
+   6  p1           1.61863e+01   6.27019e-01   1.97769e-08   8.23322e+01
+   7  p2           2.94929e+00   4.40305e-02   5.36015e-10  -3.46846e+03
+   8  p3          -2.09173e-01   1.35514e-02   1.95410e-10   1.05618e+04
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      5      6      7      8
+        5  0.99716   1.000  0.762 -0.414  0.381
+        6  0.98017   0.762  1.000  0.066  0.563
+        7  0.99707  -0.414  0.066  1.000  0.659
+        8  0.99589   0.381  0.563  0.659  1.000
+ ERR MATRIX NOT POS-DEF
+ FCN=131.77 FROM MIGRAD    STATUS=PROGRESS       41 CALLS         126 TOTAL
+                     EDM=1.51547e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25869e-03   6.37084e-04   1.27004e-04   1.14365e-01
+   6  p1           1.61865e+01   6.27019e-01   1.66085e-08  -7.82286e+01
+   7  p2           2.94919e+00   4.40305e-02  -1.03031e-08   3.63029e+03
+   8  p3          -2.09199e-01   1.35514e-02  -2.59646e-09  -9.30880e+03
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ RELATIVE CHANGE IN COV. MATRIX=  3.3 per cent
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+   START COVARIANCE MATRIX CALCULATION.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -3.8811e-05  5.2459e-04  9.2880e-02  3.9066e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.003945 TO DIAGONAL.
+ FCN=131.77 FROM MIGRAD    STATUS=CONVERGED      64 CALLS         149 TOTAL
+                     EDM=3.02278e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25869e-03   6.35610e-04   7.66229e-05   1.14386e-01
+   6  p1           1.61865e+01   6.24663e-01   9.88721e-08  -7.82200e+01
+   7  p2           2.94919e+00   4.39965e-02   2.67996e-09   3.63002e+03
+   8  p3          -2.09199e-01   1.34780e-02   9.77010e-10  -9.30803e+03
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  26    NPAR=  4    ERR DEF=0.5
+  4.062e-07  3.028e-04 -1.173e-05  3.233e-06 
+  3.028e-04  3.902e-01  1.726e-03  4.715e-03 
+ -1.173e-05  1.726e-03  1.936e-03  3.903e-04 
+  3.233e-06  4.715e-03  3.903e-04  1.817e-04 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      5      6      7      8
+        5  0.99715   1.000  0.760 -0.418  0.376
+        6  0.98002   0.760  1.000  0.063  0.560
+        7  0.99707  -0.418  0.063  1.000  0.658
+        8  0.99584   0.376  0.560  0.658  1.000
+ ERR MATRIX NOT POS-DEF
+ EXTERNAL ERROR MATRIX.    NDIM=  16    NPAR=  4    ERR DEF=0.5
+  4.062e-07  3.028e-04 -1.173e-05  3.233e-06 
+  3.028e-04  3.902e-01  1.726e-03  4.715e-03 
+ -1.173e-05  1.726e-03  1.936e-03  3.903e-04 
+  3.233e-06  4.715e-03  3.903e-04  1.817e-04 
+Data fit status: CONVERGED 
+ **********
+ **   21 **FIX           1
+ **********
+ PARAMETER    1  ALREADY FIXED. IGNORED.
+ FCN=131.77 FROM FIX         STATUS=CONVERGED       0 CALLS         149 TOTAL
+                     EDM=3.02278e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25869e-03   6.35610e-04   7.66229e-05   1.14386e-01
+   6  p1           1.61865e+01   6.24663e-01   9.88721e-08  -7.82200e+01
+   7  p2           2.94919e+00   4.39965e-02   2.67996e-09   3.63002e+03
+   8  p3          -2.09199e-01   1.34780e-02   9.77010e-10  -9.30803e+03
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ **********
+ **   22 **SET PAR           1           0
+ **********
+ **********
+ **   23 **SET PRINT           3
+ **********
+ **********
+ **   24 **SET STR            2
+ **********
+ NOW USING STRATEGY  2: MAKE SURE MINIMUM TRUE, ERRORS CORRECT  
+ **********
+ **   25 **MIGRAD       2e+04
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  2.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+   START COVARIANCE MATRIX CALCULATION.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -1.2225e-05  4.9846e-04  9.2833e-02  3.9067e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.003919 TO DIAGONAL.
+ FCN=131.77 FROM HESSE     STATUS=NOT POSDEF     23 CALLS         173 TOTAL
+                     EDM=1.51149e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25869e-03   6.37930e-04   1.53246e-05   1.14386e-01
+   6  p1           1.61865e+01   6.27256e-01   1.97744e-08  -7.82194e+01
+   7  p2           2.94919e+00   4.40066e-02   5.35992e-10   3.63000e+03
+   8  p3          -2.09199e-01   1.35396e-02   1.95402e-10  -9.30798e+03
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      5      6      7      8
+        5  0.99717   1.000  0.763 -0.415  0.381
+        6  0.98019   0.763  1.000  0.064  0.563
+        7  0.99707  -0.415  0.064  1.000  0.658
+        8  0.99588   0.381  0.563  0.658  1.000
+ ERR MATRIX NOT POS-DEF
+ FCN=131.77 FROM MIGRAD    STATUS=PROGRESS       41 CALLS         191 TOTAL
+                     EDM=1.57085e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25937e-03   6.37926e-04   1.36854e-04  -1.27158e-01
+   6  p1           1.61862e+01   6.27256e-01  -2.50764e-08   8.36642e+01
+   7  p2           2.94907e+00   4.40066e-02  -1.17620e-08  -3.44946e+03
+   8  p3          -2.09219e-01   1.35396e-02  -2.02516e-09   1.04055e+04
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ RELATIVE CHANGE IN COV. MATRIX=  3.8 per cent
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+   START COVARIANCE MATRIX CALCULATION.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -3.3033e-05  5.3542e-04  9.2882e-02  3.9066e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.003940 TO DIAGONAL.
+ FCN=131.77 FROM MIGRAD    STATUS=CONVERGED      64 CALLS         214 TOTAL
+                     EDM=3.13953e-06    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           0.00000e+00     fixed    
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25937e-03   6.34888e-04   7.66334e-05  -1.27137e-01
+   6  p1           1.61862e+01   6.24246e-01   9.88728e-08   8.36728e+01
+   7  p2           2.94907e+00   4.40149e-02   2.67999e-09  -3.44973e+03
+   8  p3          -2.09219e-01   1.34832e-02   9.77022e-10   1.04063e+04
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  26    NPAR=  4    ERR DEF=0.5
+  4.053e-07  3.020e-04 -1.171e-05  3.225e-06 
+  3.020e-04  3.897e-01  1.760e-03  4.712e-03 
+ -1.171e-05  1.760e-03  1.937e-03  3.913e-04 
+  3.225e-06  4.712e-03  3.913e-04  1.818e-04 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      5      6      7      8
+        5  0.99714   1.000  0.760 -0.418  0.376
+        6  0.97999   0.760  1.000  0.064  0.560
+        7  0.99707  -0.418  0.064  1.000  0.659
+        8  0.99585   0.376  0.560  0.659  1.000
+ ERR MATRIX NOT POS-DEF
+Significance(data) = 0
+ **********
+ **   26 **SET LIM           1           0        1000
+ **********
+ REQUEST TO CHANGE LIMITS ON FIXED PARAMETER:  1
+ PARAMETER   1 LIMITS SET TO                0           1000
+ **********
+ **   27 **RELEASE           1
+ **********
+                   PARAMETER    1  xs RESTORED TO VARIABLE.
+ MINUIT WARNING IN RELease   
+ ============== VARIABLE1 IS AT ITS LOWER ALLOWED LIMIT.
+ FCN= unknown        FROM RELease     STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03   6.34888e-04   1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01   6.24246e-01  -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00   4.40149e-02  -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01   1.34832e-02  -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   28 **FIX           2
+ **********
+ PARAMETER    2  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03   6.34888e-04   1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01   6.24246e-01  -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00   4.40149e-02  -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01   1.34832e-02  -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   29 **FIX           3
+ **********
+ PARAMETER    3  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03   6.34888e-04   1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01   6.24246e-01  -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00   4.40149e-02  -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01   1.34832e-02  -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   30 **FIX           4
+ **********
+ PARAMETER    4  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03   6.34888e-04   1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01   6.24246e-01  -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00   4.40149e-02  -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01   1.34832e-02  -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   31 **FIX           5
+ **********
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01   6.24246e-01  -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00   4.40149e-02  -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01   1.34832e-02  -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   32 **FIX           6
+ **********
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00   4.40149e-02  -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01   1.34832e-02  -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   33 **FIX           7
+ **********
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01   1.34832e-02  -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   34 **FIX           8
+ **********
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   35 **FIX           9
+ **********
+ PARAMETER    9  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   36 **FIX          10
+ **********
+ PARAMETER   10  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   37 **FIX          11
+ **********
+ PARAMETER   11  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   38 **FIX          12
+ **********
+ PARAMETER   12  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   39 **FIX          13
+ **********
+ PARAMETER   13  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   40 **FIX          14
+ **********
+ PARAMETER   14  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   41 **FIX          15
+ **********
+ PARAMETER   15  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   42 **FIX          16
+ **********
+ PARAMETER   16  ALREADY FIXED. IGNORED.
+ FCN= unknown        FROM FIX         STATUS=RESET           0 CALLS         214 TOTAL
+                     EDM= unknown      STRATEGY= 2      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS      PHYSICAL LIMITS       
+  NO.   NAME      VALUE            ERROR       NEGATIVE      POSITIVE  
+   1  xs           9.53674e-04   1.00000e-03   0.00000e+00   1.00000e+03
+   2  lumi         2.67055e+03     fixed       0.00000e+00   5.00000e+03
+   3  jes          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   4  jer          1.00000e+00     fixed       0.00000e+00   2.00000e+00
+   5  p0           5.25937e-03     fixed       1.00000e-20   1.00000e-02
+   6  p1           1.61862e+01     fixed      -9.99900e+03   9.99900e+03
+   7  p2           2.94907e+00     fixed      -9.99900e+03   9.99900e+03
+   8  p3          -2.09219e-01     fixed      -9.99900e+03   9.99900e+03
+   9  p4           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  10  p5           0.00000e+00     fixed      -9.99900e+03   9.99900e+03
+  11  n0           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  12  n1           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  13  n2           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  14  n3           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  15  n4           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+  16  n5           0.00000e+00     fixed      -1.00000e+02   1.00000e+02
+                               ERR DEF= 0.5
+ **********
+ **   43 **SET PAR           1         100
+ **********
+ **********
+ **   44 **SET PRINT           0
+ **********
+ **********
+ **   45 **SET STR            2
+ **********
+ **********
+ **   46 **MIGRAD       2e+04
+ **********
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ FCN=131.77 FROM MIGRAD    STATUS=CONVERGED      41 CALLS         256 TOTAL
+                     EDM=1.92031e-05    STRATEGY= 2      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  xs           3.65346e-06   1.86889e-01   2.17486e-04** at limit **
+   2  lumi         2.67055e+03     fixed    
+   3  jes          1.00000e+00     fixed    
+   4  jer          1.00000e+00     fixed    
+   5  p0           5.25937e-03     fixed    
+   6  p1           1.61862e+01     fixed    
+   7  p2           2.94907e+00     fixed    
+   8  p3          -2.09219e-01     fixed    
+   9  p4           0.00000e+00     fixed    
+  10  p5           0.00000e+00     fixed    
+  11  n0           0.00000e+00     fixed    
+  12  n1           0.00000e+00     fixed    
+  13  n2           0.00000e+00     fixed    
+  14  n3           0.00000e+00     fixed    
+  15  n4           0.00000e+00     fixed    
+  16  n5           0.00000e+00     fixed    
+                               ERR DEF= 0.5
+ **********
+ **   47 **FIX           1
+ **********
+ **********
+ **   48 **RELEASE           2
+ **********
+ **********
+ **   49 **RELEASE           3
+ **********
+ **********
+ **   50 **RELEASE           4
+ **********
+ **********
+ **   51 **RELEASE           5
+ **********
+ **********
+ **   52 **RELEASE           6
+ **********
+ **********
+ **   53 **RELEASE           7
+ **********
+ **********
+ **   54 **RELEASE           8
+ **********
+ **********
+ **   55 **RELEASE           9
+ **********
+ **********
+ **   56 **RELEASE          10
+ **********
+ **********
+ **   57 **RELEASE          11
+ **********
+ **********
+ **   58 **RELEASE          12
+ **********
+ **********
+ **   59 **RELEASE          13
+ **********
+ **********
+ **   60 **RELEASE          14
+ **********
+ **********
+ **   61 **RELEASE          15
+ **********
+ **********
+ **   62 **RELEASE          16
+ **********
+Call limit reached: False
+**********************************************************************
+
+observed bound = [ 0 , 0.0471427 ]
