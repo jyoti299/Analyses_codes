@@ -1,0 +1,68 @@
+[INFO] No qualified trg data found for run  167943
+[INFO] No qualified trg data found for run  167967
+[INFO] No qualified trg data found for run  167969
+[INFO] No qualified trg data found for run  172632
+[INFO] No qualified trg data found for run  172820
+[INFO] No qualified trg data found for run  172823
+[INFO] No qualified trg data found for run  172866
+[INFO] No qualified trg data found for run  165401
+[INFO] No qualified trg data found for run  179193
+[INFO] No qualified trg data found for run  179196
+[INFO] No qualified trg data found for run  179202
+[INFO] No qualified trg data found for run  190487
+[INFO] No qualified trg data found for run  179212
+[INFO] No qualified trg data found for run  179242
+[INFO] No qualified trg data found for run  171084
+[INFO] No qualified trg data found for run  191831
+[INFO] No qualified trg data found for run  193114
+[INFO] No qualified trg data found for run  175908
+[INFO] No qualified trg data found for run  167960
+[INFO] No qualified trg data found for run  167961
+[INFO] No qualified trg data found for run  167964
+[INFO] No qualified trg data found for run  167965
+[INFO] No qualified trg data found for run  176203
+[INFO] No qualified trg data found for run  201417
+[INFO] No qualified trg data found for run  193113
+[INFO] No qualified trg data found for run  176866
+[INFO] No qualified trg data found for run  176980
+[INFO] No qualified trg data found for run  177314
+[INFO] No qualified trg data found for run  177315
+[INFO] No qualified trg data found for run  178206
+[INFO] No qualified trg data found for run  178672
+[INFO] No qualified trg data found for run  178704
+[INFO] No qualified trg data found for run  178707
+[INFO] No qualified trg data found for run  179186
+[INFO] No qualified trg data found for run  179200
+[INFO] No qualified trg data found for run  179203
+[INFO] No qualified trg data found for run  179218
+[INFO] No qualified trg data found for run  179220
+[INFO] No qualified trg data found for run  179227
+[INFO] No qualified trg data found for run  179234
+[INFO] No qualified trg data found for run  179237
+[INFO] No qualified trg data found for run  179245
+[INFO] No qualified trg data found for run  179246
+[INFO] No qualified trg data found for run  179451
+[INFO] No qualified trg data found for run  180075
+********************************************************************************
+* Thu Jun 12 09:26:56 2014 UTC
+* lumitype: HF , datatag: v12 , normtag: HFV2e , worktag: UNKNOWN
+* 
+* by:
+* /uscms_data/d3/rocky86/slc5_amd64_gcc462/Lumi_Calculation/CMSSW_5_3_9/bin/slc5_amd64_gcc462/lumiCalc2.py
+* 
+* update: NONE
+********************************************************************************
+ ==  = 
+|    Run:Fill | Delivered LS |     Delivered | Selected LS |      Recorded |
+----------------------------------------------------------------------------
+| 190949:2505 |         1051 |   9.640 (/pb) |   [82-1132] |   9.576 (/pb) |
+| 191090:2509 |          271 |   3.462 (/pb) |    [56-326] |   3.438 (/pb) |
+| 191367:2520 |          274 | 131.930 (/nb) |     [3-276] | 131.864 (/nb) |
+| 193112:2580 |          173 |   1.211 (/pb) |    [54-226] |   1.148 (/pb) |
+| 193116:2580 |          676 |   4.737 (/pb) |     [1-676] |   4.682 (/pb) |
+
+ ==  =  Total : 
+| Delivered LS | Delivered(/pb) | Selected LS | Recorded(/pb) |
+---------------------------------------------------------------
+|         2445 |         19.182 |        2445 |        18.976 |
+

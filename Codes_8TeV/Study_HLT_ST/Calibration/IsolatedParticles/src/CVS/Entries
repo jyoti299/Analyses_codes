@@ -1,0 +1,17 @@
+/CaloPropagateTrack.cc/1.13/Tue Oct 11 07:08:44 2011//
+/CaloSimInfo.cc/1.2/Thu Nov 19 00:16:34 2009//
+/ChargeIsolation.cc/1.6/Wed Oct 27 14:16:52 2010//
+/ChargeIsolationExtra.cc/1.1/Thu Apr 29 19:17:47 2010//
+/DebugInfo.cc/1.1/Thu Dec 22 15:35:30 2011//
+/DetIdFromEtaPhi.cc/1.2/Mon Apr 26 13:22:31 2010//
+/FindCaloHit.cc/1.2/Wed Oct 27 14:16:52 2010//
+/FindCaloHitCone.cc/1.2/Sat May  7 10:08:45 2011//
+/FindDistCone.cc/1.2/Thu Dec 22 15:35:30 2011//
+/FindEtaPhi.cc/1.1/Thu Nov  5 21:02:30 2009//
+/GenSimInfo.cc/1.4/Thu Dec 22 15:35:30 2011//
+/MatchingSimTrack.cc/1.2/Thu Feb 11 14:42:43 2010//
+/MatrixECALDetIds.cc/1.7/Thu Dec 22 15:35:30 2011//
+/MatrixHCALDetIds.cc/1.6/Thu Dec 22 15:35:30 2011//
+/TrackSelection.cc/1.2/Thu Oct 28 23:48:04 2010//
+/eECALMatrix.cc/1.9/Fri Aug 12 13:24:54 2011//
+D

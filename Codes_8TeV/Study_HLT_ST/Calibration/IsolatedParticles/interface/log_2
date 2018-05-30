@@ -1,0 +1,74 @@
+/* 								/* 
+Functions to return total energy contained in NxN (3x3/5x5/7x	Functions to return total energy contained in NxN (3x3/5x5/7x
+Hcal towers aroud a given DetId. 				Hcal towers aroud a given DetId. 
+
+Inputs : 							Inputs : 
+1. HcalTopology, 						1. HcalTopology, 
+2. DetId around which NxN is to be formed, 			2. DetId around which NxN is to be formed, 
+3. HcalRecHitCollection,					3. HcalRecHitCollection,
+4. Number of towers to be navigated along eta and phi along 	4. Number of towers to be navigated along eta and phi along 
+   one direction (navigation is done alone +-deta and +-dphi)	   one direction (navigation is done alone +-deta and +-dphi)
+5. option to include HO						5. option to include HO
+
+Authors:  Seema Sharma, Sunanda Banerjee			Authors:  Seema Sharma, Sunanda Banerjee
+Created: August 2009						Created: August 2009
+*/								*/
+
+#ifndef CalibrationIsolatedParticleseHCALMatrix_h		#ifndef CalibrationIsolatedParticleseHCALMatrix_h
+#define CalibrationIsolatedParticleseHCALMatrix_h		#define CalibrationIsolatedParticleseHCALMatrix_h
+
+// system include files						// system include files
+#include <memory>						#include <memory>
+#include <map>							#include <map>
+#include <vector>						#include <vector>
+
+// user include files						// user include files
+#include "FWCore/Framework/interface/Frameworkfwd.h"		#include "FWCore/Framework/interface/Frameworkfwd.h"
+#include "DataFormats/Common/interface/Handle.h"		#include "DataFormats/Common/interface/Handle.h"
+#include "DataFormats/Candidate/interface/Candidate.h"		#include "DataFormats/Candidate/interface/Candidate.h"
+#include "DataFormats/DetId/interface/DetId.h"			#include "DataFormats/DetId/interface/DetId.h"
+
+#include "Geometry/CaloTopology/interface/HcalTopology.h"	#include "Geometry/CaloTopology/interface/HcalTopology.h"
+
+namespace spr{							namespace spr{
+
+  template< typename T>						  template< typename T>
+  double eHCALmatrix(const HcalTopology* topology, const DetI	  double eHCALmatrix(const HcalTopology* topology, const DetI
+
+  template< typename T>						  template< typename T>
+  double eHCALmatrix(const HcalTopology* topology, const DetI	  double eHCALmatrix(const HcalTopology* topology, const DetI
+
+  template <typename T>						  template <typename T>
+  double eHCALmatrix(const CaloGeometry* geo, const HcalTopol	  double eHCALmatrix(const CaloGeometry* geo, const HcalTopol
+
+  template< typename T>						  template< typename T>
+  double eHCALmatrix(const HcalTopology* topology, const DetI	  double eHCALmatrix(const HcalTopology* topology, const DetI
+
+							      >	  template< typename T>
+							      >	  double eHCALmatrix(const HcalTopology* topology, const DetI
+							      >
+  template <typename T>						  template <typename T>
+  double energyHCALmatrixNew(const HcalTopology* topology, co	  double energyHCALmatrixNew(const HcalTopology* topology, co
+
+  template <typename T>						  template <typename T>
+  double energyHCALmatrixTotal(const HcalTopology* topology, 	  double energyHCALmatrixTotal(const HcalTopology* topology, 
+
+  template <typename T>						  template <typename T>
+  void hitHCALmatrix(const HcalTopology* topology, const DetI	  void hitHCALmatrix(const HcalTopology* topology, const DetI
+
+  template <typename T>						  template <typename T>
+  void hitHCALmatrixTotal(const HcalTopology* topology, const	  void hitHCALmatrixTotal(const HcalTopology* topology, const
+ 								 
+  template <typename T>						  template <typename T>
+  double energyHCAL(std::vector<DetId>& vdets, edm::Handle<T>	  double energyHCAL(std::vector<DetId>& vdets, edm::Handle<T>
+ 								 
+  template <typename T>						  template <typename T>
+  void energyHCALCell(HcalDetId detId, edm::Handle<T>& hits, 	  void energyHCALCell(HcalDetId detId, edm::Handle<T>& hits, 
+
+  template <typename T>						  template <typename T>
+  void hitsHCAL(std::vector<DetId>& vdets, edm::Handle<T>& hi	  void hitsHCAL(std::vector<DetId>& vdets, edm::Handle<T>& hi
+
+}								}
+
+#include "Calibration/IsolatedParticles/interface/eHCALMatrix	#include "Calibration/IsolatedParticles/interface/eHCALMatrix
+#endif								#endif

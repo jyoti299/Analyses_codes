@@ -1,0 +1,1 @@
+130613_043518: /uscmst1/prod/grid/CRAB_2_8_7_patch2/python/crab.py -create -cfg test/runCrab_Run2012A_data_StudyHLT.cfg

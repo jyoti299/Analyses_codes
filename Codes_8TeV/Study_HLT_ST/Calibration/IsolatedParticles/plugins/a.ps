@@ -1,0 +1,6297 @@
+%!PS-Adobe-3.0
+%%Title: IsoTrig.h, IsoTrig.cc
+%%For: Sunanda Banerjee
+%%Creator: a2ps version 4.13
+%%CreationDate: Tue Nov 20 08:44:52 2012
+%%BoundingBox: 24 24 588 768
+%%DocumentData: Clean7Bit
+%%Orientation: Landscape
+%%Pages: 8
+%%PageOrder: Ascend
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: font Symbol
+%%DocumentProcessColors: Black 
+%%DocumentSuppliedResources: procset a2ps-a2ps-hdr
+%%+ procset a2ps-black+white-Prolog
+%%+ encoding ISO-8859-15Encoding
+%%+ font Courier-Bold-Ogonki
+%%+ font Courier-BoldOblique-Ogonki
+%%+ font Courier-Oblique-Ogonki
+%%+ font Courier-Ogonki
+%%+ font Helvetica-Bold-Ogonki
+%%+ font Helvetica-Ogonki
+%%+ font Times-Bold-Ogonki
+%%+ font Times-Roman-Ogonki
+%%EndComments
+/a2psdict 200 dict def
+a2psdict begin
+%%BeginProlog
+%%Copyright: (c) 1988, 89, 90, 91, 92, 93 Miguel Santana
+%%Copyright: (c) 1995, 96, 97, 98 Akim Demaille, Miguel Santana
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+
+% EPSF import as in the Red Book
+/BeginInclude {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack 
+  userdict begin
+    0 setgray 0 setlinecap
+    1 setlinewidth 0 setlinejoin
+    10 setmiterlimit [ ] 0 setdash newpath
+    gs_languagelevel 1 ne {
+      false setstrokeadjust false setoverprint 
+    } if
+} bind def
+
+/EndInclude {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+/BeginEPSF {
+  BeginInclude
+  /showpage { } def
+} bind def
+
+/EndEPSF {
+  EndInclude
+} bind def
+
+% Page prefeed
+/page_prefeed {         % bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} bind def
+
+/deffont {
+  findfont exch scalefont def
+} bind def
+
+/reencode_font {
+  findfont reencode 2 copy definefont pop def
+} bind def
+
+% Function c-show (str => -)
+% centers text only according to x axis.
+/c-show { 
+  dup stringwidth pop
+  2 div neg 0 rmoveto
+  show
+} bind def
+
+% Function l-show (str => -)
+% prints texts so that it ends at currentpoint
+/l-show {
+  dup stringwidth pop neg 
+  0 
+  rmoveto show
+} bind def
+
+% center-fit show (str w => -)
+% show centered, and scale currentfont so that the width is less than w
+/cfshow {
+  exch dup stringwidth pop
+  % If the title is too big, try to make it smaller
+  3 2 roll 2 copy
+  gt
+  { % if, i.e. too big
+    exch div
+    currentfont exch scalefont setfont
+  } { % ifelse
+    pop pop 
+  }
+  ifelse
+  c-show			% center title
+} bind def
+
+% Return the y size of the current font
+% - => fontsize
+/currentfontsize {
+  currentfont /FontType get 0 eq {
+    currentfont /FontMatrix get 3 get
+  }{
+    currentfont /FontMatrix get 3 get 1000 mul
+  } ifelse
+} bind def
+
+% reencode the font
+% <encoding-vector> <fontdict> -> <newfontdict>
+/reencode { %def
+  dup length 5 add dict begin
+    { %forall
+      1 index /FID ne 
+      { def }{ pop pop } ifelse
+    } forall
+    /Encoding exch def
+
+    % Use the font's bounding box to determine the ascent, descent,
+    % and overall height; don't forget that these values have to be
+    % transformed using the font's matrix.
+    % We use `load' because sometimes BBox is executable, sometimes not.
+    % Since we need 4 numbers an not an array avoid BBox from being executed
+    /FontBBox load aload pop
+    FontMatrix transform /Ascent exch def pop
+    FontMatrix transform /Descent exch def pop
+    /FontHeight Ascent Descent sub def
+
+    % Define these in case they're not in the FontInfo (also, here
+    % they're easier to get to.
+    /UnderlinePosition 1 def
+    /UnderlineThickness 1 def
+    
+    % Get the underline position and thickness if they're defined.
+    currentdict /FontInfo known {
+      FontInfo
+      
+      dup /UnderlinePosition known {
+	dup /UnderlinePosition get
+	0 exch FontMatrix transform exch pop
+	/UnderlinePosition exch def
+      } if
+      
+      dup /UnderlineThickness known {
+	/UnderlineThickness get
+	0 exch FontMatrix transform exch pop
+	/UnderlineThickness exch def
+      } if
+      
+    } if
+    currentdict 
+  end 
+} bind def
+
+% composite fonts for ASCII-EUC mixed string
+% Version 1.2 1/31/1990
+% Orignal Ken'ichi HANDA (handa@etl.go.jp)
+% Modified Norio Katayama (katayama@rd.nacsis.ac.jp),1998
+% Extend & Fix Koji Nakamaru (maru@on.cs.keio.ac.jp), 1999
+% Anyone can freely copy, modify, distribute this program.
+
+/copyfont {	% font-dic extra-entry-count  copyfont  font-dic
+	1 index maxlength add dict begin
+	{	1 index /FID ne 2 index /UniqueID ne and
+		{def} {pop pop} ifelse
+	} forall
+	currentdict
+	end
+} bind def
+
+/compositefont { % ASCIIFontName EUCFontName RomanScale RomanOffset Rot(T/F) compositefont font
+    /RomanRotation exch def
+    /RomanOffset exch def
+    /RomanScale exch def
+    userdict /fixeucfont_dict known not {
+	userdict begin
+	    /fixeucfont_dict 2 dict begin
+		/UpperByteEncoding [
+		    16#00 1 16#20 { pop 0 } for
+		    16#21 1 16#28 { 16#20 sub } for
+		    16#29 1 16#2F { pop 0 } for
+		    16#30 1 16#74 { 16#27 sub } for
+		    16#75 1 16#FF { pop 0 } for
+		] def
+	        /LowerByteEncoding [
+		    16#00 1 16#A0 { pop /.notdef } for
+		    16#A1 1 16#FE { 16#80 sub 16 2 string cvrs
+				    (cXX) dup 1 4 -1 roll
+				    putinterval cvn } for
+		    /.notdef
+		] def
+		currentdict
+	    end def
+	end
+    } if
+    findfont dup /FontType get 0 eq {
+	14 dict begin
+	    %
+	    % 7+8 bit EUC font
+	    %
+	    12 dict begin
+		/EUCFont exch def
+		/FontInfo (7+8 bit EUC font) readonly def
+		/PaintType 0 def
+		/FontType 0 def
+		/FontMatrix matrix def
+		% /FontName
+		/Encoding fixeucfont_dict /UpperByteEncoding get def
+		/FMapType 2 def
+		EUCFont /WMode known
+		{ EUCFont /WMode get /WMode exch def }
+		{ /WMode 0 def } ifelse
+		/FDepVector [
+		    EUCFont /FDepVector get 0 get
+		    [ 16#21 1 16#28 {} for 16#30 1 16#74 {} for ]
+		    {
+			13 dict begin
+			    /EUCFont EUCFont def
+			    /UpperByte exch 16#80 add def	
+			    % /FontName
+			    /FontInfo (EUC lower byte font) readonly def
+			    /PaintType 0 def
+			    /FontType 3 def
+			    /FontMatrix matrix def
+			    /FontBBox {0 0 0 0} def
+			    /Encoding
+				fixeucfont_dict /LowerByteEncoding get def
+			    % /UniqueID
+			    % /WMode
+			    /BuildChar {
+				gsave
+				exch dup /EUCFont get setfont
+				/UpperByte get
+				2 string
+				dup 0 4 -1 roll put
+				dup 1 4 -1 roll put
+				dup stringwidth setcharwidth
+				0 0 moveto show
+				grestore
+			    } bind def
+			    currentdict
+			end
+			/lowerbytefont exch definefont
+		    } forall
+		] def
+		currentdict
+	    end
+	    /eucfont exch definefont
+	    exch
+	    findfont 1 copyfont dup begin
+		RomanRotation {
+			/FontMatrix FontMatrix
+			[ 0 RomanScale neg RomanScale 0 RomanOffset neg 0 ]
+			matrix concatmatrix def
+		}{
+			/FontMatrix FontMatrix
+			[ RomanScale 0 0 RomanScale 0 RomanOffset ] matrix concatmatrix
+			def
+			/CDevProc
+			    {pop pop pop pop 0 exch -1000 exch 2 div 880} def
+		} ifelse
+	    end
+	    /asciifont exch definefont
+	    exch
+	    /FDepVector [ 4 2 roll ] def
+	    /FontType 0 def
+	    /WMode 0 def
+	    /FMapType 4 def
+	    /FontMatrix matrix def
+	    /Encoding [0 1] def
+	    /FontBBox {0 0 0 0} def
+%	    /FontHeight 1.0 def % XXXX
+	    /FontHeight RomanScale 1.0 ge { RomanScale }{ 1.0 } ifelse def
+	    /Descent -0.3 def   % XXXX
+	    currentdict
+	end
+	/tmpfont exch definefont
+	pop
+	/tmpfont findfont
+    }{
+	pop findfont 0 copyfont
+    } ifelse
+} def	
+
+/slantfont {	% FontName slant-degree  slantfont  font'
+    exch findfont 1 copyfont begin
+    [ 1 0 4 -1 roll 1 0 0 ] FontMatrix exch matrix concatmatrix
+    /FontMatrix exch def
+    currentdict
+    end
+} def
+
+% Function print line number (<string> # -)
+/# {
+  gsave
+    sx cw mul neg 2 div 0 rmoveto
+    f# setfont
+    c-show
+  grestore
+} bind def
+
+% -------- Some routines to enlight plain b/w printings ---------
+
+% Underline
+% width --
+/dounderline {
+  currentpoint
+  gsave
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    0 rlineto
+    stroke
+  grestore
+} bind def
+
+% Underline a string
+% string --
+/dounderlinestring {
+  stringwidth pop
+  dounderline
+} bind def
+
+/UL {
+  /ul exch store
+} bind def
+
+% Draw a box of WIDTH wrt current font
+% width --
+/dobox {
+  currentpoint
+  gsave
+    newpath
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    dup 0 rlineto
+    0 currentfont /FontHeight get currentfontsize mul rlineto
+    neg 0 rlineto
+    closepath
+    stroke
+  grestore
+} bind def
+
+/BX {
+  /bx exch store
+} bind def
+
+% Box a string
+% string --
+/doboxstring {
+  stringwidth pop
+  dobox
+} bind def
+
+%
+% ------------- Color routines ---------------
+%
+/FG /setrgbcolor load def
+
+% Draw the background
+% width --
+/dobackground {
+  currentpoint
+  gsave
+    newpath
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    dup 0 rlineto
+    0 currentfont /FontHeight get currentfontsize mul rlineto
+    neg 0 rlineto
+    closepath
+    bgcolor aload pop setrgbcolor
+    fill
+  grestore
+} bind def
+
+% Draw bg for a string
+% string --
+/dobackgroundstring {
+  stringwidth pop
+  dobackground
+} bind def
+
+
+/BG {
+  dup /bg exch store
+  { mark 4 1 roll ] /bgcolor exch store } if
+} bind def
+
+
+/Show {
+  bg { dup dobackgroundstring } if
+  ul { dup dounderlinestring } if
+  bx { dup doboxstring } if
+  show
+} bind def
+
+% Function T(ab), jumps to the n-th tabulation in the current line
+/T {
+  cw mul x0 add
+  bg { dup currentpoint pop sub dobackground } if
+  ul { dup currentpoint pop sub dounderline } if
+  bx { dup currentpoint pop sub dobox } if
+  y0 moveto
+} bind def
+
+% Function n: move to the next line
+/n {
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+% Function N: show and move to the next line
+/N {
+  Show
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+/S {
+  Show
+} bind def
+
+%%BeginResource: procset a2ps-a2ps-hdr 2.0 2
+%%Copyright: (c) 1988, 89, 90, 91, 92, 93 Miguel Santana
+%%Copyright: (c) 1995, 96, 97, 98 Akim Demaille, Miguel Santana
+% Function title: prints page header.
+% <ct> <rt> <lt> are passed as argument
+/title { 
+  % 1. Draw the background
+  x v get y v get moveto
+  gsave
+    0 th 2 div neg rmoveto 
+    th setlinewidth
+    0.95 setgray
+    pw 0 rlineto stroke
+  grestore
+  % 2. Border it
+  gsave
+    0.7 setlinewidth
+    pw 0 rlineto
+    0 th neg rlineto
+    pw neg 0 rlineto
+    closepath stroke
+  grestore
+  % stk: ct rt lt
+  x v get y v get th sub 1 add moveto
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  % 3. The left title
+  gsave
+    dup stringwidth pop fnfs 0.8 mul add exch % leave space took on stack
+    fnfs 0.8 mul hm rmoveto
+    show			% left title
+  grestore
+  exch
+  % stk: ct ltw rt
+  % 4. the right title
+  gsave
+    dup stringwidth pop fnfs 0.8 mul add exch % leave space took on stack
+    dup
+    pw exch stringwidth pop fnfs 0.8 mul add sub
+    hm
+    rmoveto
+    show			% right title
+  grestore
+  % stk: ct ltw rtw
+  % 5. the center title
+  gsave
+    pw 3 1 roll
+    % stk: ct pw ltw rtw
+    3 copy 
+    % Move to the center of the left room
+    sub add 2 div hm rmoveto
+    % What is the available space in here?
+    add sub fnfs 0.8 mul sub fnfs 0.8 mul sub
+    % stk: ct space_left
+  fHelvetica-Bold fnfs scalefont setfont
+    cfshow
+  grestore
+} bind def
+
+% Function border: prints virtual page border
+/border { %def
+  gsave				% print four sides
+    0 setgray
+    x v get y v get moveto
+    0.7 setlinewidth		% of the square
+    pw 0 rlineto
+    0 ph neg rlineto
+    pw neg 0 rlineto
+    closepath stroke
+  grestore
+} bind def
+
+% Function water: prints a water mark in background
+/water { %def
+  gsave
+    scx scy moveto rotate
+  fTimes-Bold 100 scalefont setfont
+    .97 setgray
+    dup stringwidth pop 2 div neg -50 rmoveto
+    show
+  grestore
+} bind def
+
+% Function rhead: prints the right header
+/rhead {  %def
+  lx ly moveto
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  l-show
+} bind def
+
+% Function footer (cf rf lf -> -)
+/footer {
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  dx dy moveto
+  show
+
+  snx sny moveto
+  l-show
+  
+  fnx fny moveto
+  c-show
+} bind def
+%%EndResource
+%%BeginResource: procset a2ps-black+white-Prolog 2.0 1
+
+% Function T(ab), jumps to the n-th tabulation in the current line
+/T { 
+  cw mul x0 add y0 moveto
+} bind def
+
+% Function n: move to the next line
+/n { %def
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+% Function N: show and move to the next line
+/N {
+  Show
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+}  bind def
+
+/S {
+  Show
+} bind def
+
+/p {
+  false UL
+  false BX
+  fCourier bfs scalefont setfont
+  Show
+} bind def
+
+/sy {
+  false UL
+  false BX
+  fSymbol bfs scalefont setfont
+  Show
+} bind def
+
+/k {
+  false UL
+  false BX
+  fCourier-Oblique bfs scalefont setfont
+  Show
+} bind def
+
+/K {
+  false UL
+  false BX
+  fCourier-Bold bfs scalefont setfont
+  Show
+} bind def
+
+/c {
+  false UL
+  false BX
+  fCourier-Oblique bfs scalefont setfont
+  Show
+} bind def
+
+/C {
+  false UL
+  false BX
+  fCourier-BoldOblique bfs scalefont setfont
+  Show 
+} bind def
+
+/l {
+  false UL
+  false BX
+  fHelvetica bfs scalefont setfont
+  Show
+} bind def
+
+/L {
+  false UL
+  false BX
+  fHelvetica-Bold bfs scalefont setfont
+  Show 
+} bind def
+
+/str{
+  false UL
+  false BX
+  fTimes-Roman bfs scalefont setfont
+  Show
+} bind def
+
+/e{
+  false UL
+  true BX
+  fHelvetica-Bold bfs scalefont setfont
+  Show
+} bind def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Symbol
+%%BeginResource: encoding ISO-8859-15Encoding
+/ISO-8859-15Encoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright 
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash 
+/zero /one /two /three /four /five /six /seven 
+/eight /nine /colon /semicolon /less /equal /greater /question 
+/at /A /B /C /D /E /F /G 
+/H /I /J /K /L /M /N /O 
+/P /Q /R /S /T /U /V /W 
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore 
+/quoteleft /a /b /c /d /e /f /g 
+/h /i /j /k /l /m /n /o 
+/p /q /r /s /t /u /v /w 
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/space /exclamdown /cent /sterling /Euro /yen /Scaron /section 
+/scaron /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron 
+/degree /plusminus /twosuperior /threesuperior /Zcaron /mu /paragraph /bullet 
+/zcaron /onesuperior /ordmasculine /guillemotright /OE /oe /Ydieresis /questiondown 
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla 
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis 
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply 
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls 
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla 
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis 
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide 
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis 
+] def
+%%EndResource
+%%BeginResource: font Courier-Bold-Ogonki
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding OgonkiEncoding
+/OgonkiEncoding [
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /quotesingle
+/quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl /endash /dagger
+/daggerdbl /periodcentered /paragraph /bullet /quotesinglbase /quotedblbase /quotedblright /guillemotright
+/ellipsis /perthousand /questiondown /grave /circumflex /tilde /macron /ring
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /emdash /AE /ordfeminine /Oslash /OE /ordmasculine /ae
+/dotlessi /oslash /oe /threesuperior /thorn /twosuperior /threequarters /Eth
+/trademark /registered /onequarter /Thorn /logicalnot /plusminus /minus /onesuperior
+/copyright /mu /eth /brokenbar /onehalf /dotlessj /Euro /.notdef
+/space /Aogonek /breve /Lslash /currency /Lcaron /Sacute /section
+/dieresis /Scaron /Scedilla /Tcaron /Zacute /hyphen /Zcaron /Zdotaccent
+/degree /aogonek /ogonek /lslash /acute /lcaron /sacute /caron
+/cedilla /scaron /scedilla /tcaron /zacute /hungarumlaut /zcaron /zdotaccent
+% 300
+/Racute /Aacute /Acircumflex /Abreve /Adieresis /Lacute /Cacute /Ccedilla
+/Ccaron /Eacute /Eogonek /Edieresis /Ecaron /Iacute /Icircumflex /Dcaron
+/Eth /Nacute /Ncaron /Oacute /Ocircumflex /Ohungarumlaut /Odieresis /multiply
+/Rcaron /Uring /Uacute /Uhungarumlaut /Udieresis /Yacute /Tcedilla /germandbls
+/racute /aacute /acircumflex /abreve /adieresis /lacute /cacute /ccedilla
+/ccaron /eacute /eogonek /edieresis /ecaron /iacute /icircumflex /dcaron
+/dbar /nacute /ncaron /oacute /ocircumflex /ohungarumlaut /odieresis /divide
+/rcaron /uring /uacute /uhungarumlaut /udieresis /yacute /tcedilla /dotaccent
+] def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding StandardEncoding
+/StandardEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /section
+/currency /quotesingle /quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl
+/.notdef /endash /dagger /daggerdbl /periodcentered /.notdef /paragraph /bullet
+/quotesinglbase /quotedblbase /quotedblright /guillemotright /ellipsis /perthousand /.notdef /questiondown
+% 300
+/.notdef /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/emdash /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /AE /.notdef /ordfeminine /.notdef /.notdef /.notdef /.notdef
+/Lslash /Oslash /OE /ordmasculine /.notdef /.notdef /.notdef /.notdef
+/.notdef /ae /.notdef /.notdef /.notdef /dotlessi /.notdef /.notdef
+/lslash /oslash /oe /germandbls /.notdef /.notdef /.notdef /.notdef
+] def
+%%EndResource
+%!
+% Add composite (i.e. accented) characters to any font
+% By J. Chroboczek <jec@dcs.ed.ac.uk>
+%
+% -- code follows this line --
+%%BeginResource: procset compose 0.8 0
+% Copyright (c) 1996-1999 by J. Chroboczek
+% This code may be distributed under the terms of the 
+% GNU Public License, either version 2 of the license, or (at your
+% option) any later version.
+/makeCompositeDict 20 dict def
+makeCompositeDict begin
+/nameUnique {                           % name nameUnique namexxxxxx
+  dup length exch 1 index string cvs    % length (name)
+  1 index 12 add string dup             % length (name) (...) (...)
+  3 2 roll 0 exch putinterval           % length (name...)
+  dup 3 2 roll
+  rand 12 string cvs
+  putinterval
+} bind def
+
+/doMakeComposite
+{
+  /compositeChars exch def
+  /targetEncoding exch def
+  /baseEncoding exch def
+  /newfontname exch def
+  /oldfontname exch def
+  /oldfont oldfontname findfont def
+  /newfont 20 dict def
+  /oldFontMatrix oldfont /FontMatrix get def
+  /oldFontBBox oldfont /FontBBox get cvlit def
+  /oldfontcopy oldfont length dict def
+
+  newfont begin
+    /FontType 3 def
+    /PaintType 0 def      % not used
+    /FontMatrix [0.001 0 0 0.001 0 0] def
+    /FontBBox
+    [
+      oldFontBBox 0 get oldFontBBox 1 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+      oldFontBBox 2 get oldFontBBox 3 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+    ] cvx def
+
+    /StrokeWidth 0 def                  % not used
+
+    /Encoding targetEncoding def
+
+    /Decoding 256 dict def              % invert base encoding vector
+    Decoding begin
+      0 1 255
+      { dup baseEncoding exch get exch def } bind for
+    end
+
+    newfont /compositeChars compositeChars put
+
+    /FontName newfontname def
+
+% make a copy of the original font, reencoding it
+    oldfont
+    oldfontcopy begin
+      {1 index /FID ne
+        {def}
+        {pop pop} ifelse
+      } bind forall
+    end
+    oldfontcopy /Encoding baseEncoding put
+    oldfontname nameUnique oldfontcopy definefont
+    1000 scalefont /OriginalFont exch def
+
+    /BuildChar                          % newfont n BuildChar -
+    {
+      exch begin                        % n
+        /OriginalFont load setfont
+        /Encoding load exch get         % glyphName
+        /compositeChars load dup
+        2 index known                   % glyphName compositeChars known-p
+        { 1 index get                   % glyphName [ 65 x y 129 ]
+          dup 0 get ( ) dup             % glyphName [...] 65 ( ) ( )
+          0 3 index put                 % glyphName [...] 65 (A)
+          dup stringwidth setcharwidth
+          0 0 moveto
+          show pop                      % glyphName [...]
+          dup 1 get 1 index 2 get       % glyphName [...] x y
+          moveto                        % glyphName [...]
+          3 get ( ) dup 3 2 roll        % glyphName ( ) ( ) 129
+          0 exch put                    % glyphName (')
+          show                          % glyphName
+        }
+        { pop
+          /Decoding load                % glyphName Decoding
+          dup 2 index known             % glyphName Decoding known-p
+          { exch get }
+          { pop pop 0 } ifelse          % n'
+          ( ) dup 0 3 index put dup     % n' (A) (A)
+          stringwidth setcharwidth
+          0 0 moveto
+          show                          % n'
+        } ifelse
+        pop
+      end
+    } bind def
+  end                                   % newfont
+  newfontname newfont definefont pop
+} def                                   % doMakeComposite
+
+/fillEuro {                             % w h --
+  gsave exch 1000 div exch 1000 div scale
+  955.852 232.172 moveto
+  904.495 180.815 lineto
+  829.454 117.848 734.626 83.333 636.667 83.333 curveto
+  406.667 83.333 220 270 220 500 curveto
+  220 730 406.667 916.667 636.667 916.667 curveto
+  759.831 916.667 876.684 862.177 955.852 767.828 curveto
+  988.474 855.291 lineto
+  894.851 947.996 768.422 1000 636.667 1000 curveto
+  360.667 1000 136.667 776 136.667 500 curveto
+  136.667 224 360.667 0 636.667 0 curveto
+  753.23 0 866.13 40.725 955.852 115.135 curveto
+  closepath fill
+  
+  869.037 541.667 moveto
+  901.025 625 lineto
+  31.989 625 lineto
+  0 541.667 lineto
+  closepath fill
+  
+  805.059 375 moveto
+  837.048 458.333 lineto
+  31.989 458.333 lineto
+  0 375 lineto
+  closepath fill
+  grestore
+} bind def
+
+/makeEuroCharstring {                   % w h -- charstring
+  [ /pop cvx                            % w h mark pop
+    3 index 0 0 0                       % w h mark pop w 0 0 0
+    7 index 7 index /setcachedevice cvx 
+                                % w h mark pop w 0 0 0 w h setcachedevice
+    10 index 10 index /fillEuro load /exec cvx ] 
+  cvx bind 3 1 roll pop pop
+} def
+
+/doEurifyFont {                         % oldname newname --
+  exch
+  findfont dup dup                      % newname dict dict dict
+  /FontMatrix get matrix invertmatrix   % newname dict dict m
+  {} forall pop pop [ 5 1 roll 0 0] makefont setfont   % newnamedict
+  0 0 moveto
+  (5) stringwidth pop                     % newname dict w
+  (M) false charpath pathbbox 4 1 roll pop pop pop % newnamedict w h
+  3 2 roll                                % newname w h dict
+  
+  dup length dict dup 3 1 roll begin      % newname w h newdict
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    CharStrings dup length 1 add dict dup 3 1 roll begin % newnamew h newdict newdict'
+      {def} forall
+      /Euro                               % newname w h newdict newdict' /Euro
+      4 index 4 index makeEuroCharstring def
+    end                                   % newname w h newdict newdict'
+    /CharStrings exch def
+  end
+  3 1 roll pop pop                      % newname dict
+  definefont pop
+} bind def
+
+end                                     % makeCompositeDict
+
+% oldfontname newfontname baseEncoding targetEncoding compositeChars --
+/makeComposite
+{
+  makeCompositeDict begin doMakeComposite end
+} bind def
+
+% oldfontname newfontname
+/eurifyFont
+{
+  makeCompositeDict begin doEurifyFont end
+} bind def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: font Courier-Bold-Ogonki
+/Courier-Bold /Courier-Bold-Ogonki OgonkiEncoding StandardEncoding 111 dict
+dup /Agrave [65 -50 123 27] put
+dup /Aring [65 -10 123 31] put
+dup /Atilde [65 -30 123 29] put
+dup /Ecircumflex [69 0 123 28] put
+dup /Egrave [69 0 123 27] put
+dup /Gcaron [71 10 123 183] put
+dup /Idieresis [73 0 123 168] put
+dup /Igrave [73 0 123 27] put
+dup /Ntilde [78 0 123 29] put
+dup /Ograve [79 0 123 27] put
+dup /Otilde [79 0 123 29] put
+dup /Ucircumflex [85 0 123 28] put
+dup /Ugrave [85 -30 123 27] put
+dup /Ydieresis [89 0 123 168] put
+dup /agrave [97 -30 0 27] put
+dup /aring [97 0 0 31] put
+dup /atilde [97 0 0 29] put
+dup /ecircumflex [101 0 0 28] put
+dup /egrave [101 0 0 27] put
+dup /gcaron [103 -40 0 183] put
+dup /idieresis [136 -40 0 168] put
+dup /igrave [136 0 0 27] put
+dup /ntilde [110 0 0 29] put
+dup /ograve [111 0 0 27] put
+dup /otilde [111 0 0 29] put
+dup /ucircumflex [117 -20 0 28] put
+dup /ugrave [117 -30 0 27] put
+dup /ydieresis [121 10 0 168] put
+dup /abreve [97 0 0 162] put
+dup /Abreve [65 0 130 162] put
+dup /amacron [97 0 0 30] put
+dup /Amacron [65 0 130 30] put
+dup /Aogonek [65 200 0 178] put
+dup /aogonek [97 200 0 178] put
+dup /cacute [99 0 0 180] put
+dup /Cacute [67 0 130 180] put
+dup /ccaron [99 18 0 183] put
+dup /Ccaron [67 18 130 183] put
+dup /ccircumflex [99 18 0 28] put
+dup /Ccircumflex [67 18 130 28] put
+dup /cdotaccent [99 0 0 255] put
+dup /Cdotaccent [67 0 130 255] put
+dup /dbar [100 200 250 173] put
+dup /Dbar [208 0 0 160] put
+dup /Dcaron [68 0 130 183] put
+dup /dcaron [100 30 195 183] put
+dup /ecaron [101 0 0 183] put
+dup /Ecaron [69 0 130 183] put
+dup /edotaccent [101 0 0 255] put
+dup /Edotaccent [69 0 130 255] put
+dup /emacron [101 0 0 30] put
+dup /Emacron [69 0 130 30] put
+dup /Eogonek [69 0 0 178] put
+dup /eogonek [101 0 0 178] put
+dup /gacute [103 0 0 180] put
+dup /gbreve [103 0 0 162] put
+dup /Gbreve [71 18 130 162] put
+dup /gcircumflex [103 0 0 28] put
+dup /Gcircumflex [71 18 130 28] put
+dup /gdotaccent [103 0 0 255] put
+dup /Gdotaccent [71 18 130 255] put
+dup /hcircumflex [104 -20 195 28] put
+dup /Hcircumflex [72 0 130 28] put
+dup /Iogonek [73 20 0 178] put
+dup /iogonek [105 20 0 178] put
+dup /Idotaccent [73 0 130 255] put
+dup /imacron [136 0 0 30] put
+dup /Imacron [73 0 130 30] put
+dup /itilde [136 0 0 29] put
+dup /Itilde [73 0 130 29] put
+dup /Jcircumflex [74 85 130 28] put
+dup /Lacute [76 -100 130 180] put
+dup /lacute [108 -20 195 180] put
+dup /Lcaron [76 -100 130 183] put
+dup /lcaron [108 0 195 183] put
+dup /nacute [110 0 0 180] put
+dup /Nacute [78 0 130 180] put
+dup /ncaron [110 0 0 183] put
+dup /Ncaron [78 0 130 183] put
+dup /ohungarumlaut [111 0 0 189] put
+dup /Ohungarumlaut [79 0 130 189] put
+dup /omacron [111 0 0 30] put
+dup /Omacron [79 0 130 30] put
+dup /racute [114 0 0 180] put
+dup /Racute [82 0 130 180] put
+dup /rcaron [114 0 0 183] put
+dup /Rcaron [82 0 130 183] put
+dup /sacute [115 0 0 180] put
+dup /Sacute [83 0 130 180] put
+dup /scircumflex [115 0 0 28] put
+dup /Scircumflex [83 0 130 28] put
+dup /tcaron [116 0 107 183] put
+dup /Tcaron [84 0 130 183] put
+dup /Tcedilla [84 0 0 184] put
+dup /tcedilla [116 0 0 184] put
+dup /ubreve [117 0 0 162] put
+dup /Ubreve [85 0 130 162] put
+dup /uhungarumlaut [117 0 0 189] put
+dup /Uhungarumlaut [85 0 130 189] put
+dup /umacron [117 0 0 30] put
+dup /Umacron [85 0 130 30] put
+dup /uogonek [117 109 0 178] put
+dup /Uogonek [85 5 23 178] put
+dup /uring [117 0 0 31] put
+dup /Uring [85 0 130 31] put
+dup /utilde [117 0 0 29] put
+dup /Utilde [85 0 130 29] put
+dup /zacute [122 0 0 180] put
+dup /Zacute [90 0 130 180] put
+dup /zdotaccent [122 0 0 255] put
+dup /Zdotaccent [90 0 130 255] put
+makeComposite
+%%EndResource
+
+%%EndResource
+%%BeginResource: font Courier-BoldOblique-Ogonki
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding OgonkiEncoding
+/OgonkiEncoding [
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /quotesingle
+/quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl /endash /dagger
+/daggerdbl /periodcentered /paragraph /bullet /quotesinglbase /quotedblbase /quotedblright /guillemotright
+/ellipsis /perthousand /questiondown /grave /circumflex /tilde /macron /ring
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /emdash /AE /ordfeminine /Oslash /OE /ordmasculine /ae
+/dotlessi /oslash /oe /threesuperior /thorn /twosuperior /threequarters /Eth
+/trademark /registered /onequarter /Thorn /logicalnot /plusminus /minus /onesuperior
+/copyright /mu /eth /brokenbar /onehalf /dotlessj /Euro /.notdef
+/space /Aogonek /breve /Lslash /currency /Lcaron /Sacute /section
+/dieresis /Scaron /Scedilla /Tcaron /Zacute /hyphen /Zcaron /Zdotaccent
+/degree /aogonek /ogonek /lslash /acute /lcaron /sacute /caron
+/cedilla /scaron /scedilla /tcaron /zacute /hungarumlaut /zcaron /zdotaccent
+% 300
+/Racute /Aacute /Acircumflex /Abreve /Adieresis /Lacute /Cacute /Ccedilla
+/Ccaron /Eacute /Eogonek /Edieresis /Ecaron /Iacute /Icircumflex /Dcaron
+/Eth /Nacute /Ncaron /Oacute /Ocircumflex /Ohungarumlaut /Odieresis /multiply
+/Rcaron /Uring /Uacute /Uhungarumlaut /Udieresis /Yacute /Tcedilla /germandbls
+/racute /aacute /acircumflex /abreve /adieresis /lacute /cacute /ccedilla
+/ccaron /eacute /eogonek /edieresis /ecaron /iacute /icircumflex /dcaron
+/dbar /nacute /ncaron /oacute /ocircumflex /ohungarumlaut /odieresis /divide
+/rcaron /uring /uacute /uhungarumlaut /udieresis /yacute /tcedilla /dotaccent
+] def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding StandardEncoding
+/StandardEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /section
+/currency /quotesingle /quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl
+/.notdef /endash /dagger /daggerdbl /periodcentered /.notdef /paragraph /bullet
+/quotesinglbase /quotedblbase /quotedblright /guillemotright /ellipsis /perthousand /.notdef /questiondown
+% 300
+/.notdef /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/emdash /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /AE /.notdef /ordfeminine /.notdef /.notdef /.notdef /.notdef
+/Lslash /Oslash /OE /ordmasculine /.notdef /.notdef /.notdef /.notdef
+/.notdef /ae /.notdef /.notdef /.notdef /dotlessi /.notdef /.notdef
+/lslash /oslash /oe /germandbls /.notdef /.notdef /.notdef /.notdef
+] def
+%%EndResource
+%!
+% Add composite (i.e. accented) characters to any font
+% By J. Chroboczek <jec@dcs.ed.ac.uk>
+%
+% -- code follows this line --
+%%BeginResource: procset compose 0.8 0
+% Copyright (c) 1996-1999 by J. Chroboczek
+% This code may be distributed under the terms of the 
+% GNU Public License, either version 2 of the license, or (at your
+% option) any later version.
+/makeCompositeDict 20 dict def
+makeCompositeDict begin
+/nameUnique {                           % name nameUnique namexxxxxx
+  dup length exch 1 index string cvs    % length (name)
+  1 index 12 add string dup             % length (name) (...) (...)
+  3 2 roll 0 exch putinterval           % length (name...)
+  dup 3 2 roll
+  rand 12 string cvs
+  putinterval
+} bind def
+
+/doMakeComposite
+{
+  /compositeChars exch def
+  /targetEncoding exch def
+  /baseEncoding exch def
+  /newfontname exch def
+  /oldfontname exch def
+  /oldfont oldfontname findfont def
+  /newfont 20 dict def
+  /oldFontMatrix oldfont /FontMatrix get def
+  /oldFontBBox oldfont /FontBBox get cvlit def
+  /oldfontcopy oldfont length dict def
+
+  newfont begin
+    /FontType 3 def
+    /PaintType 0 def      % not used
+    /FontMatrix [0.001 0 0 0.001 0 0] def
+    /FontBBox
+    [
+      oldFontBBox 0 get oldFontBBox 1 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+      oldFontBBox 2 get oldFontBBox 3 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+    ] cvx def
+
+    /StrokeWidth 0 def                  % not used
+
+    /Encoding targetEncoding def
+
+    /Decoding 256 dict def              % invert base encoding vector
+    Decoding begin
+      0 1 255
+      { dup baseEncoding exch get exch def } bind for
+    end
+
+    newfont /compositeChars compositeChars put
+
+    /FontName newfontname def
+
+% make a copy of the original font, reencoding it
+    oldfont
+    oldfontcopy begin
+      {1 index /FID ne
+        {def}
+        {pop pop} ifelse
+      } bind forall
+    end
+    oldfontcopy /Encoding baseEncoding put
+    oldfontname nameUnique oldfontcopy definefont
+    1000 scalefont /OriginalFont exch def
+
+    /BuildChar                          % newfont n BuildChar -
+    {
+      exch begin                        % n
+        /OriginalFont load setfont
+        /Encoding load exch get         % glyphName
+        /compositeChars load dup
+        2 index known                   % glyphName compositeChars known-p
+        { 1 index get                   % glyphName [ 65 x y 129 ]
+          dup 0 get ( ) dup             % glyphName [...] 65 ( ) ( )
+          0 3 index put                 % glyphName [...] 65 (A)
+          dup stringwidth setcharwidth
+          0 0 moveto
+          show pop                      % glyphName [...]
+          dup 1 get 1 index 2 get       % glyphName [...] x y
+          moveto                        % glyphName [...]
+          3 get ( ) dup 3 2 roll        % glyphName ( ) ( ) 129
+          0 exch put                    % glyphName (')
+          show                          % glyphName
+        }
+        { pop
+          /Decoding load                % glyphName Decoding
+          dup 2 index known             % glyphName Decoding known-p
+          { exch get }
+          { pop pop 0 } ifelse          % n'
+          ( ) dup 0 3 index put dup     % n' (A) (A)
+          stringwidth setcharwidth
+          0 0 moveto
+          show                          % n'
+        } ifelse
+        pop
+      end
+    } bind def
+  end                                   % newfont
+  newfontname newfont definefont pop
+} def                                   % doMakeComposite
+
+/fillEuro {                             % w h --
+  gsave exch 1000 div exch 1000 div scale
+  955.852 232.172 moveto
+  904.495 180.815 lineto
+  829.454 117.848 734.626 83.333 636.667 83.333 curveto
+  406.667 83.333 220 270 220 500 curveto
+  220 730 406.667 916.667 636.667 916.667 curveto
+  759.831 916.667 876.684 862.177 955.852 767.828 curveto
+  988.474 855.291 lineto
+  894.851 947.996 768.422 1000 636.667 1000 curveto
+  360.667 1000 136.667 776 136.667 500 curveto
+  136.667 224 360.667 0 636.667 0 curveto
+  753.23 0 866.13 40.725 955.852 115.135 curveto
+  closepath fill
+  
+  869.037 541.667 moveto
+  901.025 625 lineto
+  31.989 625 lineto
+  0 541.667 lineto
+  closepath fill
+  
+  805.059 375 moveto
+  837.048 458.333 lineto
+  31.989 458.333 lineto
+  0 375 lineto
+  closepath fill
+  grestore
+} bind def
+
+/makeEuroCharstring {                   % w h -- charstring
+  [ /pop cvx                            % w h mark pop
+    3 index 0 0 0                       % w h mark pop w 0 0 0
+    7 index 7 index /setcachedevice cvx 
+                                % w h mark pop w 0 0 0 w h setcachedevice
+    10 index 10 index /fillEuro load /exec cvx ] 
+  cvx bind 3 1 roll pop pop
+} def
+
+/doEurifyFont {                         % oldname newname --
+  exch
+  findfont dup dup                      % newname dict dict dict
+  /FontMatrix get matrix invertmatrix   % newname dict dict m
+  {} forall pop pop [ 5 1 roll 0 0] makefont setfont   % newnamedict
+  0 0 moveto
+  (5) stringwidth pop                     % newname dict w
+  (M) false charpath pathbbox 4 1 roll pop pop pop % newnamedict w h
+  3 2 roll                                % newname w h dict
+  
+  dup length dict dup 3 1 roll begin      % newname w h newdict
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    CharStrings dup length 1 add dict dup 3 1 roll begin % newnamew h newdict newdict'
+      {def} forall
+      /Euro                               % newname w h newdict newdict' /Euro
+      4 index 4 index makeEuroCharstring def
+    end                                   % newname w h newdict newdict'
+    /CharStrings exch def
+  end
+  3 1 roll pop pop                      % newname dict
+  definefont pop
+} bind def
+
+end                                     % makeCompositeDict
+
+% oldfontname newfontname baseEncoding targetEncoding compositeChars --
+/makeComposite
+{
+  makeCompositeDict begin doMakeComposite end
+} bind def
+
+% oldfontname newfontname
+/eurifyFont
+{
+  makeCompositeDict begin doEurifyFont end
+} bind def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: font Courier-BoldOblique-Ogonki
+/Courier-BoldOblique /Courier-BoldOblique-Ogonki OgonkiEncoding StandardEncoding 111 dict
+dup /Agrave [65 -24 123 27] put
+dup /Aring [65 16 123 31] put
+dup /Atilde [65 -4 123 29] put
+dup /Ecircumflex [69 26 123 28] put
+dup /Egrave [69 26 123 27] put
+dup /Gcaron [71 36 123 183] put
+dup /Idieresis [73 26 123 168] put
+dup /Igrave [73 26 123 27] put
+dup /Ntilde [78 26 123 29] put
+dup /Ograve [79 26 123 27] put
+dup /Otilde [79 26 123 29] put
+dup /Ucircumflex [85 26 123 28] put
+dup /Ugrave [85 -4 123 27] put
+dup /Ydieresis [89 26 123 168] put
+dup /agrave [97 -30 0 27] put
+dup /aring [97 0 0 31] put
+dup /atilde [97 0 0 29] put
+dup /ecircumflex [101 0 0 28] put
+dup /egrave [101 0 0 27] put
+dup /gcaron [103 -40 0 183] put
+dup /idieresis [136 -40 0 168] put
+dup /igrave [136 0 0 27] put
+dup /ntilde [110 0 0 29] put
+dup /ograve [111 0 0 27] put
+dup /otilde [111 0 0 29] put
+dup /ucircumflex [117 -20 0 28] put
+dup /ugrave [117 -30 0 27] put
+dup /ydieresis [121 10 0 168] put
+dup /Abreve [65 -18 130 162] put
+dup /abreve [97 0 0 162] put
+dup /Amacron [65 -15 130 30] put
+dup /amacron [97 0 0 30] put
+dup /Aogonek [65 200 0 178] put
+dup /aogonek [97 200 0 178] put
+dup /cacute [99 0 0 180] put
+dup /Cacute [67 30 130 180] put
+dup /ccaron [99 0 0 183] put
+dup /Ccaron [67 30 130 183] put
+dup /ccircumflex [99 0 0 28] put
+dup /Ccircumflex [67 30 130 28] put
+dup /cdotaccent [99 0 0 255] put
+dup /Cdotaccent [67 30 130 255] put
+dup /dbar [100 200 250 173] put
+dup /Dbar [208 0 0 160] put
+dup /Dcaron [68 -12 130 183] put
+dup /dcaron [100 35 178 183] put
+dup /ecaron [101 0 0 183] put
+dup /Ecaron [69 30 130 183] put
+dup /edotaccent [101 0 0 255] put
+dup /Edotaccent [69 30 130 255] put
+dup /emacron [101 0 0 30] put
+dup /Emacron [69 30 130 30] put
+dup /Eogonek [69 0 0 178] put
+dup /eogonek [101 0 0 178] put
+dup /gacute [103 0 0 180] put
+dup /gbreve [103 0 0 162] put
+dup /Gbreve [71 30 130 162] put
+dup /gcircumflex [103 0 0 28] put
+dup /Gcircumflex [71 30 130 28] put
+dup /gdotaccent [103 0 0 255] put
+dup /Gdotaccent [71 30 130 255] put
+dup /hcircumflex [104 0 178 28] put
+dup /Hcircumflex [72 30 130 28] put
+dup /Idotaccent [73 30 130 255] put
+dup /imacron [136 0 0 30] put
+dup /Imacron [73 30 130 30] put
+dup /Iogonek [73 20 0 178] put
+dup /iogonek [105 20 0 178] put
+dup /itilde [136 0 0 29] put
+dup /Itilde [73 30 130 29] put
+dup /Jcircumflex [74 95 130 28] put
+dup /Lacute [76 -88 130 180] put
+dup /lacute [108 0 178 180] put
+dup /Lcaron [76 -88 130 183] put
+dup /lcaron [108 0 178 183] put
+dup /nacute [110 0 0 180] put
+dup /Nacute [78 30 130 180] put
+dup /ncaron [110 0 0 183] put
+dup /Ncaron [78 30 130 183] put
+dup /ohungarumlaut [111 0 0 189] put
+dup /Ohungarumlaut [79 30 130 189] put
+dup /omacron [111 0 0 30] put
+dup /Omacron [79 30 130 30] put
+dup /racute [114 0 0 180] put
+dup /Racute [82 30 130 180] put
+dup /rcaron [114 0 0 183] put
+dup /Rcaron [82 30 130 183] put
+dup /sacute [115 0 0 180] put
+dup /Sacute [83 30 130 180] put
+dup /scircumflex [115 0 0 28] put
+dup /Scircumflex [83 30 130 28] put
+dup /tcaron [116 -59 106 183] put
+dup /Tcaron [84 30 130 183] put
+dup /Tcedilla [84 0 0 184] put
+dup /tcedilla [116 0 0 184] put
+dup /ubreve [117 0 0 162] put
+dup /Ubreve [85 30 130 162] put
+dup /uhungarumlaut [117 0 0 189] put
+dup /Uhungarumlaut [85 30 130 189] put
+dup /umacron [117 0 0 30] put
+dup /Umacron [85 30 130 30] put
+dup /Uogonek [85 0 7 178] put
+dup /uogonek [117 108 0 178] put
+dup /uring [117 0 0 31] put
+dup /Uring [85 30 130 31] put
+dup /utilde [117 0 0 29] put
+dup /Utilde [85 30 130 29] put
+dup /zacute [122 0 0 180] put
+dup /Zacute [90 30 130 180] put
+dup /zdotaccent [122 0 0 255] put
+dup /Zdotaccent [90 30 130 255] put
+makeComposite
+%%EndResource
+
+%%EndResource
+%%BeginResource: font Courier-Oblique-Ogonki
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding OgonkiEncoding
+/OgonkiEncoding [
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /quotesingle
+/quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl /endash /dagger
+/daggerdbl /periodcentered /paragraph /bullet /quotesinglbase /quotedblbase /quotedblright /guillemotright
+/ellipsis /perthousand /questiondown /grave /circumflex /tilde /macron /ring
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /emdash /AE /ordfeminine /Oslash /OE /ordmasculine /ae
+/dotlessi /oslash /oe /threesuperior /thorn /twosuperior /threequarters /Eth
+/trademark /registered /onequarter /Thorn /logicalnot /plusminus /minus /onesuperior
+/copyright /mu /eth /brokenbar /onehalf /dotlessj /Euro /.notdef
+/space /Aogonek /breve /Lslash /currency /Lcaron /Sacute /section
+/dieresis /Scaron /Scedilla /Tcaron /Zacute /hyphen /Zcaron /Zdotaccent
+/degree /aogonek /ogonek /lslash /acute /lcaron /sacute /caron
+/cedilla /scaron /scedilla /tcaron /zacute /hungarumlaut /zcaron /zdotaccent
+% 300
+/Racute /Aacute /Acircumflex /Abreve /Adieresis /Lacute /Cacute /Ccedilla
+/Ccaron /Eacute /Eogonek /Edieresis /Ecaron /Iacute /Icircumflex /Dcaron
+/Eth /Nacute /Ncaron /Oacute /Ocircumflex /Ohungarumlaut /Odieresis /multiply
+/Rcaron /Uring /Uacute /Uhungarumlaut /Udieresis /Yacute /Tcedilla /germandbls
+/racute /aacute /acircumflex /abreve /adieresis /lacute /cacute /ccedilla
+/ccaron /eacute /eogonek /edieresis /ecaron /iacute /icircumflex /dcaron
+/dbar /nacute /ncaron /oacute /ocircumflex /ohungarumlaut /odieresis /divide
+/rcaron /uring /uacute /uhungarumlaut /udieresis /yacute /tcedilla /dotaccent
+] def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding StandardEncoding
+/StandardEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /section
+/currency /quotesingle /quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl
+/.notdef /endash /dagger /daggerdbl /periodcentered /.notdef /paragraph /bullet
+/quotesinglbase /quotedblbase /quotedblright /guillemotright /ellipsis /perthousand /.notdef /questiondown
+% 300
+/.notdef /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/emdash /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /AE /.notdef /ordfeminine /.notdef /.notdef /.notdef /.notdef
+/Lslash /Oslash /OE /ordmasculine /.notdef /.notdef /.notdef /.notdef
+/.notdef /ae /.notdef /.notdef /.notdef /dotlessi /.notdef /.notdef
+/lslash /oslash /oe /germandbls /.notdef /.notdef /.notdef /.notdef
+] def
+%%EndResource
+%!
+% Add composite (i.e. accented) characters to any font
+% By J. Chroboczek <jec@dcs.ed.ac.uk>
+%
+% -- code follows this line --
+%%BeginResource: procset compose 0.8 0
+% Copyright (c) 1996-1999 by J. Chroboczek
+% This code may be distributed under the terms of the 
+% GNU Public License, either version 2 of the license, or (at your
+% option) any later version.
+/makeCompositeDict 20 dict def
+makeCompositeDict begin
+/nameUnique {                           % name nameUnique namexxxxxx
+  dup length exch 1 index string cvs    % length (name)
+  1 index 12 add string dup             % length (name) (...) (...)
+  3 2 roll 0 exch putinterval           % length (name...)
+  dup 3 2 roll
+  rand 12 string cvs
+  putinterval
+} bind def
+
+/doMakeComposite
+{
+  /compositeChars exch def
+  /targetEncoding exch def
+  /baseEncoding exch def
+  /newfontname exch def
+  /oldfontname exch def
+  /oldfont oldfontname findfont def
+  /newfont 20 dict def
+  /oldFontMatrix oldfont /FontMatrix get def
+  /oldFontBBox oldfont /FontBBox get cvlit def
+  /oldfontcopy oldfont length dict def
+
+  newfont begin
+    /FontType 3 def
+    /PaintType 0 def      % not used
+    /FontMatrix [0.001 0 0 0.001 0 0] def
+    /FontBBox
+    [
+      oldFontBBox 0 get oldFontBBox 1 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+      oldFontBBox 2 get oldFontBBox 3 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+    ] cvx def
+
+    /StrokeWidth 0 def                  % not used
+
+    /Encoding targetEncoding def
+
+    /Decoding 256 dict def              % invert base encoding vector
+    Decoding begin
+      0 1 255
+      { dup baseEncoding exch get exch def } bind for
+    end
+
+    newfont /compositeChars compositeChars put
+
+    /FontName newfontname def
+
+% make a copy of the original font, reencoding it
+    oldfont
+    oldfontcopy begin
+      {1 index /FID ne
+        {def}
+        {pop pop} ifelse
+      } bind forall
+    end
+    oldfontcopy /Encoding baseEncoding put
+    oldfontname nameUnique oldfontcopy definefont
+    1000 scalefont /OriginalFont exch def
+
+    /BuildChar                          % newfont n BuildChar -
+    {
+      exch begin                        % n
+        /OriginalFont load setfont
+        /Encoding load exch get         % glyphName
+        /compositeChars load dup
+        2 index known                   % glyphName compositeChars known-p
+        { 1 index get                   % glyphName [ 65 x y 129 ]
+          dup 0 get ( ) dup             % glyphName [...] 65 ( ) ( )
+          0 3 index put                 % glyphName [...] 65 (A)
+          dup stringwidth setcharwidth
+          0 0 moveto
+          show pop                      % glyphName [...]
+          dup 1 get 1 index 2 get       % glyphName [...] x y
+          moveto                        % glyphName [...]
+          3 get ( ) dup 3 2 roll        % glyphName ( ) ( ) 129
+          0 exch put                    % glyphName (')
+          show                          % glyphName
+        }
+        { pop
+          /Decoding load                % glyphName Decoding
+          dup 2 index known             % glyphName Decoding known-p
+          { exch get }
+          { pop pop 0 } ifelse          % n'
+          ( ) dup 0 3 index put dup     % n' (A) (A)
+          stringwidth setcharwidth
+          0 0 moveto
+          show                          % n'
+        } ifelse
+        pop
+      end
+    } bind def
+  end                                   % newfont
+  newfontname newfont definefont pop
+} def                                   % doMakeComposite
+
+/fillEuro {                             % w h --
+  gsave exch 1000 div exch 1000 div scale
+  955.852 232.172 moveto
+  904.495 180.815 lineto
+  829.454 117.848 734.626 83.333 636.667 83.333 curveto
+  406.667 83.333 220 270 220 500 curveto
+  220 730 406.667 916.667 636.667 916.667 curveto
+  759.831 916.667 876.684 862.177 955.852 767.828 curveto
+  988.474 855.291 lineto
+  894.851 947.996 768.422 1000 636.667 1000 curveto
+  360.667 1000 136.667 776 136.667 500 curveto
+  136.667 224 360.667 0 636.667 0 curveto
+  753.23 0 866.13 40.725 955.852 115.135 curveto
+  closepath fill
+  
+  869.037 541.667 moveto
+  901.025 625 lineto
+  31.989 625 lineto
+  0 541.667 lineto
+  closepath fill
+  
+  805.059 375 moveto
+  837.048 458.333 lineto
+  31.989 458.333 lineto
+  0 375 lineto
+  closepath fill
+  grestore
+} bind def
+
+/makeEuroCharstring {                   % w h -- charstring
+  [ /pop cvx                            % w h mark pop
+    3 index 0 0 0                       % w h mark pop w 0 0 0
+    7 index 7 index /setcachedevice cvx 
+                                % w h mark pop w 0 0 0 w h setcachedevice
+    10 index 10 index /fillEuro load /exec cvx ] 
+  cvx bind 3 1 roll pop pop
+} def
+
+/doEurifyFont {                         % oldname newname --
+  exch
+  findfont dup dup                      % newname dict dict dict
+  /FontMatrix get matrix invertmatrix   % newname dict dict m
+  {} forall pop pop [ 5 1 roll 0 0] makefont setfont   % newnamedict
+  0 0 moveto
+  (5) stringwidth pop                     % newname dict w
+  (M) false charpath pathbbox 4 1 roll pop pop pop % newnamedict w h
+  3 2 roll                                % newname w h dict
+  
+  dup length dict dup 3 1 roll begin      % newname w h newdict
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    CharStrings dup length 1 add dict dup 3 1 roll begin % newnamew h newdict newdict'
+      {def} forall
+      /Euro                               % newname w h newdict newdict' /Euro
+      4 index 4 index makeEuroCharstring def
+    end                                   % newname w h newdict newdict'
+    /CharStrings exch def
+  end
+  3 1 roll pop pop                      % newname dict
+  definefont pop
+} bind def
+
+end                                     % makeCompositeDict
+
+% oldfontname newfontname baseEncoding targetEncoding compositeChars --
+/makeComposite
+{
+  makeCompositeDict begin doMakeComposite end
+} bind def
+
+% oldfontname newfontname
+/eurifyFont
+{
+  makeCompositeDict begin doEurifyFont end
+} bind def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: font Courier-Oblique-Ogonki
+/Courier-Oblique /Courier-Oblique-Ogonki OgonkiEncoding StandardEncoding 111 dict
+dup /Agrave [65 -4 121 27] put
+dup /Aring [65 12 126 31] put
+dup /Atilde [65 27 126 29] put
+dup /Ecircumflex [69 26 121 28] put
+dup /Egrave [69 26 121 27] put
+dup /Gcaron [71 29 136 183] put
+dup /Idieresis [73 29 136 168] put
+dup /Igrave [73 26 121 27] put
+dup /Ntilde [78 27 126 29] put
+dup /Ograve [79 26 121 27] put
+dup /Otilde [79 27 126 29] put
+dup /Ucircumflex [85 26 121 28] put
+dup /Ugrave [85 -4 121 27] put
+dup /Ydieresis [89 29 136 168] put
+dup /agrave [97 0 0 27] put
+dup /aring [97 0 0 31] put
+dup /atilde [97 0 0 29] put
+dup /ecircumflex [101 0 0 28] put
+dup /egrave [101 0 0 27] put
+dup /gcaron [103 -30 0 183] put
+dup /idieresis [136 -30 0 168] put
+dup /igrave [136 -30 0 27] put
+dup /ntilde [110 0 0 29] put
+dup /ograve [111 0 0 27] put
+dup /otilde [111 0 0 29] put
+dup /ucircumflex [117 -10 0 28] put
+dup /ugrave [117 -30 0 27] put
+dup /ydieresis [121 -10 0 168] put
+dup /abreve [97 0 0 162] put
+dup /Abreve [65 0 133 162] put
+dup /amacron [97 0 0 30] put
+dup /Amacron [65 0 133 30] put
+dup /Aogonek [65 200 0 178] put
+dup /aogonek [97 200 0 178] put
+dup /cacute [99 0 0 180] put
+dup /Cacute [67 53 133 180] put
+dup /ccaron [99 0 0 183] put
+dup /Ccaron [67 53 133 183] put
+dup /ccircumflex [99 0 2 28] put
+dup /Ccircumflex [67 53 133 28] put
+dup /cdotaccent [99 0 0 255] put
+dup /Cdotaccent [67 53 133 255] put
+dup /dbar [100 200 250 173] put
+dup /Dbar [208 0 0 160] put
+dup /dcaron [100 20 182 183] put
+dup /Dcaron [68 33 133 183] put
+dup /ecaron [101 0 0 183] put
+dup /Ecaron [69 53 133 183] put
+dup /edotaccent [101 0 0 255] put
+dup /Edotaccent [69 53 133 255] put
+dup /emacron [101 0 0 30] put
+dup /Emacron [69 53 133 30] put
+dup /Eogonek [69 0 0 178] put
+dup /eogonek [101 0 0 178] put
+dup /gacute [103 -10 0 180] put
+dup /gbreve [103 -10 0 162] put
+dup /Gbreve [71 53 133 162] put
+dup /gcircumflex [103 -10 0 28] put
+dup /Gcircumflex [71 53 133 28] put
+dup /gdotaccent [103 0 0 255] put
+dup /Gdotaccent [71 53 186 255] put
+dup /hcircumflex [104 0 182 28] put
+dup /Hcircumflex [72 30 133 28] put
+dup /Idotaccent [73 30 133 255] put
+dup /imacron [136 0 0 30] put
+dup /Imacron [73 30 133 30] put
+dup /iogonek [105 20 0 178] put
+dup /Iogonek [73 20 0 178] put
+dup /itilde [136 0 0 29] put
+dup /Itilde [73 30 133 29] put
+dup /Jcircumflex [74 98 133 28] put
+dup /Lacute [76 -83 133 180] put
+dup /lacute [108 0 182 180] put
+dup /Lcaron [76 -83 133 183] put
+dup /lcaron [108 0 182 183] put
+dup /nacute [110 0 0 180] put
+dup /Nacute [78 53 133 180] put
+dup /ncaron [110 0 0 183] put
+dup /Ncaron [78 53 133 183] put
+dup /ohungarumlaut [111 0 0 189] put
+dup /Ohungarumlaut [79 53 133 189] put
+dup /omacron [111 0 0 30] put
+dup /Omacron [79 53 133 30] put
+dup /racute [114 0 0 180] put
+dup /Racute [82 53 133 180] put
+dup /rcaron [114 0 0 183] put
+dup /Rcaron [82 40 133 183] put
+dup /sacute [115 0 0 180] put
+dup /Sacute [83 53 133 180] put
+dup /scircumflex [115 0 0 28] put
+dup /Scircumflex [83 53 133 28] put
+dup /tcaron [116 -65 118 183] put
+dup /Tcaron [84 40 133 183] put
+dup /Tcedilla [84 0 0 184] put
+dup /tcedilla [116 0 0 184] put
+dup /ubreve [117 0 0 162] put
+dup /Ubreve [85 53 133 162] put
+dup /uhungarumlaut [117 0 0 189] put
+dup /Uhungarumlaut [85 53 133 189] put
+dup /umacron [117 0 0 30] put
+dup /Umacron [85 53 133 30] put
+dup /uogonek [117 120 0 178] put
+dup /Uogonek [85 5 15 178] put
+dup /uring [117 -30 0 31] put
+dup /Uring [85 53 133 31] put
+dup /utilde [117 0 0 29] put
+dup /Utilde [85 53 133 29] put
+dup /zacute [122 0 0 180] put
+dup /Zacute [90 40 133 180] put
+dup /zdotaccent [122 0 0 255] put
+dup /Zdotaccent [90 40 133 255] put
+makeComposite
+%%EndResource
+
+%%EndResource
+%%BeginResource: font Courier-Ogonki
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding OgonkiEncoding
+/OgonkiEncoding [
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /quotesingle
+/quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl /endash /dagger
+/daggerdbl /periodcentered /paragraph /bullet /quotesinglbase /quotedblbase /quotedblright /guillemotright
+/ellipsis /perthousand /questiondown /grave /circumflex /tilde /macron /ring
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /emdash /AE /ordfeminine /Oslash /OE /ordmasculine /ae
+/dotlessi /oslash /oe /threesuperior /thorn /twosuperior /threequarters /Eth
+/trademark /registered /onequarter /Thorn /logicalnot /plusminus /minus /onesuperior
+/copyright /mu /eth /brokenbar /onehalf /dotlessj /Euro /.notdef
+/space /Aogonek /breve /Lslash /currency /Lcaron /Sacute /section
+/dieresis /Scaron /Scedilla /Tcaron /Zacute /hyphen /Zcaron /Zdotaccent
+/degree /aogonek /ogonek /lslash /acute /lcaron /sacute /caron
+/cedilla /scaron /scedilla /tcaron /zacute /hungarumlaut /zcaron /zdotaccent
+% 300
+/Racute /Aacute /Acircumflex /Abreve /Adieresis /Lacute /Cacute /Ccedilla
+/Ccaron /Eacute /Eogonek /Edieresis /Ecaron /Iacute /Icircumflex /Dcaron
+/Eth /Nacute /Ncaron /Oacute /Ocircumflex /Ohungarumlaut /Odieresis /multiply
+/Rcaron /Uring /Uacute /Uhungarumlaut /Udieresis /Yacute /Tcedilla /germandbls
+/racute /aacute /acircumflex /abreve /adieresis /lacute /cacute /ccedilla
+/ccaron /eacute /eogonek /edieresis /ecaron /iacute /icircumflex /dcaron
+/dbar /nacute /ncaron /oacute /ocircumflex /ohungarumlaut /odieresis /divide
+/rcaron /uring /uacute /uhungarumlaut /udieresis /yacute /tcedilla /dotaccent
+] def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding StandardEncoding
+/StandardEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /section
+/currency /quotesingle /quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl
+/.notdef /endash /dagger /daggerdbl /periodcentered /.notdef /paragraph /bullet
+/quotesinglbase /quotedblbase /quotedblright /guillemotright /ellipsis /perthousand /.notdef /questiondown
+% 300
+/.notdef /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/emdash /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /AE /.notdef /ordfeminine /.notdef /.notdef /.notdef /.notdef
+/Lslash /Oslash /OE /ordmasculine /.notdef /.notdef /.notdef /.notdef
+/.notdef /ae /.notdef /.notdef /.notdef /dotlessi /.notdef /.notdef
+/lslash /oslash /oe /germandbls /.notdef /.notdef /.notdef /.notdef
+] def
+%%EndResource
+%!
+% Add composite (i.e. accented) characters to any font
+% By J. Chroboczek <jec@dcs.ed.ac.uk>
+%
+% -- code follows this line --
+%%BeginResource: procset compose 0.8 0
+% Copyright (c) 1996-1999 by J. Chroboczek
+% This code may be distributed under the terms of the 
+% GNU Public License, either version 2 of the license, or (at your
+% option) any later version.
+/makeCompositeDict 20 dict def
+makeCompositeDict begin
+/nameUnique {                           % name nameUnique namexxxxxx
+  dup length exch 1 index string cvs    % length (name)
+  1 index 12 add string dup             % length (name) (...) (...)
+  3 2 roll 0 exch putinterval           % length (name...)
+  dup 3 2 roll
+  rand 12 string cvs
+  putinterval
+} bind def
+
+/doMakeComposite
+{
+  /compositeChars exch def
+  /targetEncoding exch def
+  /baseEncoding exch def
+  /newfontname exch def
+  /oldfontname exch def
+  /oldfont oldfontname findfont def
+  /newfont 20 dict def
+  /oldFontMatrix oldfont /FontMatrix get def
+  /oldFontBBox oldfont /FontBBox get cvlit def
+  /oldfontcopy oldfont length dict def
+
+  newfont begin
+    /FontType 3 def
+    /PaintType 0 def      % not used
+    /FontMatrix [0.001 0 0 0.001 0 0] def
+    /FontBBox
+    [
+      oldFontBBox 0 get oldFontBBox 1 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+      oldFontBBox 2 get oldFontBBox 3 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+    ] cvx def
+
+    /StrokeWidth 0 def                  % not used
+
+    /Encoding targetEncoding def
+
+    /Decoding 256 dict def              % invert base encoding vector
+    Decoding begin
+      0 1 255
+      { dup baseEncoding exch get exch def } bind for
+    end
+
+    newfont /compositeChars compositeChars put
+
+    /FontName newfontname def
+
+% make a copy of the original font, reencoding it
+    oldfont
+    oldfontcopy begin
+      {1 index /FID ne
+        {def}
+        {pop pop} ifelse
+      } bind forall
+    end
+    oldfontcopy /Encoding baseEncoding put
+    oldfontname nameUnique oldfontcopy definefont
+    1000 scalefont /OriginalFont exch def
+
+    /BuildChar                          % newfont n BuildChar -
+    {
+      exch begin                        % n
+        /OriginalFont load setfont
+        /Encoding load exch get         % glyphName
+        /compositeChars load dup
+        2 index known                   % glyphName compositeChars known-p
+        { 1 index get                   % glyphName [ 65 x y 129 ]
+          dup 0 get ( ) dup             % glyphName [...] 65 ( ) ( )
+          0 3 index put                 % glyphName [...] 65 (A)
+          dup stringwidth setcharwidth
+          0 0 moveto
+          show pop                      % glyphName [...]
+          dup 1 get 1 index 2 get       % glyphName [...] x y
+          moveto                        % glyphName [...]
+          3 get ( ) dup 3 2 roll        % glyphName ( ) ( ) 129
+          0 exch put                    % glyphName (')
+          show                          % glyphName
+        }
+        { pop
+          /Decoding load                % glyphName Decoding
+          dup 2 index known             % glyphName Decoding known-p
+          { exch get }
+          { pop pop 0 } ifelse          % n'
+          ( ) dup 0 3 index put dup     % n' (A) (A)
+          stringwidth setcharwidth
+          0 0 moveto
+          show                          % n'
+        } ifelse
+        pop
+      end
+    } bind def
+  end                                   % newfont
+  newfontname newfont definefont pop
+} def                                   % doMakeComposite
+
+/fillEuro {                             % w h --
+  gsave exch 1000 div exch 1000 div scale
+  955.852 232.172 moveto
+  904.495 180.815 lineto
+  829.454 117.848 734.626 83.333 636.667 83.333 curveto
+  406.667 83.333 220 270 220 500 curveto
+  220 730 406.667 916.667 636.667 916.667 curveto
+  759.831 916.667 876.684 862.177 955.852 767.828 curveto
+  988.474 855.291 lineto
+  894.851 947.996 768.422 1000 636.667 1000 curveto
+  360.667 1000 136.667 776 136.667 500 curveto
+  136.667 224 360.667 0 636.667 0 curveto
+  753.23 0 866.13 40.725 955.852 115.135 curveto
+  closepath fill
+  
+  869.037 541.667 moveto
+  901.025 625 lineto
+  31.989 625 lineto
+  0 541.667 lineto
+  closepath fill
+  
+  805.059 375 moveto
+  837.048 458.333 lineto
+  31.989 458.333 lineto
+  0 375 lineto
+  closepath fill
+  grestore
+} bind def
+
+/makeEuroCharstring {                   % w h -- charstring
+  [ /pop cvx                            % w h mark pop
+    3 index 0 0 0                       % w h mark pop w 0 0 0
+    7 index 7 index /setcachedevice cvx 
+                                % w h mark pop w 0 0 0 w h setcachedevice
+    10 index 10 index /fillEuro load /exec cvx ] 
+  cvx bind 3 1 roll pop pop
+} def
+
+/doEurifyFont {                         % oldname newname --
+  exch
+  findfont dup dup                      % newname dict dict dict
+  /FontMatrix get matrix invertmatrix   % newname dict dict m
+  {} forall pop pop [ 5 1 roll 0 0] makefont setfont   % newnamedict
+  0 0 moveto
+  (5) stringwidth pop                     % newname dict w
+  (M) false charpath pathbbox 4 1 roll pop pop pop % newnamedict w h
+  3 2 roll                                % newname w h dict
+  
+  dup length dict dup 3 1 roll begin      % newname w h newdict
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    CharStrings dup length 1 add dict dup 3 1 roll begin % newnamew h newdict newdict'
+      {def} forall
+      /Euro                               % newname w h newdict newdict' /Euro
+      4 index 4 index makeEuroCharstring def
+    end                                   % newname w h newdict newdict'
+    /CharStrings exch def
+  end
+  3 1 roll pop pop                      % newname dict
+  definefont pop
+} bind def
+
+end                                     % makeCompositeDict
+
+% oldfontname newfontname baseEncoding targetEncoding compositeChars --
+/makeComposite
+{
+  makeCompositeDict begin doMakeComposite end
+} bind def
+
+% oldfontname newfontname
+/eurifyFont
+{
+  makeCompositeDict begin doEurifyFont end
+} bind def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: font Courier-Ogonki
+/Courier /Courier-Ogonki OgonkiEncoding StandardEncoding 111 dict
+dup /Agrave [65 -30 121 27] put
+dup /Aring [65 -15 126 31] put
+dup /Atilde [65 0 126 29] put
+dup /Ecircumflex [69 0 121 28] put
+dup /Egrave [69 0 121 27] put
+dup /Gcaron [71 0 136 183] put
+dup /Idieresis [73 0 136 168] put
+dup /Igrave [73 0 121 27] put
+dup /Ntilde [78 0 126 29] put
+dup /Ograve [79 0 121 27] put
+dup /Otilde [79 0 126 29] put
+dup /Ucircumflex [85 0 121 28] put
+dup /Ugrave [85 -30 121 27] put
+dup /Ydieresis [89 0 136 168] put
+dup /agrave [97 0 0 27] put
+dup /aring [97 0 0 31] put
+dup /atilde [97 0 0 29] put
+dup /ecircumflex [101 0 0 28] put
+dup /egrave [101 0 0 27] put
+dup /gcaron [103 -30 0 183] put
+dup /idieresis [136 -30 0 168] put
+dup /igrave [136 -30 0 27] put
+dup /ntilde [110 0 0 29] put
+dup /ograve [111 0 0 27] put
+dup /otilde [111 0 0 29] put
+dup /ucircumflex [117 -10 0 28] put
+dup /ugrave [117 -30 0 27] put
+dup /ydieresis [121 -10 0 168] put
+dup /abreve [97 0 0 162] put
+dup /Abreve [65 0 133 162] put
+dup /amacron [97 0 0 30] put
+dup /Amacron [65 0 133 30] put
+dup /Aogonek [65 200 0 178] put
+dup /aogonek [97 200 0 178] put
+dup /cacute [99 17 0 180] put
+dup /Cacute [67 30 133 180] put
+dup /ccaron [99 17 0 183] put
+dup /Ccaron [67 30 133 183] put
+dup /ccircumflex [99 17 2 28] put
+dup /Ccircumflex [67 30 133 28] put
+dup /cdotaccent [99 0 0 255] put
+dup /Cdotaccent [67 30 133 255] put
+dup /dbar [100 200 250 173] put
+dup /Dbar [208 0 0 160] put
+dup /Dcaron [68 0 133 183] put
+dup /dcaron [100 17 156 183] put
+dup /ecaron [101 0 0 183] put
+dup /Ecaron [69 0 133 183] put
+dup /edotaccent [101 0 0 255] put
+dup /Edotaccent [69 0 133 255] put
+dup /Emacron [69 0 133 30] put
+dup /emacron [101 17 0 30] put
+dup /Eogonek [69 100 0 178] put
+dup /eogonek [101 100 0 178] put
+dup /gacute [103 0 0 180] put
+dup /gbreve [103 0 0 162] put
+dup /Gbreve [71 30 133 162] put
+dup /gcircumflex [103 0 0 28] put
+dup /Gcircumflex [71 30 133 28] put
+dup /gdotaccent [103 0 0 255] put
+dup /Gdotaccent [71 0 133 255] put
+dup /Hcircumflex [72 0 133 28] put
+dup /hcircumflex [104 0 164 28] put
+dup /Idotaccent [73 0 133 255] put
+dup /imacron [136 0 0 30] put
+dup /Imacron [73 0 133 30] put
+dup /iogonek [105 20 0 178] put
+dup /Iogonek [73 20 0 178] put
+dup /itilde [136 0 0 29] put
+dup /Itilde [73 0 133 29] put
+dup /Jcircumflex [74 100 133 28] put
+dup /Lacute [76 -100 133 180] put
+dup /lacute [108 -12 147 180] put
+dup /Lcaron [76 -100 133 183] put
+dup /lcaron [108 -12 144 183] put
+dup /nacute [110 0 0 180] put
+dup /Nacute [78 0 133 180] put
+dup /ncaron [110 0 0 183] put
+dup /Ncaron [78 0 133 183] put
+dup /ohungarumlaut [111 0 0 189] put
+dup /Ohungarumlaut [79 0 133 189] put
+dup /omacron [111 0 0 30] put
+dup /Omacron [79 0 133 30] put
+dup /racute [114 0 0 180] put
+dup /Racute [82 0 133 180] put
+dup /rcaron [114 0 0 183] put
+dup /Rcaron [82 0 133 183] put
+dup /sacute [115 0 0 180] put
+dup /Sacute [83 0 133 180] put
+dup /scircumflex [115 0 0 28] put
+dup /Scircumflex [83 0 133 28] put
+dup /tcaron [116 -77 92 183] put
+dup /Tcaron [84 0 133 183] put
+dup /Tcedilla [84 0 0 184] put
+dup /tcedilla [116 0 0 184] put
+dup /ubreve [117 0 0 162] put
+dup /Ubreve [85 0 133 162] put
+dup /uhungarumlaut [117 0 0 189] put
+dup /Uhungarumlaut [85 0 133 189] put
+dup /umacron [117 0 0 30] put
+dup /Umacron [85 0 133 30] put
+dup /uogonek [117 120 0 178] put
+dup /Uogonek [85 5 20 178] put
+dup /uring [117 0 0 31] put
+dup /Uring [85 0 133 31] put
+dup /utilde [117 0 0 29] put
+dup /Utilde [85 0 133 29] put
+dup /zacute [122 0 0 180] put
+dup /Zacute [90 0 133 180] put
+dup /zdotaccent [122 0 0 255] put
+dup /Zdotaccent [90 0 133 255] put
+makeComposite
+%%EndResource
+
+%%EndResource
+%%BeginResource: font Helvetica-Bold-Ogonki
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding OgonkiEncoding
+/OgonkiEncoding [
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /quotesingle
+/quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl /endash /dagger
+/daggerdbl /periodcentered /paragraph /bullet /quotesinglbase /quotedblbase /quotedblright /guillemotright
+/ellipsis /perthousand /questiondown /grave /circumflex /tilde /macron /ring
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /emdash /AE /ordfeminine /Oslash /OE /ordmasculine /ae
+/dotlessi /oslash /oe /threesuperior /thorn /twosuperior /threequarters /Eth
+/trademark /registered /onequarter /Thorn /logicalnot /plusminus /minus /onesuperior
+/copyright /mu /eth /brokenbar /onehalf /dotlessj /Euro /.notdef
+/space /Aogonek /breve /Lslash /currency /Lcaron /Sacute /section
+/dieresis /Scaron /Scedilla /Tcaron /Zacute /hyphen /Zcaron /Zdotaccent
+/degree /aogonek /ogonek /lslash /acute /lcaron /sacute /caron
+/cedilla /scaron /scedilla /tcaron /zacute /hungarumlaut /zcaron /zdotaccent
+% 300
+/Racute /Aacute /Acircumflex /Abreve /Adieresis /Lacute /Cacute /Ccedilla
+/Ccaron /Eacute /Eogonek /Edieresis /Ecaron /Iacute /Icircumflex /Dcaron
+/Eth /Nacute /Ncaron /Oacute /Ocircumflex /Ohungarumlaut /Odieresis /multiply
+/Rcaron /Uring /Uacute /Uhungarumlaut /Udieresis /Yacute /Tcedilla /germandbls
+/racute /aacute /acircumflex /abreve /adieresis /lacute /cacute /ccedilla
+/ccaron /eacute /eogonek /edieresis /ecaron /iacute /icircumflex /dcaron
+/dbar /nacute /ncaron /oacute /ocircumflex /ohungarumlaut /odieresis /divide
+/rcaron /uring /uacute /uhungarumlaut /udieresis /yacute /tcedilla /dotaccent
+] def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding StandardEncoding
+/StandardEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /section
+/currency /quotesingle /quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl
+/.notdef /endash /dagger /daggerdbl /periodcentered /.notdef /paragraph /bullet
+/quotesinglbase /quotedblbase /quotedblright /guillemotright /ellipsis /perthousand /.notdef /questiondown
+% 300
+/.notdef /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/emdash /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /AE /.notdef /ordfeminine /.notdef /.notdef /.notdef /.notdef
+/Lslash /Oslash /OE /ordmasculine /.notdef /.notdef /.notdef /.notdef
+/.notdef /ae /.notdef /.notdef /.notdef /dotlessi /.notdef /.notdef
+/lslash /oslash /oe /germandbls /.notdef /.notdef /.notdef /.notdef
+] def
+%%EndResource
+%!
+% Add composite (i.e. accented) characters to any font
+% By J. Chroboczek <jec@dcs.ed.ac.uk>
+%
+% -- code follows this line --
+%%BeginResource: procset compose 0.8 0
+% Copyright (c) 1996-1999 by J. Chroboczek
+% This code may be distributed under the terms of the 
+% GNU Public License, either version 2 of the license, or (at your
+% option) any later version.
+/makeCompositeDict 20 dict def
+makeCompositeDict begin
+/nameUnique {                           % name nameUnique namexxxxxx
+  dup length exch 1 index string cvs    % length (name)
+  1 index 12 add string dup             % length (name) (...) (...)
+  3 2 roll 0 exch putinterval           % length (name...)
+  dup 3 2 roll
+  rand 12 string cvs
+  putinterval
+} bind def
+
+/doMakeComposite
+{
+  /compositeChars exch def
+  /targetEncoding exch def
+  /baseEncoding exch def
+  /newfontname exch def
+  /oldfontname exch def
+  /oldfont oldfontname findfont def
+  /newfont 20 dict def
+  /oldFontMatrix oldfont /FontMatrix get def
+  /oldFontBBox oldfont /FontBBox get cvlit def
+  /oldfontcopy oldfont length dict def
+
+  newfont begin
+    /FontType 3 def
+    /PaintType 0 def      % not used
+    /FontMatrix [0.001 0 0 0.001 0 0] def
+    /FontBBox
+    [
+      oldFontBBox 0 get oldFontBBox 1 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+      oldFontBBox 2 get oldFontBBox 3 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+    ] cvx def
+
+    /StrokeWidth 0 def                  % not used
+
+    /Encoding targetEncoding def
+
+    /Decoding 256 dict def              % invert base encoding vector
+    Decoding begin
+      0 1 255
+      { dup baseEncoding exch get exch def } bind for
+    end
+
+    newfont /compositeChars compositeChars put
+
+    /FontName newfontname def
+
+% make a copy of the original font, reencoding it
+    oldfont
+    oldfontcopy begin
+      {1 index /FID ne
+        {def}
+        {pop pop} ifelse
+      } bind forall
+    end
+    oldfontcopy /Encoding baseEncoding put
+    oldfontname nameUnique oldfontcopy definefont
+    1000 scalefont /OriginalFont exch def
+
+    /BuildChar                          % newfont n BuildChar -
+    {
+      exch begin                        % n
+        /OriginalFont load setfont
+        /Encoding load exch get         % glyphName
+        /compositeChars load dup
+        2 index known                   % glyphName compositeChars known-p
+        { 1 index get                   % glyphName [ 65 x y 129 ]
+          dup 0 get ( ) dup             % glyphName [...] 65 ( ) ( )
+          0 3 index put                 % glyphName [...] 65 (A)
+          dup stringwidth setcharwidth
+          0 0 moveto
+          show pop                      % glyphName [...]
+          dup 1 get 1 index 2 get       % glyphName [...] x y
+          moveto                        % glyphName [...]
+          3 get ( ) dup 3 2 roll        % glyphName ( ) ( ) 129
+          0 exch put                    % glyphName (')
+          show                          % glyphName
+        }
+        { pop
+          /Decoding load                % glyphName Decoding
+          dup 2 index known             % glyphName Decoding known-p
+          { exch get }
+          { pop pop 0 } ifelse          % n'
+          ( ) dup 0 3 index put dup     % n' (A) (A)
+          stringwidth setcharwidth
+          0 0 moveto
+          show                          % n'
+        } ifelse
+        pop
+      end
+    } bind def
+  end                                   % newfont
+  newfontname newfont definefont pop
+} def                                   % doMakeComposite
+
+/fillEuro {                             % w h --
+  gsave exch 1000 div exch 1000 div scale
+  955.852 232.172 moveto
+  904.495 180.815 lineto
+  829.454 117.848 734.626 83.333 636.667 83.333 curveto
+  406.667 83.333 220 270 220 500 curveto
+  220 730 406.667 916.667 636.667 916.667 curveto
+  759.831 916.667 876.684 862.177 955.852 767.828 curveto
+  988.474 855.291 lineto
+  894.851 947.996 768.422 1000 636.667 1000 curveto
+  360.667 1000 136.667 776 136.667 500 curveto
+  136.667 224 360.667 0 636.667 0 curveto
+  753.23 0 866.13 40.725 955.852 115.135 curveto
+  closepath fill
+  
+  869.037 541.667 moveto
+  901.025 625 lineto
+  31.989 625 lineto
+  0 541.667 lineto
+  closepath fill
+  
+  805.059 375 moveto
+  837.048 458.333 lineto
+  31.989 458.333 lineto
+  0 375 lineto
+  closepath fill
+  grestore
+} bind def
+
+/makeEuroCharstring {                   % w h -- charstring
+  [ /pop cvx                            % w h mark pop
+    3 index 0 0 0                       % w h mark pop w 0 0 0
+    7 index 7 index /setcachedevice cvx 
+                                % w h mark pop w 0 0 0 w h setcachedevice
+    10 index 10 index /fillEuro load /exec cvx ] 
+  cvx bind 3 1 roll pop pop
+} def
+
+/doEurifyFont {                         % oldname newname --
+  exch
+  findfont dup dup                      % newname dict dict dict
+  /FontMatrix get matrix invertmatrix   % newname dict dict m
+  {} forall pop pop [ 5 1 roll 0 0] makefont setfont   % newnamedict
+  0 0 moveto
+  (5) stringwidth pop                     % newname dict w
+  (M) false charpath pathbbox 4 1 roll pop pop pop % newnamedict w h
+  3 2 roll                                % newname w h dict
+  
+  dup length dict dup 3 1 roll begin      % newname w h newdict
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    CharStrings dup length 1 add dict dup 3 1 roll begin % newnamew h newdict newdict'
+      {def} forall
+      /Euro                               % newname w h newdict newdict' /Euro
+      4 index 4 index makeEuroCharstring def
+    end                                   % newname w h newdict newdict'
+    /CharStrings exch def
+  end
+  3 1 roll pop pop                      % newname dict
+  definefont pop
+} bind def
+
+end                                     % makeCompositeDict
+
+% oldfontname newfontname baseEncoding targetEncoding compositeChars --
+/makeComposite
+{
+  makeCompositeDict begin doMakeComposite end
+} bind def
+
+% oldfontname newfontname
+/eurifyFont
+{
+  makeCompositeDict begin doEurifyFont end
+} bind def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: font Helvetica-Bold-Ogonki
+/Helvetica-Bold /Helvetica-Bold-Ogonki OgonkiEncoding StandardEncoding 83 dict
+dup /Ydieresis [89 167 191 168] put
+dup /ydieresis [121 111 0 168] put
+dup /Ucircumflex [85 197 191 28] put
+dup /Ugrave [85 197 191 27] put
+dup /ucircumflex [117 139 0 28] put
+dup /ugrave [117 139 0 27] put
+dup /Idieresis [73 -27 191 168] put
+dup /Igrave [73 -27 191 27] put
+dup /idieresis [136 -27 0 168] put
+dup /igrave [136 -27 0 27] put
+dup /Ecircumflex [69 188 191 28] put
+dup /Egrave [69 188 191 27] put
+dup /ecircumflex [101 111 0 28] put
+dup /egrave [101 111 0 27] put
+dup /Agrave [65 197 191 27] put
+dup /agrave [97 111 0 27] put
+dup /Ograve [79 222 191 27] put
+dup /ograve [111 139 0 27] put
+dup /Atilde [65 197 191 29] put
+dup /atilde [97 111 0 29] put
+dup /Ntilde [78 200 191 29] put
+dup /ntilde [110 146 0 29] put
+dup /Otilde [79 222 191 29] put
+dup /otilde [111 139 0 29] put
+dup /Aring [65 197 191 31] put
+dup /aring [97 111 0 31] put
+dup /abreve [97 111 0 162] put
+dup /Abreve [65 194 202 162] put
+dup /aogonek [97 270 0 178] put
+dup /Aogonek [65 444 0 178] put
+dup /cacute [99 111 0 180] put
+dup /Cacute [67 194 193 180] put
+dup /ccaron [99 122 0 183] put
+dup /Ccaron [67 210 191 183] put
+dup /dbar [100 302 298 173] put
+dup /Dbar [208 0 0 160] put
+dup /dcaron [100 493 73 39] put
+dup /Dcaron [68 194 190 183] put
+dup /ecaron [101 111 0 183] put
+dup /Ecaron [69 167 190 183] put
+dup /edotaccent [101 103 0 255] put
+dup /Edotaccent [69 188 191 255] put
+dup /eogonek [101 150 0 178] put
+dup /Eogonek [69 290 0 178] put
+dup /gbreve [103 139 0 162] put
+dup /Gbreve [71 222 191 162] put
+dup /Idotaccent [73 -27 191 255] put
+dup /iogonek [105 -39 0 178] put
+dup /Iogonek [73 -30 0 178] put
+dup /lacute [108 -7 193 180] put
+dup /Lacute [76 139 193 180] put
+dup /lcaron [108 155 73 39] put
+dup /Lcaron [76 161 73 39] put
+dup /nacute [110 159 0 180] put
+dup /Nacute [78 231 193 180] put
+dup /ncaron [110 111 0 183] put
+dup /Ncaron [78 194 215 183] put
+dup /ohungarumlaut [111 139 0 189] put
+dup /Ohungarumlaut [79 222 191 189] put
+dup /racute [114 48 0 180] put
+dup /Racute [82 231 193 180] put
+dup /rcaron [114 28 0 183] put
+dup /Rcaron [82 194 190 183] put
+dup /sacute [115 111 0 180] put
+dup /Sacute [83 167 193 180] put
+dup /scedilla [115 111 0 184] put
+dup /Scedilla [83 167 0 184] put
+dup /tcaron [116 249 0 39] put
+dup /Tcaron [84 139 190 183] put
+dup /tcedilla [116 86 0 184] put
+dup /Tcedilla [84 197 0 184] put
+dup /uhungarumlaut [117 139 0 189] put
+dup /Uhungarumlaut [85 197 191 189] put
+dup /uring [117 139 0 31] put
+dup /Uring [85 194 190 31] put
+dup /umacron [117 139 0 30] put
+dup /Umacron [85 199 191 30] put
+dup /uogonek [117 286 0 178] put
+dup /Uogonek [85 260 0 178] put
+dup /zacute [122 103 0 180] put
+dup /Zacute [90 139 193 180] put
+dup /zdotaccent [122 83 0 255] put
+dup /Zdotaccent [90 139 206 255] put
+makeComposite
+%%EndResource
+
+%%EndResource
+%%BeginResource: font Helvetica-Ogonki
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding OgonkiEncoding
+/OgonkiEncoding [
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /quotesingle
+/quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl /endash /dagger
+/daggerdbl /periodcentered /paragraph /bullet /quotesinglbase /quotedblbase /quotedblright /guillemotright
+/ellipsis /perthousand /questiondown /grave /circumflex /tilde /macron /ring
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /emdash /AE /ordfeminine /Oslash /OE /ordmasculine /ae
+/dotlessi /oslash /oe /threesuperior /thorn /twosuperior /threequarters /Eth
+/trademark /registered /onequarter /Thorn /logicalnot /plusminus /minus /onesuperior
+/copyright /mu /eth /brokenbar /onehalf /dotlessj /Euro /.notdef
+/space /Aogonek /breve /Lslash /currency /Lcaron /Sacute /section
+/dieresis /Scaron /Scedilla /Tcaron /Zacute /hyphen /Zcaron /Zdotaccent
+/degree /aogonek /ogonek /lslash /acute /lcaron /sacute /caron
+/cedilla /scaron /scedilla /tcaron /zacute /hungarumlaut /zcaron /zdotaccent
+% 300
+/Racute /Aacute /Acircumflex /Abreve /Adieresis /Lacute /Cacute /Ccedilla
+/Ccaron /Eacute /Eogonek /Edieresis /Ecaron /Iacute /Icircumflex /Dcaron
+/Eth /Nacute /Ncaron /Oacute /Ocircumflex /Ohungarumlaut /Odieresis /multiply
+/Rcaron /Uring /Uacute /Uhungarumlaut /Udieresis /Yacute /Tcedilla /germandbls
+/racute /aacute /acircumflex /abreve /adieresis /lacute /cacute /ccedilla
+/ccaron /eacute /eogonek /edieresis /ecaron /iacute /icircumflex /dcaron
+/dbar /nacute /ncaron /oacute /ocircumflex /ohungarumlaut /odieresis /divide
+/rcaron /uring /uacute /uhungarumlaut /udieresis /yacute /tcedilla /dotaccent
+] def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding StandardEncoding
+/StandardEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /section
+/currency /quotesingle /quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl
+/.notdef /endash /dagger /daggerdbl /periodcentered /.notdef /paragraph /bullet
+/quotesinglbase /quotedblbase /quotedblright /guillemotright /ellipsis /perthousand /.notdef /questiondown
+% 300
+/.notdef /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/emdash /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /AE /.notdef /ordfeminine /.notdef /.notdef /.notdef /.notdef
+/Lslash /Oslash /OE /ordmasculine /.notdef /.notdef /.notdef /.notdef
+/.notdef /ae /.notdef /.notdef /.notdef /dotlessi /.notdef /.notdef
+/lslash /oslash /oe /germandbls /.notdef /.notdef /.notdef /.notdef
+] def
+%%EndResource
+%!
+% Add composite (i.e. accented) characters to any font
+% By J. Chroboczek <jec@dcs.ed.ac.uk>
+%
+% -- code follows this line --
+%%BeginResource: procset compose 0.8 0
+% Copyright (c) 1996-1999 by J. Chroboczek
+% This code may be distributed under the terms of the 
+% GNU Public License, either version 2 of the license, or (at your
+% option) any later version.
+/makeCompositeDict 20 dict def
+makeCompositeDict begin
+/nameUnique {                           % name nameUnique namexxxxxx
+  dup length exch 1 index string cvs    % length (name)
+  1 index 12 add string dup             % length (name) (...) (...)
+  3 2 roll 0 exch putinterval           % length (name...)
+  dup 3 2 roll
+  rand 12 string cvs
+  putinterval
+} bind def
+
+/doMakeComposite
+{
+  /compositeChars exch def
+  /targetEncoding exch def
+  /baseEncoding exch def
+  /newfontname exch def
+  /oldfontname exch def
+  /oldfont oldfontname findfont def
+  /newfont 20 dict def
+  /oldFontMatrix oldfont /FontMatrix get def
+  /oldFontBBox oldfont /FontBBox get cvlit def
+  /oldfontcopy oldfont length dict def
+
+  newfont begin
+    /FontType 3 def
+    /PaintType 0 def      % not used
+    /FontMatrix [0.001 0 0 0.001 0 0] def
+    /FontBBox
+    [
+      oldFontBBox 0 get oldFontBBox 1 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+      oldFontBBox 2 get oldFontBBox 3 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+    ] cvx def
+
+    /StrokeWidth 0 def                  % not used
+
+    /Encoding targetEncoding def
+
+    /Decoding 256 dict def              % invert base encoding vector
+    Decoding begin
+      0 1 255
+      { dup baseEncoding exch get exch def } bind for
+    end
+
+    newfont /compositeChars compositeChars put
+
+    /FontName newfontname def
+
+% make a copy of the original font, reencoding it
+    oldfont
+    oldfontcopy begin
+      {1 index /FID ne
+        {def}
+        {pop pop} ifelse
+      } bind forall
+    end
+    oldfontcopy /Encoding baseEncoding put
+    oldfontname nameUnique oldfontcopy definefont
+    1000 scalefont /OriginalFont exch def
+
+    /BuildChar                          % newfont n BuildChar -
+    {
+      exch begin                        % n
+        /OriginalFont load setfont
+        /Encoding load exch get         % glyphName
+        /compositeChars load dup
+        2 index known                   % glyphName compositeChars known-p
+        { 1 index get                   % glyphName [ 65 x y 129 ]
+          dup 0 get ( ) dup             % glyphName [...] 65 ( ) ( )
+          0 3 index put                 % glyphName [...] 65 (A)
+          dup stringwidth setcharwidth
+          0 0 moveto
+          show pop                      % glyphName [...]
+          dup 1 get 1 index 2 get       % glyphName [...] x y
+          moveto                        % glyphName [...]
+          3 get ( ) dup 3 2 roll        % glyphName ( ) ( ) 129
+          0 exch put                    % glyphName (')
+          show                          % glyphName
+        }
+        { pop
+          /Decoding load                % glyphName Decoding
+          dup 2 index known             % glyphName Decoding known-p
+          { exch get }
+          { pop pop 0 } ifelse          % n'
+          ( ) dup 0 3 index put dup     % n' (A) (A)
+          stringwidth setcharwidth
+          0 0 moveto
+          show                          % n'
+        } ifelse
+        pop
+      end
+    } bind def
+  end                                   % newfont
+  newfontname newfont definefont pop
+} def                                   % doMakeComposite
+
+/fillEuro {                             % w h --
+  gsave exch 1000 div exch 1000 div scale
+  955.852 232.172 moveto
+  904.495 180.815 lineto
+  829.454 117.848 734.626 83.333 636.667 83.333 curveto
+  406.667 83.333 220 270 220 500 curveto
+  220 730 406.667 916.667 636.667 916.667 curveto
+  759.831 916.667 876.684 862.177 955.852 767.828 curveto
+  988.474 855.291 lineto
+  894.851 947.996 768.422 1000 636.667 1000 curveto
+  360.667 1000 136.667 776 136.667 500 curveto
+  136.667 224 360.667 0 636.667 0 curveto
+  753.23 0 866.13 40.725 955.852 115.135 curveto
+  closepath fill
+  
+  869.037 541.667 moveto
+  901.025 625 lineto
+  31.989 625 lineto
+  0 541.667 lineto
+  closepath fill
+  
+  805.059 375 moveto
+  837.048 458.333 lineto
+  31.989 458.333 lineto
+  0 375 lineto
+  closepath fill
+  grestore
+} bind def
+
+/makeEuroCharstring {                   % w h -- charstring
+  [ /pop cvx                            % w h mark pop
+    3 index 0 0 0                       % w h mark pop w 0 0 0
+    7 index 7 index /setcachedevice cvx 
+                                % w h mark pop w 0 0 0 w h setcachedevice
+    10 index 10 index /fillEuro load /exec cvx ] 
+  cvx bind 3 1 roll pop pop
+} def
+
+/doEurifyFont {                         % oldname newname --
+  exch
+  findfont dup dup                      % newname dict dict dict
+  /FontMatrix get matrix invertmatrix   % newname dict dict m
+  {} forall pop pop [ 5 1 roll 0 0] makefont setfont   % newnamedict
+  0 0 moveto
+  (5) stringwidth pop                     % newname dict w
+  (M) false charpath pathbbox 4 1 roll pop pop pop % newnamedict w h
+  3 2 roll                                % newname w h dict
+  
+  dup length dict dup 3 1 roll begin      % newname w h newdict
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    CharStrings dup length 1 add dict dup 3 1 roll begin % newnamew h newdict newdict'
+      {def} forall
+      /Euro                               % newname w h newdict newdict' /Euro
+      4 index 4 index makeEuroCharstring def
+    end                                   % newname w h newdict newdict'
+    /CharStrings exch def
+  end
+  3 1 roll pop pop                      % newname dict
+  definefont pop
+} bind def
+
+end                                     % makeCompositeDict
+
+% oldfontname newfontname baseEncoding targetEncoding compositeChars --
+/makeComposite
+{
+  makeCompositeDict begin doMakeComposite end
+} bind def
+
+% oldfontname newfontname
+/eurifyFont
+{
+  makeCompositeDict begin doEurifyFont end
+} bind def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: font Helvetica-Ogonki
+/Helvetica /Helvetica-Ogonki OgonkiEncoding StandardEncoding 83 dict
+dup /Ydieresis [89 167 199 168] put
+dup /ydieresis [121 83 0 168] put
+dup /Ucircumflex [85 194 199 28] put
+dup /Ugrave [85 194 199 27] put
+dup /ucircumflex [117 111 0 28] put
+dup /ugrave [117 111 0 27] put
+dup /Idieresis [73 -21 199 168] put
+dup /Igrave [73 -21 199 27] put
+dup /idieresis [136 -27 0 168] put
+dup /igrave [136 -27 0 27] put
+dup /Ecircumflex [69 188 199 28] put
+dup /Egrave [69 188 199 27] put
+dup /ecircumflex [101 117 0 28] put
+dup /egrave [101 117 0 27] put
+dup /Agrave [65 167 199 27] put
+dup /agrave [97 111 0 27] put
+dup /Ograve [79 222 199 27] put
+dup /ograve [111 111 0 27] put
+dup /Atilde [65 167 199 29] put
+dup /atilde [97 111 0 29] put
+dup /Ntilde [78 200 199 29] put
+dup /ntilde [110 117 0 29] put
+dup /Otilde [79 222 199 29] put
+dup /otilde [111 111 0 29] put
+dup /Aring [65 167 199 31] put
+dup /aring [97 111 0 31] put
+dup /abreve [97 96 0 162] put
+dup /Abreve [65 174 195 162] put
+dup /aogonek [97 270 0 178] put
+dup /Aogonek [65 424 0 178] put
+dup /cacute [99 84 0 180] put
+dup /Cacute [67 196 195 180] put
+dup /ccaron [99 84 0 183] put
+dup /Ccaron [67 196 195 183] put
+dup /dbar [100 270 330 173] put
+dup /Dbar [208 0 0 160] put
+dup /dcaron [100 523 0 39] put
+dup /Dcaron [68 102 195 183] put
+dup /ecaron [101 93 0 183] put
+dup /Ecaron [69 102 195 183] put
+dup /edotaccent [101 111 0 255] put
+dup /Edotaccent [69 188 199 255] put
+dup /eogonek [101 150 0 178] put
+dup /Eogonek [69 290 0 178] put
+dup /gbreve [103 111 0 162] put
+dup /Gbreve [71 222 199 162] put
+dup /Idotaccent [73 -21 199 255] put
+dup /iogonek [105 -75 0 178] put
+dup /Iogonek [73 -30 0 178] put
+dup /lacute [108 -27 195 180] put
+dup /Lacute [76 -27 195 180] put
+dup /lcaron [108 169 0 39] put
+dup /Lcaron [76 276 0 39] put
+dup /nacute [110 160 0 180] put
+dup /Nacute [78 220 195 180] put
+dup /ncaron [110 70 0 183] put
+dup /Ncaron [78 160 195 183] put
+dup /ohungarumlaut [111 112 0 189] put
+dup /Ohungarumlaut [79 223 195 189] put
+dup /racute [114 25 0 180] put
+dup /Racute [82 200 195 180] put
+dup /rcaron [114 0 0 183] put
+dup /Rcaron [82 100 195 183] put
+dup /sacute [115 84 0 180] put
+dup /Sacute [83 167 195 180] put
+dup /scedilla [115 83 0 184] put
+dup /Scedilla [83 167 0 184] put
+dup /tcaron [116 291 0 39] put
+dup /Tcaron [84 165 195 183] put
+dup /tcedilla [116 84 0 184] put
+dup /Tcedilla [84 185 0 184] put
+dup /uhungarumlaut [117 112 0 189] put
+dup /Uhungarumlaut [85 195 195 189] put
+dup /umacron [117 111 0 30] put
+dup /Umacron [85 194 199 30] put
+dup /uogonek [117 255 0 178] put
+dup /Uogonek [85 288 5 178] put
+dup /uring [117 112 0 31] put
+dup /Uring [85 195 195 31] put
+dup /zacute [122 84 0 180] put
+dup /Zacute [90 139 195 180] put
+dup /zdotaccent [122 84 0 255] put
+dup /Zdotaccent [90 139 195 255] put
+makeComposite
+%%EndResource
+
+%%EndResource
+%%BeginResource: font Times-Bold-Ogonki
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding OgonkiEncoding
+/OgonkiEncoding [
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /quotesingle
+/quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl /endash /dagger
+/daggerdbl /periodcentered /paragraph /bullet /quotesinglbase /quotedblbase /quotedblright /guillemotright
+/ellipsis /perthousand /questiondown /grave /circumflex /tilde /macron /ring
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /emdash /AE /ordfeminine /Oslash /OE /ordmasculine /ae
+/dotlessi /oslash /oe /threesuperior /thorn /twosuperior /threequarters /Eth
+/trademark /registered /onequarter /Thorn /logicalnot /plusminus /minus /onesuperior
+/copyright /mu /eth /brokenbar /onehalf /dotlessj /Euro /.notdef
+/space /Aogonek /breve /Lslash /currency /Lcaron /Sacute /section
+/dieresis /Scaron /Scedilla /Tcaron /Zacute /hyphen /Zcaron /Zdotaccent
+/degree /aogonek /ogonek /lslash /acute /lcaron /sacute /caron
+/cedilla /scaron /scedilla /tcaron /zacute /hungarumlaut /zcaron /zdotaccent
+% 300
+/Racute /Aacute /Acircumflex /Abreve /Adieresis /Lacute /Cacute /Ccedilla
+/Ccaron /Eacute /Eogonek /Edieresis /Ecaron /Iacute /Icircumflex /Dcaron
+/Eth /Nacute /Ncaron /Oacute /Ocircumflex /Ohungarumlaut /Odieresis /multiply
+/Rcaron /Uring /Uacute /Uhungarumlaut /Udieresis /Yacute /Tcedilla /germandbls
+/racute /aacute /acircumflex /abreve /adieresis /lacute /cacute /ccedilla
+/ccaron /eacute /eogonek /edieresis /ecaron /iacute /icircumflex /dcaron
+/dbar /nacute /ncaron /oacute /ocircumflex /ohungarumlaut /odieresis /divide
+/rcaron /uring /uacute /uhungarumlaut /udieresis /yacute /tcedilla /dotaccent
+] def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding StandardEncoding
+/StandardEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /section
+/currency /quotesingle /quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl
+/.notdef /endash /dagger /daggerdbl /periodcentered /.notdef /paragraph /bullet
+/quotesinglbase /quotedblbase /quotedblright /guillemotright /ellipsis /perthousand /.notdef /questiondown
+% 300
+/.notdef /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/emdash /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /AE /.notdef /ordfeminine /.notdef /.notdef /.notdef /.notdef
+/Lslash /Oslash /OE /ordmasculine /.notdef /.notdef /.notdef /.notdef
+/.notdef /ae /.notdef /.notdef /.notdef /dotlessi /.notdef /.notdef
+/lslash /oslash /oe /germandbls /.notdef /.notdef /.notdef /.notdef
+] def
+%%EndResource
+%!
+% Add composite (i.e. accented) characters to any font
+% By J. Chroboczek <jec@dcs.ed.ac.uk>
+%
+% -- code follows this line --
+%%BeginResource: procset compose 0.8 0
+% Copyright (c) 1996-1999 by J. Chroboczek
+% This code may be distributed under the terms of the 
+% GNU Public License, either version 2 of the license, or (at your
+% option) any later version.
+/makeCompositeDict 20 dict def
+makeCompositeDict begin
+/nameUnique {                           % name nameUnique namexxxxxx
+  dup length exch 1 index string cvs    % length (name)
+  1 index 12 add string dup             % length (name) (...) (...)
+  3 2 roll 0 exch putinterval           % length (name...)
+  dup 3 2 roll
+  rand 12 string cvs
+  putinterval
+} bind def
+
+/doMakeComposite
+{
+  /compositeChars exch def
+  /targetEncoding exch def
+  /baseEncoding exch def
+  /newfontname exch def
+  /oldfontname exch def
+  /oldfont oldfontname findfont def
+  /newfont 20 dict def
+  /oldFontMatrix oldfont /FontMatrix get def
+  /oldFontBBox oldfont /FontBBox get cvlit def
+  /oldfontcopy oldfont length dict def
+
+  newfont begin
+    /FontType 3 def
+    /PaintType 0 def      % not used
+    /FontMatrix [0.001 0 0 0.001 0 0] def
+    /FontBBox
+    [
+      oldFontBBox 0 get oldFontBBox 1 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+      oldFontBBox 2 get oldFontBBox 3 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+    ] cvx def
+
+    /StrokeWidth 0 def                  % not used
+
+    /Encoding targetEncoding def
+
+    /Decoding 256 dict def              % invert base encoding vector
+    Decoding begin
+      0 1 255
+      { dup baseEncoding exch get exch def } bind for
+    end
+
+    newfont /compositeChars compositeChars put
+
+    /FontName newfontname def
+
+% make a copy of the original font, reencoding it
+    oldfont
+    oldfontcopy begin
+      {1 index /FID ne
+        {def}
+        {pop pop} ifelse
+      } bind forall
+    end
+    oldfontcopy /Encoding baseEncoding put
+    oldfontname nameUnique oldfontcopy definefont
+    1000 scalefont /OriginalFont exch def
+
+    /BuildChar                          % newfont n BuildChar -
+    {
+      exch begin                        % n
+        /OriginalFont load setfont
+        /Encoding load exch get         % glyphName
+        /compositeChars load dup
+        2 index known                   % glyphName compositeChars known-p
+        { 1 index get                   % glyphName [ 65 x y 129 ]
+          dup 0 get ( ) dup             % glyphName [...] 65 ( ) ( )
+          0 3 index put                 % glyphName [...] 65 (A)
+          dup stringwidth setcharwidth
+          0 0 moveto
+          show pop                      % glyphName [...]
+          dup 1 get 1 index 2 get       % glyphName [...] x y
+          moveto                        % glyphName [...]
+          3 get ( ) dup 3 2 roll        % glyphName ( ) ( ) 129
+          0 exch put                    % glyphName (')
+          show                          % glyphName
+        }
+        { pop
+          /Decoding load                % glyphName Decoding
+          dup 2 index known             % glyphName Decoding known-p
+          { exch get }
+          { pop pop 0 } ifelse          % n'
+          ( ) dup 0 3 index put dup     % n' (A) (A)
+          stringwidth setcharwidth
+          0 0 moveto
+          show                          % n'
+        } ifelse
+        pop
+      end
+    } bind def
+  end                                   % newfont
+  newfontname newfont definefont pop
+} def                                   % doMakeComposite
+
+/fillEuro {                             % w h --
+  gsave exch 1000 div exch 1000 div scale
+  955.852 232.172 moveto
+  904.495 180.815 lineto
+  829.454 117.848 734.626 83.333 636.667 83.333 curveto
+  406.667 83.333 220 270 220 500 curveto
+  220 730 406.667 916.667 636.667 916.667 curveto
+  759.831 916.667 876.684 862.177 955.852 767.828 curveto
+  988.474 855.291 lineto
+  894.851 947.996 768.422 1000 636.667 1000 curveto
+  360.667 1000 136.667 776 136.667 500 curveto
+  136.667 224 360.667 0 636.667 0 curveto
+  753.23 0 866.13 40.725 955.852 115.135 curveto
+  closepath fill
+  
+  869.037 541.667 moveto
+  901.025 625 lineto
+  31.989 625 lineto
+  0 541.667 lineto
+  closepath fill
+  
+  805.059 375 moveto
+  837.048 458.333 lineto
+  31.989 458.333 lineto
+  0 375 lineto
+  closepath fill
+  grestore
+} bind def
+
+/makeEuroCharstring {                   % w h -- charstring
+  [ /pop cvx                            % w h mark pop
+    3 index 0 0 0                       % w h mark pop w 0 0 0
+    7 index 7 index /setcachedevice cvx 
+                                % w h mark pop w 0 0 0 w h setcachedevice
+    10 index 10 index /fillEuro load /exec cvx ] 
+  cvx bind 3 1 roll pop pop
+} def
+
+/doEurifyFont {                         % oldname newname --
+  exch
+  findfont dup dup                      % newname dict dict dict
+  /FontMatrix get matrix invertmatrix   % newname dict dict m
+  {} forall pop pop [ 5 1 roll 0 0] makefont setfont   % newnamedict
+  0 0 moveto
+  (5) stringwidth pop                     % newname dict w
+  (M) false charpath pathbbox 4 1 roll pop pop pop % newnamedict w h
+  3 2 roll                                % newname w h dict
+  
+  dup length dict dup 3 1 roll begin      % newname w h newdict
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    CharStrings dup length 1 add dict dup 3 1 roll begin % newnamew h newdict newdict'
+      {def} forall
+      /Euro                               % newname w h newdict newdict' /Euro
+      4 index 4 index makeEuroCharstring def
+    end                                   % newname w h newdict newdict'
+    /CharStrings exch def
+  end
+  3 1 roll pop pop                      % newname dict
+  definefont pop
+} bind def
+
+end                                     % makeCompositeDict
+
+% oldfontname newfontname baseEncoding targetEncoding compositeChars --
+/makeComposite
+{
+  makeCompositeDict begin doMakeComposite end
+} bind def
+
+% oldfontname newfontname
+/eurifyFont
+{
+  makeCompositeDict begin doEurifyFont end
+} bind def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: font Times-Bold-Ogonki
+/Times-Bold /Times-Bold-Ogonki OgonkiEncoding StandardEncoding 83 dict
+dup /Ydieresis [89 194 219 168] put
+dup /ydieresis [121 83 0 168] put
+dup /Ucircumflex [85 221 219 28] put
+dup /Ugrave [85 221 219 27] put
+dup /ucircumflex [117 104 0 28] put
+dup /ugrave [117 104 0 27] put
+dup /Idieresis [73 28 219 168] put
+dup /Igrave [73 28 219 27] put
+dup /idieresis [136 -34 0 168] put
+dup /igrave [136 -34 0 27] put
+dup /Ecircumflex [69 174 219 28] put
+dup /Egrave [69 174 219 27] put
+dup /ecircumflex [101 61 0 28] put
+dup /egrave [101 61 0 27] put
+dup /Agrave [65 187 219 27] put
+dup /agrave [97 76 0 27] put
+dup /Ograve [79 222 219 27] put
+dup /ograve [111 83 0 27] put
+dup /Atilde [65 187 219 29] put
+dup /atilde [97 76 0 29] put
+dup /Ntilde [78 194 219 29] put
+dup /ntilde [110 111 0 29] put
+dup /Otilde [79 222 219 29] put
+dup /otilde [111 83 0 29] put
+dup /Aring [65 187 219 31] put
+dup /aring [97 76 0 31] put
+dup /abreve [97 83 0 162] put
+dup /Abreve [65 194 240 162] put
+dup /aogonek [97 175 -30 178] put
+dup /Aogonek [65 384 -30 178] put
+dup /cacute [99 70 0 180] put
+dup /Cacute [67 210 219 180] put
+dup /ccaron [99 84 0 183] put
+dup /Ccaron [67 232 219 183] put
+dup /dbar [100 240 300 173] put
+dup /Dbar [208 0 0 160] put
+dup /dcaron [100 473 53 39] put
+dup /Dcaron [68 194 210 183] put
+dup /ecaron [101 61 0 183] put
+dup /Ecaron [69 174 219 183] put
+dup /edotaccent [101 61 0 255] put
+dup /Edotaccent [69 187 219 255] put
+dup /eogonek [101 114 -30 178] put
+dup /Eogonek [69 295 -30 178] put
+dup /gbreve [103 83 0 162] put
+dup /Gbreve [71 222 219 162] put
+dup /Idotaccent [73 28 219 255] put
+dup /iogonek [105 -50 -30 178] put
+dup /Iogonek [73 63 -30 178] put
+dup /lacute [108 -3 210 180] put
+dup /Lacute [76 167 210 180] put
+dup /lcaron [108 194 53 39] put
+dup /Lcaron [76 309 53 39] put
+dup /nacute [110 90 0 180] put
+dup /Nacute [78 190 219 180] put
+dup /ncaron [110 111 0 183] put
+dup /Ncaron [78 194 210 183] put
+dup /ohungarumlaut [111 83 0 189] put
+dup /Ohungarumlaut [79 222 219 189] put
+dup /racute [114 79 0 180] put
+dup /Racute [82 239 210 180] put
+dup /rcaron [114 55 0 183] put
+dup /Rcaron [82 194 210 183] put
+dup /sacute [115 20 0 180] put
+dup /Sacute [83 100 219 180] put
+dup /scedilla [115 12 0 184] put
+dup /Scedilla [83 94 0 184] put
+dup /tcaron [116 271 0 39] put
+dup /Tcaron [84 167 210 183] put
+dup /tcedilla [116 89 0 184] put
+dup /Tcedilla [84 227 0 184] put
+dup /umacron [117 104 0 30] put
+dup /Umacron [85 215 219 30] put
+dup /uhungarumlaut [117 104 0 189] put
+dup /Uhungarumlaut [85 221 219 189] put
+dup /uogonek [117 236 -25 178] put
+dup /Uogonek [85 299 -25 178] put
+dup /uring [117 111 0 31] put
+dup /Uring [85 194 174 31] put
+dup /zacute [122 80 0 180] put
+dup /Zacute [90 160 219 180] put
+dup /zdotaccent [122 70 0 255] put
+dup /Zdotaccent [90 200 219 255] put
+makeComposite
+%%EndResource
+
+%%EndResource
+%%BeginResource: font Times-Roman-Ogonki
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding OgonkiEncoding
+/OgonkiEncoding [
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /quotesingle
+/quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl /endash /dagger
+/daggerdbl /periodcentered /paragraph /bullet /quotesinglbase /quotedblbase /quotedblright /guillemotright
+/ellipsis /perthousand /questiondown /grave /circumflex /tilde /macron /ring
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /emdash /AE /ordfeminine /Oslash /OE /ordmasculine /ae
+/dotlessi /oslash /oe /threesuperior /thorn /twosuperior /threequarters /Eth
+/trademark /registered /onequarter /Thorn /logicalnot /plusminus /minus /onesuperior
+/copyright /mu /eth /brokenbar /onehalf /dotlessj /Euro /.notdef
+/space /Aogonek /breve /Lslash /currency /Lcaron /Sacute /section
+/dieresis /Scaron /Scedilla /Tcaron /Zacute /hyphen /Zcaron /Zdotaccent
+/degree /aogonek /ogonek /lslash /acute /lcaron /sacute /caron
+/cedilla /scaron /scedilla /tcaron /zacute /hungarumlaut /zcaron /zdotaccent
+% 300
+/Racute /Aacute /Acircumflex /Abreve /Adieresis /Lacute /Cacute /Ccedilla
+/Ccaron /Eacute /Eogonek /Edieresis /Ecaron /Iacute /Icircumflex /Dcaron
+/Eth /Nacute /Ncaron /Oacute /Ocircumflex /Ohungarumlaut /Odieresis /multiply
+/Rcaron /Uring /Uacute /Uhungarumlaut /Udieresis /Yacute /Tcedilla /germandbls
+/racute /aacute /acircumflex /abreve /adieresis /lacute /cacute /ccedilla
+/ccaron /eacute /eogonek /edieresis /ecaron /iacute /icircumflex /dcaron
+/dbar /nacute /ncaron /oacute /ocircumflex /ohungarumlaut /odieresis /divide
+/rcaron /uring /uacute /uhungarumlaut /udieresis /yacute /tcedilla /dotaccent
+] def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: encoding StandardEncoding
+/StandardEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+% 100
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+% 200
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /exclamdown /cent /sterling /fraction /yen /florin /section
+/currency /quotesingle /quotedblleft /guillemotleft /guilsinglleft /guilsinglright /fi /fl
+/.notdef /endash /dagger /daggerdbl /periodcentered /.notdef /paragraph /bullet
+/quotesinglbase /quotedblbase /quotedblright /guillemotright /ellipsis /perthousand /.notdef /questiondown
+% 300
+/.notdef /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/emdash /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /AE /.notdef /ordfeminine /.notdef /.notdef /.notdef /.notdef
+/Lslash /Oslash /OE /ordmasculine /.notdef /.notdef /.notdef /.notdef
+/.notdef /ae /.notdef /.notdef /.notdef /dotlessi /.notdef /.notdef
+/lslash /oslash /oe /germandbls /.notdef /.notdef /.notdef /.notdef
+] def
+%%EndResource
+%!
+% Add composite (i.e. accented) characters to any font
+% By J. Chroboczek <jec@dcs.ed.ac.uk>
+%
+% -- code follows this line --
+%%BeginResource: procset compose 0.8 0
+% Copyright (c) 1996-1999 by J. Chroboczek
+% This code may be distributed under the terms of the 
+% GNU Public License, either version 2 of the license, or (at your
+% option) any later version.
+/makeCompositeDict 20 dict def
+makeCompositeDict begin
+/nameUnique {                           % name nameUnique namexxxxxx
+  dup length exch 1 index string cvs    % length (name)
+  1 index 12 add string dup             % length (name) (...) (...)
+  3 2 roll 0 exch putinterval           % length (name...)
+  dup 3 2 roll
+  rand 12 string cvs
+  putinterval
+} bind def
+
+/doMakeComposite
+{
+  /compositeChars exch def
+  /targetEncoding exch def
+  /baseEncoding exch def
+  /newfontname exch def
+  /oldfontname exch def
+  /oldfont oldfontname findfont def
+  /newfont 20 dict def
+  /oldFontMatrix oldfont /FontMatrix get def
+  /oldFontBBox oldfont /FontBBox get cvlit def
+  /oldfontcopy oldfont length dict def
+
+  newfont begin
+    /FontType 3 def
+    /PaintType 0 def      % not used
+    /FontMatrix [0.001 0 0 0.001 0 0] def
+    /FontBBox
+    [
+      oldFontBBox 0 get oldFontBBox 1 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+      oldFontBBox 2 get oldFontBBox 3 get
+      oldFontMatrix transform
+      [1000 0 0 1000 0 0] transform
+    ] cvx def
+
+    /StrokeWidth 0 def                  % not used
+
+    /Encoding targetEncoding def
+
+    /Decoding 256 dict def              % invert base encoding vector
+    Decoding begin
+      0 1 255
+      { dup baseEncoding exch get exch def } bind for
+    end
+
+    newfont /compositeChars compositeChars put
+
+    /FontName newfontname def
+
+% make a copy of the original font, reencoding it
+    oldfont
+    oldfontcopy begin
+      {1 index /FID ne
+        {def}
+        {pop pop} ifelse
+      } bind forall
+    end
+    oldfontcopy /Encoding baseEncoding put
+    oldfontname nameUnique oldfontcopy definefont
+    1000 scalefont /OriginalFont exch def
+
+    /BuildChar                          % newfont n BuildChar -
+    {
+      exch begin                        % n
+        /OriginalFont load setfont
+        /Encoding load exch get         % glyphName
+        /compositeChars load dup
+        2 index known                   % glyphName compositeChars known-p
+        { 1 index get                   % glyphName [ 65 x y 129 ]
+          dup 0 get ( ) dup             % glyphName [...] 65 ( ) ( )
+          0 3 index put                 % glyphName [...] 65 (A)
+          dup stringwidth setcharwidth
+          0 0 moveto
+          show pop                      % glyphName [...]
+          dup 1 get 1 index 2 get       % glyphName [...] x y
+          moveto                        % glyphName [...]
+          3 get ( ) dup 3 2 roll        % glyphName ( ) ( ) 129
+          0 exch put                    % glyphName (')
+          show                          % glyphName
+        }
+        { pop
+          /Decoding load                % glyphName Decoding
+          dup 2 index known             % glyphName Decoding known-p
+          { exch get }
+          { pop pop 0 } ifelse          % n'
+          ( ) dup 0 3 index put dup     % n' (A) (A)
+          stringwidth setcharwidth
+          0 0 moveto
+          show                          % n'
+        } ifelse
+        pop
+      end
+    } bind def
+  end                                   % newfont
+  newfontname newfont definefont pop
+} def                                   % doMakeComposite
+
+/fillEuro {                             % w h --
+  gsave exch 1000 div exch 1000 div scale
+  955.852 232.172 moveto
+  904.495 180.815 lineto
+  829.454 117.848 734.626 83.333 636.667 83.333 curveto
+  406.667 83.333 220 270 220 500 curveto
+  220 730 406.667 916.667 636.667 916.667 curveto
+  759.831 916.667 876.684 862.177 955.852 767.828 curveto
+  988.474 855.291 lineto
+  894.851 947.996 768.422 1000 636.667 1000 curveto
+  360.667 1000 136.667 776 136.667 500 curveto
+  136.667 224 360.667 0 636.667 0 curveto
+  753.23 0 866.13 40.725 955.852 115.135 curveto
+  closepath fill
+  
+  869.037 541.667 moveto
+  901.025 625 lineto
+  31.989 625 lineto
+  0 541.667 lineto
+  closepath fill
+  
+  805.059 375 moveto
+  837.048 458.333 lineto
+  31.989 458.333 lineto
+  0 375 lineto
+  closepath fill
+  grestore
+} bind def
+
+/makeEuroCharstring {                   % w h -- charstring
+  [ /pop cvx                            % w h mark pop
+    3 index 0 0 0                       % w h mark pop w 0 0 0
+    7 index 7 index /setcachedevice cvx 
+                                % w h mark pop w 0 0 0 w h setcachedevice
+    10 index 10 index /fillEuro load /exec cvx ] 
+  cvx bind 3 1 roll pop pop
+} def
+
+/doEurifyFont {                         % oldname newname --
+  exch
+  findfont dup dup                      % newname dict dict dict
+  /FontMatrix get matrix invertmatrix   % newname dict dict m
+  {} forall pop pop [ 5 1 roll 0 0] makefont setfont   % newnamedict
+  0 0 moveto
+  (5) stringwidth pop                     % newname dict w
+  (M) false charpath pathbbox 4 1 roll pop pop pop % newnamedict w h
+  3 2 roll                                % newname w h dict
+  
+  dup length dict dup 3 1 roll begin      % newname w h newdict
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    CharStrings dup length 1 add dict dup 3 1 roll begin % newnamew h newdict newdict'
+      {def} forall
+      /Euro                               % newname w h newdict newdict' /Euro
+      4 index 4 index makeEuroCharstring def
+    end                                   % newname w h newdict newdict'
+    /CharStrings exch def
+  end
+  3 1 roll pop pop                      % newname dict
+  definefont pop
+} bind def
+
+end                                     % makeCompositeDict
+
+% oldfontname newfontname baseEncoding targetEncoding compositeChars --
+/makeComposite
+{
+  makeCompositeDict begin doMakeComposite end
+} bind def
+
+% oldfontname newfontname
+/eurifyFont
+{
+  makeCompositeDict begin doEurifyFont end
+} bind def
+%%EndResource
+%!
+% Automatically generated by the Ogonkify package
+% Do not modify
+% -- code follows this line --
+%%BeginResource: font Times-Roman-Ogonki
+/Times-Roman /Times-Roman-Ogonki OgonkiEncoding StandardEncoding 83 dict
+dup /Agrave [65 195 212 27] put
+dup /Aring [65 185 187 31] put
+dup /Atilde [65 195 212 29] put
+dup /Ecircumflex [69 139 212 28] put
+dup /Egrave [69 139 212 27] put
+dup /Idieresis [73 0 212 168] put
+dup /Igrave [73 0 212 27] put
+dup /Ntilde [78 195 212 29] put
+dup /Ograve [79 195 212 27] put
+dup /Otilde [79 195 212 29] put
+dup /Ucircumflex [85 195 212 28] put
+dup /Ugrave [85 195 212 27] put
+dup /Ydieresis [89 195 212 168] put
+dup /agrave [97 56 0 27] put
+dup /aring [97 56 0 31] put
+dup /atilde [97 56 0 29] put
+dup /ecircumflex [101 56 0 28] put
+dup /egrave [101 56 0 27] put
+dup /idieresis [136 -27 0 168] put
+dup /igrave [136 -27 0 27] put
+dup /ntilde [110 84 0 29] put
+dup /ograve [111 84 0 27] put
+dup /otilde [111 84 0 29] put
+dup /ucircumflex [117 84 0 28] put
+dup /ugrave [117 84 0 27] put
+dup /ydieresis [121 84 0 168] put
+dup /abreve [97 55 0 162] put
+dup /Abreve [65 194 223 162] put
+dup /aogonek [97 209 0 178] put
+dup /Aogonek [65 465 0 178] put
+dup /cacute [99 70 0 180] put
+dup /Cacute [67 212 212 180] put
+dup /ccaron [99 69 0 183] put
+dup /Ccaron [67 196 212 183] put
+dup /dbar [100 200 300 173] put
+dup /Dbar [208 0 0 160] put
+dup /dcaron [100 426 75 39] put
+dup /Dcaron [68 194 216 183] put
+dup /ecaron [101 55 0 183] put
+dup /Ecaron [69 139 214 183] put
+dup /edotaccent [101 61 0 255] put
+dup /Edotaccent [69 154 212 255] put
+dup /eogonek [101 142 9 178] put
+dup /Eogonek [69 320 0 178] put
+dup /gbreve [103 84 0 162] put
+dup /Gbreve [71 195 212 162] put
+dup /Idotaccent [73 0 212 255] put
+dup /iogonek [105 12 0 178] put
+dup /Iogonek [73 67 0 178] put
+dup /lacute [108 -5 216 180] put
+dup /Lacute [76 139 216 180] put
+dup /lcaron [108 192 75 39] put
+dup /Lcaron [76 250 52 39] put
+dup /nacute [110 90 0 180] put
+dup /Nacute [78 190 212 180] put
+dup /ncaron [110 83 0 183] put
+dup /Ncaron [78 194 214 183] put
+dup /ohungarumlaut [111 83 0 189] put
+dup /Ohungarumlaut [79 194 214 189] put
+dup /racute [114 22 0 180] put
+dup /Racute [82 210 216 180] put
+dup /rcaron [114 0 0 183] put
+dup /Rcaron [82 167 216 183] put
+dup /sacute [115 20 0 180] put
+dup /Sacute [83 100 212 180] put
+dup /scedilla [115 28 0 184] put
+dup /Scedilla [83 112 0 184] put
+dup /tcedilla [116 53 0 184] put
+dup /Tcedilla [84 197 0 184] put
+dup /tcaron [116 214 0 39] put
+dup /Tcaron [84 139 216 183] put
+dup /uhungarumlaut [117 83 0 189] put
+dup /Uhungarumlaut [85 194 214 189] put
+dup /umacron [117 81 0 30] put
+dup /Umacron [85 205 212 30] put
+dup /uogonek [117 236 5 178] put
+dup /Uogonek [85 287 5 178] put
+dup /uring [117 83 0 31] put
+dup /Uring [85 194 179 31] put
+dup /zacute [122 60 0 180] put
+dup /Zacute [90 120 212 180] put
+dup /zdotaccent [122 50 0 255] put
+dup /Zdotaccent [90 140 212 255] put
+makeComposite
+%%EndResource
+
+%%EndResource
+% Initialize page description variables.
+/sh 612 def
+/sw 792 def
+/llx 24 def
+/urx 768 def
+/ury 588 def
+/lly 24 def
+/#copies 1 def
+/th 15.000000 def
+/fnfs 11 def
+/bfs 7.493857 def
+/cw 4.496314 def
+
+% Dictionary for ISO-8859-15 support
+/iso15dict 8 dict begin
+  /fCourier ISO-8859-15Encoding /Courier-Ogonki reencode_font
+  /fCourier-Bold ISO-8859-15Encoding /Courier-Bold-Ogonki reencode_font
+  /fCourier-BoldOblique ISO-8859-15Encoding /Courier-BoldOblique-Ogonki reencode_font
+  /fCourier-Oblique ISO-8859-15Encoding /Courier-Oblique-Ogonki reencode_font
+  /fHelvetica ISO-8859-15Encoding /Helvetica-Ogonki reencode_font
+  /fHelvetica-Bold ISO-8859-15Encoding /Helvetica-Bold-Ogonki reencode_font
+  /fTimes-Bold ISO-8859-15Encoding /Times-Bold-Ogonki reencode_font
+  /fTimes-Roman ISO-8859-15Encoding /Times-Roman-Ogonki reencode_font
+currentdict end def
+/bgcolor [ 0 0 0 ] def
+/bg false def
+/ul false def
+/bx false def
+% The font for line numbering
+/f# /Helvetica findfont bfs .6 mul scalefont def
+/fSymbol /Symbol findfont def
+/hm fnfs 0.25 mul def
+/pw
+   cw 81.400000 mul
+def
+/ph
+   522.321860 th add
+def
+/pmw urx llx sub pw 2 mul sub 1 div def
+/pmh 0 def
+/v 0 def
+/x [
+  0
+  dup pmw add pw add
+] def
+/y [
+  pmh ph add 0 mul ph add
+  dup
+] def
+/scx sw 2 div def
+/scy sh 2 div def
+/snx urx def
+/sny lly 2 add def
+/dx llx def
+/dy sny def
+/fnx scx def
+/fny dy def
+/lx snx def
+/ly ury fnfs 0.8 mul sub def
+/sx 0 def
+/tab 8 def
+/x0 0 def
+/y0 0 def
+%%EndSetup
+
+%%Page: (1-2) 1
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso15dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(// system include files) c n
+(#include) K
+( <memory>) p n
+() N
+(// Root objects) c n
+(#include) K
+( ") p
+(TROOT.h) str
+(") p n
+(#include) K
+( ") p
+(TSystem.h) str
+(") p n
+(#include) K
+( ") p
+(TFile.h) str
+(") p n
+(#include) K
+( ") p
+(TProfile.h) str
+(") p n
+(#include) K
+( ") p
+(TDirectory.h) str
+(") p n
+(#include) K
+( ") p
+(TTree.h) str
+(") p n
+() N
+(// user include files) c n
+(#include) K
+( ") p
+(FWCore/Framework/interface/Frameworkfwd.h) str
+(") p n
+(#include) K
+( ") p
+(FWCore/Framework/interface/EDAnalyzer.h) str
+(") p n
+() N
+(#include) K
+( ") p
+(FWCore/Framework/interface/Event.h) str
+(") p n
+(#include) K
+( ") p
+(FWCore/Framework/interface/MakerMacros.h) str
+(") p n
+(#include) K
+( ") p
+(FWCore/ServiceRegistry/interface/Service.h) str
+(") p n
+(#include) K
+( ") p
+(CommonTools/UtilAlgos/interface/TFileService.h) str
+(") p n
+(#include) K
+( ") p
+(FWCore/ParameterSet/interface/ParameterSet.h) str
+(") p n
+(#include) K
+( ") p
+(HLTrigger/HLTcore/interface/HLTConfigProvider.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/Math/interface/LorentzVector.h) str
+(") p n
+(#include) K
+( ") p
+(Calibration/IsolatedParticles/interface/TrackSelection.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/TrackReco/interface/Track.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/TrackReco/interface/TrackFwd.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/TrackReco/interface/TrackBase.h) str
+(") p n
+() N
+(class IsoTrig : public edm::EDAnalyzer {) N
+() N
+(public:) N
+(  explicit IsoTrig\() S
+(const) K
+( edm::ParameterSet&\);) p n
+(  ~IsoTrig\(\);) N
+() N
+(  ) S
+(static) K
+( ) p
+(void) k
+( fillDescriptions\(edm::ConfigurationDescriptions& descriptions\);) p n
+() N
+(private:) N
+() N
+(  virtual ) S
+(void) k
+( analyze\() p
+(const) K
+( edm::Event&, ) p
+(const) K
+( edm::EventSetup&\);) p n
+(  virtual ) S
+(void) k
+( beginJob\(\) ;) p n
+(  virtual ) S
+(void) k
+( endJob\(\) ;) p n
+() N
+(  virtual ) S
+(void) k
+( beginRun\(edm::Run ) p
+(const) K
+(&, edm::EventSetup ) p
+(const) K
+(&\);) p n
+(  virtual ) S
+(void) k
+( endRun\(edm::Run ) p
+(const) K
+(&, edm::EventSetup ) p
+(const) K
+(&\);) p n
+(  virtual ) S
+(void) k
+( beginLuminosityBlock\(edm::LuminosityBlock ) p
+(const) K
+(&, edm::EventSetup) p n
+( ) S
+(const) K
+(&\);) p n
+(  virtual ) S
+(void) k
+( endLuminosityBlock\(edm::LuminosityBlock ) p
+(const) K
+(&, edm::EventSetup ) p
+(c) K n
+(onst) S
+(&\);) p n
+() N
+(  ) S
+(void) k
+( studyTrigger\(edm::Handle<reco::TrackCollection>&,) p n
+() S 8 T () S 16 T (    std::vector<reco::TrackCollection::const_iterator>&\);) N
+(  ) S
+(void) k
+( studyIsolation\() p
+(const) K
+( edm::Event&,  ) p
+(const) K
+( edm::EventSetup&,) p n
+() S 8 T () S 16 T (      edm::Handle<reco::TrackCollection>&,) N
+() S 8 T () S 16 T (      std::vector<reco::TrackCollection::const_iterator>&\);) N
+(  ) S
+(void) k
+( fillHist\() p
+(int) k
+(, math::XYZTLorentzVector&\);) p n
+(  ) S
+(void) k
+( fillDifferences\() p
+(int) k
+(, math::XYZTLorentzVector&, math::XYZTLorentzVector&, ) p n
+(bool\);) N
+(  ) S
+(void) k
+( fillCuts\() p
+(int) k
+(, ) p
+(double) k
+(, ) p
+(double) k
+(, ) p
+(double) k
+(, math::XYZTLorentzVector&, ) p
+(int) k
+(, bool) p n
+(\);) N
+(  ) S
+(void) k
+( fillEnergy\() p
+(int) k
+(, ) p
+(int) k
+(, ) p
+(double) k
+(, ) p
+(double) k
+(, math::XYZTLorentzVector&\);) p n
+(  ) S
+(double) k
+( dEta\(math::XYZTLorentzVector&, math::XYZTLorentzVector&\);) p n
+(  ) S
+(double) k
+( dPhi\(math::XYZTLorentzVector&, math::XYZTLorentzVector&\);) p n
+(  ) S
+(double) k
+( dR\(math::XYZTLorentzVector&, math::XYZTLorentzVector&\);) p n
+(  ) S
+(double) k
+( dPt\(math::XYZTLorentzVector&, math::XYZTLorentzVector&\);) p n
+(  ) S
+(double) k
+( dP\(math::XYZTLorentzVector&, math::XYZTLorentzVector&\);) p n
+(  ) S
+(double) k
+( dinvPt\(math::XYZTLorentzVector&, math::XYZTLorentzVector&\);) p n
+() N
+(  ) S
+(// ----------member data ---------------------------) c n
+(  HLTConfigProvider          hltConfig_;) p n
+(  std::vector<std::string>   trigNames;) N
+(IsoTrig.h) (Page 1/2) (Nov 14, 12 0:46) title
+border
+/v 1 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(  bool                       doL2L3;) p n
+(  ) S
+(int) k
+(                        verbosity;) p n
+(  spr::trackSelectionParameters selectionParameters;) N
+(  std::string                theTrackQuality;) N
+(  ) S
+(double) k
+(                     dr_L1, a_mipR, a_coneR, a_charIsoR, a_neutIsoR;) p n
+(  ) S
+(double) k
+(                     a_neutR1, a_neutR2, cutMip, cutCharge, cutNeutral;) p n
+(  ) S
+(int) k
+(                        minRunNo, maxRunNo;) p n
+(  ) S
+(double) k
+(                     pLimits[6];) p n
+(  std::map<) S
+(unsigned) k
+( ) p
+(int) k
+(, ) p
+(unsigned) k
+( ) p
+(int) k
+(> TrigList;) p n
+(  std::map<) S
+(unsigned) k
+( ) p
+(int) k
+(, ) p
+(const) K
+( std::pair<) p
+(int) k
+(, ) p
+(int) k
+(>> TrigPreList;) p n
+(  bool                       changed;) N
+(  edm::Service<TFileService> fs;) N
+(  TH1I                      *h_nHLT, *h_HLT, *h_PreL1, *h_PreHLT, *h_Pre, *h_nL3) N
+(Objs;) N
+(  TH1D                      *h_PreL1wt, *h_PreHLTwt, *h_L1ObjEnergy;) N
+(  TH1D                      *h_p[20], *h_pt[20], *h_eta[20], *h_phi[20];) N
+(  TH1D                      *h_dEtaL1[2], *h_dPhiL1[2], *h_dRL1[2];) N
+(  TH1D                      *h_dEta[6], *h_dPhi[6], *h_dPt[6], *h_dP[6];) N
+(  TH1D                      *h_dinvPt[6], *h_mindR[6], *h_eMip[2];) N
+(  TH1D                      *h_eMaxNearP[2], *h_eNeutIso[2];) N
+(  TH1D                      *h_etaCalibTracks[5][2][2],*h_etaMipTracks[5][2][2];) N
+(  TH1D                      *h_eHcal[5][6][48], *h_eCalo[5][6][48];) N
+(  TH1I                      *g_Pre, *g_PreL1, *g_PreHLT, *g_Accepts;) N
+(  std::vector<math::XYZTLorentzVector> vec[3];) N
+() N
+(};) N
+(IsoTrig.h) (Page 2/2) (Nov 14, 12 0:46) title
+border
+grestore
+(Printed by Sunanda Banerjee) rhead
+(IsoTrig.h) (1/8) (Tuesday November 20, 2012) footer
+end % of iso15dict
+pagesave restore
+showpage
+%%Page: (1-2) 2
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso15dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(// -*- C++ -*-) c n
+(//) N
+(// Package:    IsoTrig) N
+(// Class:      IsoTrig) N
+(// ) N
+(/**\\class IsoTrig IsoTrig.cc IsoTrig/IsoTrig/src/IsoTrig.cc) N
+() N
+(v Description: [one line class summary]) N
+() N
+( Implementation:) N
+(     [Notes on implementation]) N
+(*/) N
+(//) N
+(// Original Author:  Ruchi Gupta) N
+(//         Created:  Fri May 25 12:02:48 CDT 2012) N
+(// $Id$) N
+(//) N
+(//) N
+(#include) K
+( ") p
+(IsoTrig.h) str
+(") p n
+() N
+(//Tracks) c n
+(#include) K
+( ") p
+(DataFormats/TrackReco/interface/HitPattern.h) str
+(") p n
+(// Vertices) c n
+(#include) K
+( ") p
+(DataFormats/VertexReco/interface/VertexFwd.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/VertexReco/interface/Vertex.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/BeamSpot/interface/BeamSpot.h) str
+(") p n
+() N
+(//Triggers) c n
+(#include) K
+( ") p
+(DataFormats/Common/interface/TriggerResults.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/HLTReco/interface/TriggerEvent.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/HLTReco/interface/TriggerObject.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/L1GlobalTrigger/interface/L1GlobalTriggerReadoutRecord.h) str
+(") p n
+(#include) K
+( ") p
+(DataFormats/Luminosity/interface/LumiDetails.h) str
+(") p n
+() N
+(#include) K
+( ") p
+(FWCore/Common/interface/TriggerNames.h) str
+(") p n
+() N
+(#include) K
+( ") p
+(Calibration/IsolatedParticles/interface/CaloPropagateTrack.h) str
+(") p n
+(#include) K
+( ") p
+(Calibration/IsolatedParticles/interface/ChargeIsolation.h) str
+(") p n
+(#include) K
+( ") p
+(Calibration/IsolatedParticles/interface/eCone.h) str
+(") p n
+(#include) K
+( ") p
+(Calibration/IsolatedParticles/interface/eECALMatrix.h) str
+(") p n
+() N
+(#include) K
+( ") p
+(MagneticField/Engine/interface/MagneticField.h) str
+(") p n
+(#include) K
+( ") p
+(MagneticField/Records/interface/IdealMagneticFieldRecord.h) str
+(") p n
+(#include) K
+( ") p
+(Geometry/CaloGeometry/interface/CaloGeometry.h) str
+(") p n
+(#include) K
+( ") p
+(Geometry/CaloGeometry/interface/CaloSubdetectorGeometry.h) str
+(") p n
+(#include) K
+( ") p
+(Geometry/CaloEventSetup/interface/CaloTopologyRecord.h) str
+(") p n
+(#include) K
+( ") p
+(Geometry/CaloTopology/interface/CaloSubdetectorTopology.h) str
+(") p n
+(#include) K
+( ") p
+(Geometry/CaloTopology/interface/HcalTopology.h) str
+(") p n
+(#include) K
+( ") p
+(Geometry/CaloTopology/interface/CaloTopology.h) str
+(") p n
+(#include) K
+( ") p
+(CondFormats/DataRecord/interface/EcalChannelStatusRcd.h) str
+(") p n
+(#include) K
+( ") p
+(Geometry/CaloTopology/interface/EcalTrigTowerConstituentsMap.h) str
+(") p n
+(#include) K
+( ") p
+(RecoLocalCalo/EcalRecAlgos/interface/EcalSeverityLevelAlgo.h) str
+(") p n
+(#include) K
+( ") p
+(RecoLocalCalo/EcalRecAlgos/interface/EcalSeverityLevelAlgoRcd.h) str
+(") p n
+() N
+(IsoTrig::IsoTrig\() S
+(const) K
+( edm::ParameterSet& iConfig\) : changed\() p
+(false) k
+(\) {) p n
+(   ) S
+(//now do whatever initialization is needed) c n
+(  trigNames                           = iConfig.getUntrackedParameter<std::vecto) p n
+(r<std::string> >\(") S
+(Triggers) str
+("\);) p n
+(  doL2L3                              = iConfig.getUntrackedParameter<) S
+(bool) k
+(>\(") p
+(Do) str n
+(L2L3) S
+(",) p
+(true) k
+(\);) p n
+(  verbosity                           = iConfig.getUntrackedParameter<) S
+(int) k
+(>\(") p
+(Verb) str n
+(osity) S
+(",0\);) p n
+(  theTrackQuality                     = iConfig.getUntrackedParameter<std::strin) N
+(g>\(") S
+(TrackQuality) str
+(",") p
+(highPurity) str
+("\);) p n
+(  reco::TrackBase::TrackQuality trackQuality_=reco::TrackBase::qualityByName\(the) N
+(TrackQuality\);) N
+(  selectionParameters.minPt           = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(MinTrackPt) S
+(", 10.0\);) p n
+(  selectionParameters.minQuality      = trackQuality_;) N
+(IsoTrig.cc) (Page 1/13) (Nov 14, 12 0:50) title
+border
+/v 1 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(  selectionParameters.maxDxyPV        = iConfig.getUntrackedParameter<) p
+(double) k
+(>\(") p
+() str n
+(MaxDxyPV) S
+(", 0.2\);) p n
+(  selectionParameters.maxDzPV         = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(MaxDzPV) S
+(",  5.0\);) p n
+(  selectionParameters.maxChi2         = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(MaxChi2) S
+(",  5.0\);) p n
+(  selectionParameters.maxDpOverP      = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(MaxDpOverP) S
+(",  0.1\);) p n
+(  selectionParameters.minOuterHit     = iConfig.getUntrackedParameter<) S
+(int) k
+(>\(") p
+(MinO) str n
+(uterHit) S
+(", 4\);) p n
+(  selectionParameters.minLayerCrossed = iConfig.getUntrackedParameter<) S
+(int) k
+(>\(") p
+(MinL) str n
+(ayerCrossed) S
+(", 8\);) p n
+(  selectionParameters.maxInMiss       = iConfig.getUntrackedParameter<) S
+(int) k
+(>\(") p
+(MaxI) str n
+(nMiss) S
+(", 0\);) p n
+(  selectionParameters.maxOutMiss      = iConfig.getUntrackedParameter<) S
+(int) k
+(>\(") p
+(Max) str n
+(OutMiss) S
+(", 0\);) p n
+(  dr_L1                               = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+(I) str n
+(solationL1) S
+(",1.0\);) p n
+(  a_coneR                             = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(ConeRadius) S
+(",34.98\);) p n
+(  a_charIsoR                          = a_coneR + 28.9;) N
+(  a_neutIsoR                          = a_charIsoR*0.726;) N
+(  a_mipR                              = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(ConeRadiusMIP) S
+(",14.0\);) p n
+(  a_neutR1                            = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(ConeRadiusNeut1) S
+(",21.0\);) p n
+(  a_neutR2                            = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(ConeRadiusNeut2) S
+(",29.0\);) p n
+(  cutMip                              = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(MIPCut) S
+(", 1.0\);) p n
+(  cutCharge                           = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(ChargeIsolation) S
+(",  2.0\);) p n
+(  cutNeutral                          = iConfig.getUntrackedParameter<) S
+(double) k
+(>\(") p
+() str n
+(NeutralIsolation) S
+(",  2.0\);) p n
+(  minRunNo                            = iConfig.getUntrackedParameter<) S
+(int) k
+(>\(") p
+(minR) str n
+(un) S
+("\);) p n
+(  maxRunNo                            = iConfig.getUntrackedParameter<) S
+(int) k
+(>\(") p
+(maxR) str n
+(un) S
+("\);) p n
+(  ) S
+(if) K
+( \(verbosity>=0\) {) p n
+(    std::cout <<") S
+(Parameters read from config file \\n) str
+(" ) p n
+() S 8 T (      <<") S
+(\\t minPt ) str
+("           << selectionParameters.minPt   ) p n
+(              <<") S
+(\\t theTrackQuality ) str
+(" << theTrackQuality) p n
+() S 8 T (      <<") S
+(\\t minQuality ) str
+("      << selectionParameters.minQuality) p n
+() S 8 T (      <<") S
+(\\t maxDxyPV ) str
+("        << selectionParameters.maxDxyPV          ) p n
+() S 8 T (      <<") S
+(\\t maxDzPV ) str
+("         << selectionParameters.maxDzPV          ) p n
+() S 8 T (      <<") S
+(\\t maxChi2 ) str
+("         << selectionParameters.maxChi2          ) p n
+() S 8 T (      <<") S
+(\\t maxDpOverP ) str
+("      << selectionParameters.maxDpOverP) p n
+() S 8 T (      <<") S
+(\\t minOuterHit ) str
+("     << selectionParameters.minOuterHit) p n
+() S 8 T (      <<") S
+(\\t minLayerCrossed ) str
+(" << selectionParameters.minLayerCrossed) p n
+() S 8 T (      <<") S
+(\\t maxInMiss ) str
+("       << selectionParameters.maxInMiss) p n
+() S 8 T (      <<") S
+(\\t maxOutMiss ) str
+("      << selectionParameters.maxOutMiss) p n
+() S 8 T (      <<") S
+(\\t a_coneR ) str
+("         << a_coneR          ) p n
+() S 8 T (      <<") S
+(\\t a_charIsoR ) str
+("      << a_charIsoR          ) p n
+() S 8 T (      <<") S
+(\\t a_neutIsoR ) str
+("      << a_neutIsoR          ) p n
+() S 8 T (      <<") S
+(\\t a_mipR ) str
+("          << a_mipR ) p n
+() S 8 T (      <<") S
+(\\t a_neutR ) str
+("         << a_neutR1 << ") p
+(:) str
+(" << a_neutR2) p n
+(              <<") S
+(\\t cuts \(MIP ) str
+("       << cutMip << ") p
+( : Charge ) str
+(" << cutCharge) p n
+() S 8 T (      <<") S
+( : Neutral ) str
+("         << cutNeutral << ") p
+(\)) str
+(") p n
+() S 8 T (      << std::endl;) N
+(  }) N
+(  ) S
+(double) k
+( pl[] = {20,30,40,60,80,120};) p n
+(  ) S
+(for) K
+( \() p
+(int) k
+( i=0; i<6; ++i\) pLimits[i] = pl[i];) p n
+(}) N
+() N
+(IsoTrig::~IsoTrig\(\) {) N
+(  ) S
+(// do anything here that needs to be done at desctruction time) c n
+(  ) p
+(// \(e.g. close files, deallocate resources etc.\)) c n
+() p n
+(}) N
+(IsoTrig.cc) (Page 2/13) (Nov 14, 12 0:50) title
+border
+grestore
+(Printed by Sunanda Banerjee) rhead
+(IsoTrig.cc) (2/8) (Tuesday November 20, 2012) footer
+end % of iso15dict
+pagesave restore
+showpage
+%%Page: (3-4) 3
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso15dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(void) k
+( IsoTrig::fillDescriptions\(edm::ConfigurationDescriptions& descriptions\) {) p n
+(  ) S
+(//The following says we do not know what parameters are allowed so do no valid) c n
+(ation) N
+(  ) p
+(// Please change this to state exactly what you do use, even if it is no param) c n
+(eters) N
+(  edm::ParameterSetDescription desc;) p n
+(  desc.setUnknown\(\);) N
+(  descriptions.addDefault\(desc\);) N
+(}) N
+() N
+(void) k
+( IsoTrig::analyze\() p
+(const) K
+( edm::Event& iEvent, ) p
+(const) K
+( edm::EventSetup& iSetup\) {) p n
+() N
+(  ) S
+(if) K
+( \(verbosity%10 > 0\) std::cout << ") p
+(Event starts====================================) str
+() p n
+(" << std::endl;) N
+(  ) S
+(int) k
+( RunNo = iEvent.id\(\).run\(\);) p n
+(  ) S
+(int) k
+( EvtNo = iEvent.id\(\).event\(\);) p n
+(  ) S
+(int) k
+( Lumi  = iEvent.luminosityBlock\(\);) p n
+(  ) S
+(int) k
+( Bunch = iEvent.bunchCrossing\(\);) p n
+() N
+(  edm::Handle<reco::TrackCollection> trkCollection;) N
+(  iEvent.getByLabel\(") S
+(generalTracks) str
+(", trkCollection\);) p n
+() N
+(  edm::InputTag lumiProducer\(") S
+(LumiProducer) str
+(", "", ") p
+(RECO) str
+("\);) p n
+(  edm::Handle<LumiDetails> Lumid;) N
+(  iEvent.getLuminosityBlock\(\).getByLabel\(") S
+(lumiProducer) str
+(",Lumid\); ) p n
+(  ) S
+(float) k
+( mybxlumi=-1;) p n
+(  ) S
+(if) K
+( \(Lumid.isValid\(\)\) ) p n
+(    mybxlumi=Lumid->lumiValue\(LumiDetails::kOCC1,iEvent.bunchCrossing\(\)\)*6.37;) N
+(  ) S
+(if) K
+( \(verbosity%10 > 0\)) p n
+(    std::cout << ") S
+(RunNo ) str
+(" << RunNo << ") p
+( EvtNo ) str
+(" << EvtNo << ") p
+( Lumi ) str
+(" << Lumi ) p n
+() S 8 T (      << ") S
+( Bunch ) str
+(" << Bunch << ") p
+( mybxlumi ) str
+(" << mybxlumi << std::endl;) p n
+() N
+(  edm::InputTag triggerEvent_ \(") S
+(hltTriggerSummaryAOD) str
+(","",") p
+(HLT) str
+("\);) p n
+(  trigger::TriggerEvent triggerEvent;) N
+(  edm::Handle<trigger::TriggerEvent> triggerEventHandle;) N
+(  iEvent.getByLabel\(triggerEvent_,triggerEventHandle\);) N
+(  ) S
+(if) K
+( \(!triggerEventHandle.isValid\(\)\)) p n
+(    std::cout << ") S
+(Error! Can't get the product ) str
+("<< triggerEvent_.label\(\) << std::endl;) p n
+(  ) S
+(else) K
+( {) p n
+(    triggerEvent = *\(triggerEventHandle.product\(\)\);) N
+(  ) N
+(    ) S
+(const) K
+( trigger::TriggerObjectCollection& TOC\(triggerEvent.getObjects\(\)\);) p n
+(    ) S
+(/////////////////////////////TriggerResults) c n
+(    edm::InputTag theTriggerResultsLabel \(") p
+(TriggerResults) str
+(","",") p
+(HLT) str
+("\);) p n
+(    edm::Handle<edm::TriggerResults> triggerResults;) N
+(    iEvent.getByLabel\( theTriggerResultsLabel, triggerResults\);) N
+(    ) S
+(if) K
+( \(triggerResults.isValid\(\)\) {) p n
+(      std::vector<std::string> modules;) N
+(      h_nHLT->Fill\(triggerResults->size\(\)\);) N
+(      ) S
+(const) K
+( edm::TriggerNames & triggerNames = iEvent.triggerNames\(*triggerResul) p n
+(ts\);) N
+() N
+(      ) S
+(const) K
+( std::vector<std::string> & triggerNames_ = triggerNames.triggerNames) p n
+(\(\);) N
+(      ) S
+(int) k
+( hlt\(-1\), preL1\(-1\), preHLT\(-1\), prescale\(-1\);) p n
+(      ) S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( i=0; i<triggerResults->size\(\); i++\) {) p n
+() S 8 T () S
+(unsigned) k
+( ) p
+(int) k
+( triggerindx = hltConfig_.triggerIndex\(triggerNames_[i]\);) p n
+() S 8 T () S
+(const) K
+( std::vector<std::string>& moduleLabels\(hltConfig_.moduleLabels\(tri) p n
+(ggerindx\)\);) N
+(        ) S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( in=0; in<trigNames.size\(\); ++in\) {) p n
+(          ) S
+(if) K
+( \(triggerNames_[i].find\(trigNames[in].c_str\(\)\)!=std::string::npos\) {) p n
+() S 8 T (    hlt    = triggerResults->accept\(i\);) N
+() S 8 T (    ) S
+(if) K
+( \(hlt>0\) {) p n
+() S 8 T (      ) S
+(const) K
+( std::pair<) p
+(int) k
+(,) p
+(int) k
+(> prescales\(hltConfig_.prescaleValues\(iEven) p n
+(t,iSetup,triggerNames_[i]\)\);) N
+() S 8 T (      preL1  = prescales.first;) N
+() S 8 T (      preHLT = prescales.second;) N
+() S 8 T (      prescale = preL1*preHLT;) N
+(IsoTrig.cc) (Page 3/13) (Nov 14, 12 0:50) title
+border
+/v 1 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p 8 T (      ) S
+(if) K
+( \(verbosity%10 > 0\)) p n
+() S 8 T () S 16 T (std::cout << triggerNames_[i] << ") S
+( accept ) str
+(" << hlt << ") p
+( preL1 ) str
+(" ) p n
+() S 8 T () S 16 T () S 24 T (  << preL1 << ") S
+( preHLT ) str
+(" << preHLT << std::endl;) p n
+() N
+() S 8 T (      ) S
+(for) K
+( \() p
+(int) k
+( iv=0; iv<3; ++iv\) vec[iv].clear\(\);) p n
+() S 8 T (      ) S
+(if) K
+( \(TrigList.find\(RunNo\) != TrigList.end\(\) \) {) p n
+() S 8 T () S 16 T (TrigList[RunNo] += 1;) N
+() S 8 T (      } ) S
+(else) K
+( {) p n
+() S 8 T () S 16 T (TrigList.insert\(std::pair<) S
+(unsigned) k
+( ) p
+(int) k
+(, ) p
+(unsigned) k
+( ) p
+(int) k
+(>\(RunNo,1\)\);) p n
+() S 8 T () S 16 T (TrigPreList.insert\(std::pair<) S
+(unsigned) k
+( ) p
+(int) k
+(, std::pair<) p
+(int) k
+(, ) p
+(int) k
+(>>\() p n
+(RunNo,prescales\)\);) N
+() S 8 T (      }) N
+() S 8 T (      ) S
+(//loop over all trigger filters in event \(i.e. filters passed\)) c n
+() p 8 T (      ) S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( ifilter=0; ifilter<triggerEvent.sizeFilters\(\); ) p n
+() S 8 T () S 16 T (   ++ifilter\) {  ) N
+() S 8 T () S 16 T (std::vector<) S
+(int) k
+(> Keys;) p n
+() S 8 T () S 16 T (std::string label = triggerEvent.filterTag\(ifilter\).label\(\);) N
+() S 8 T () S 16 T () S
+(//loop over keys to objects passing this filter) c n
+() p 8 T () S 16 T () S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( imodule=0; imodule<moduleLabels.size\(\); ) p n
+() S 8 T () S 16 T (     imodule++\) {) N
+() S 8 T () S 16 T (  ) S
+(if) K
+( \(label.find\(moduleLabels[imodule]\) != std::string::npos\) {) p n
+() S 8 T () S 16 T (    ) S
+(if) K
+( \(verbosity%10 > 0\) std::cout << ") p
+(FILTERNAME ) str
+(" << label <<) p n
+( std::endl;) N
+() S 8 T () S 16 T (    ) S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( ifiltrKey=0; ifiltrKey<triggerEvent.filter) p n
+(Keys\(ifilter\).size\(\); ++ifiltrKey\) {) N
+() S 8 T () S 16 T (      Keys.push_back\(triggerEvent.filterKeys\(ifilter\)[ifiltrKey]) N
+(\);) N
+() S 8 T () S 16 T (      ) S
+(const) K
+( trigger::TriggerObject& TO\(TOC[Keys[ifiltrKey]]\);) p n
+() S 8 T () S 16 T (      math::XYZTLorentzVector v4\(TO.px\(\), TO.py\(\), TO.pz\(\), TO.e) N
+(nergy\(\)\);) N
+() S 8 T () S 16 T (      ) S
+(if) K
+( \(label.find\(") p
+(L2Filter) str
+("\) != std::string::npos\) {) p n
+() S 8 T () S 16 T () S 24 T (vec[1].push_back\(v4\);) N
+() S 8 T () S 16 T (      } ) S
+(else) K
+( ) p
+(if) K
+( \(label.find\(") p
+(L3Filter) str
+("\) != std::string::npos\) {) p n
+() S 8 T () S 16 T () S 24 T (vec[2].push_back\(v4\);) N
+() S 8 T () S 16 T (      } ) S
+(else) K
+( {) p n
+() S 8 T () S 16 T () S 24 T (vec[0].push_back\(v4\);) N
+() S 8 T () S 16 T () S 24 T (h_L1ObjEnergy->Fill\(TO.energy\(\)\);) N
+() S 8 T () S 16 T (      }) N
+() S 8 T () S 16 T (      ) S
+(if) K
+( \(verbosity%10 > 0\)) p n
+() S 8 T () S 16 T () S 24 T (std::cout << ") S
+(key ) str
+(" << ifiltrKey << ") p
+( : pt ) str
+(" << TO.pt\(\) << ") p
+() str n
+( eta ) S
+(" << TO.eta\(\) << ") p
+( phi ) str
+(" << TO.phi\(\) << ") p
+( mass ) str
+(" << TO.mass\(\) << ") p
+( Id ) str
+(" << TO.id\(\)) p n
+( << std::endl;) N
+() S 8 T () S 16 T (    }) N
+() S 8 T () S 16 T (  }) N
+() S 8 T () S 16 T (}) N
+() S 8 T (      }) N
+() S 8 T (      std::vector<reco::TrackCollection::const_iterator> goodTks;) N
+() S 8 T (      ) S
+(if) K
+( \(doL2L3\) {) p n
+() S 8 T () S 16 T (h_nL3Objs  -> Fill\(vec[2].size\(\)\);) N
+() S 8 T () S 16 T (studyTrigger\(trkCollection, goodTks\);) N
+() S 8 T (      } ) S
+(else) K
+( {) p n
+() S 8 T () S 16 T () S
+(if) K
+( \(trkCollection.isValid\(\)\) {) p n
+() S 8 T () S 16 T (  reco::TrackCollection::const_iterator trkItr;) N
+() S 8 T () S 16 T (  ) S
+(for) K
+( \(trkItr=trkCollection->begin\(\); ) p n
+() S 8 T () S 16 T (       trkItr!=trkCollection->end\(\); trkItr++\) ) N
+() S 8 T () S 16 T (    goodTks.push_back\(trkItr\);) N
+() S 8 T () S 16 T (}) N
+() S 8 T (      }) N
+() S 8 T (      ) S
+(// Now study isolation etc) c n
+() p 8 T (      studyIsolation\(iEvent, iSetup, trkCollection, goodTks\);) N
+() S 8 T (    }) N
+() S 8 T (    ) S
+(break) K
+(;) p n
+() S 8 T (  }) N
+() S 8 T (}) N
+(      }) N
+(      ) N
+(      h_HLT      -> Fill\(hlt\);) N
+(      h_PreL1    -> Fill\(preL1\);) N
+(      h_PreHLT   -> Fill\(preHLT\);) N
+(IsoTrig.cc) (Page 4/13) (Nov 14, 12 0:50) title
+border
+grestore
+(Printed by Sunanda Banerjee) rhead
+(IsoTrig.cc) (3/8) (Tuesday November 20, 2012) footer
+end % of iso15dict
+pagesave restore
+showpage
+%%Page: (5-6) 4
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso15dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(      h_Pre      -> Fill\(prescale\);) p n
+(      h_PreL1wt  -> Fill\(preL1, mybxlumi\);) N
+(      h_PreHLTwt -> Fill\(preHLT, mybxlumi\);) N
+() N
+(      ) S
+(// check if trigger names in \(new\) config                       ) c n
+(      ) p
+(if) K
+( \(changed\) {) p n
+() S 8 T (changed = ) S
+(false) k
+(;) p n
+() S 8 T () S
+(if) K
+( \(\(verbosity/10\)%10 > 1\) {) p n
+() S 8 T (  std::cout<<") S
+(New trigger menu found !!!) str
+(" << std::endl;) p n
+() S 8 T (  ) S
+(const) K
+( ) p
+(unsigned) k
+( ) p
+(int) k
+( n\(hltConfig_.size\(\)\);) p n
+() S 8 T (  ) S
+(for) K
+( \() p
+(unsigned) k
+( itrig=0; itrig<triggerNames_.size\(\); itrig++\) {) p n
+() S 8 T (    ) S
+(unsigned) k
+( ) p
+(int) k
+( triggerindx = hltConfig_.triggerIndex\(triggerNames_[itr) p n
+(ig]\);) N
+() S 8 T (    std::cout << triggerNames_[itrig] << ") S
+( ) str
+(" << triggerindx << ") p
+( ) str
+(";) p n
+() S 8 T (    ) S
+(if) K
+( \(triggerindx >= n\)) p n
+() S 8 T (      std::cout << ") S
+(does not exist in the current menu) str
+(" << std::endl;) p n
+() S 8 T (    ) S
+(else) K n
+() p 8 T (      std::cout << ") S
+(exists) str
+(" << std::endl;) p n
+() S 8 T (  }) N
+() S 8 T (}) N
+(      }) N
+(    }) N
+(  }) N
+(}) N
+() N
+(void) k
+( IsoTrig::beginJob\(\) {) p n
+(  ) S
+(char) k
+( hname[100], htit[100];) p n
+(  std::string levels[20] = {") S
+(L1) str
+(", ") p
+(L2) str
+(", ") p
+(L3) str
+(", ) p n
+() S 8 T () S 16 T () S 24 T (    ") S
+(Reco) str
+(", ") p
+(RecoMatch) str
+(", ") p
+(RecoNoMatch) str
+(", ) p n
+() S 8 T () S 16 T () S 24 T (    ") S
+(L2Match) str
+(", ") p
+(L2NoMatch) str
+(", ") p
+(L3Match) str
+(", ") p
+(L3NoMatch) str
+(", ) p n
+() S 8 T () S 16 T () S 24 T (    ") S
+(HLTTrk) str
+(", ") p
+(HLTGoodTrk) str
+(", ") p
+(HLTIsoTrk) str
+(", ") p
+(HLTMip) str
+(", ") p
+(HLTSele) str n
+(ct) S
+(",) p n
+() S 8 T () S 16 T () S 24 T (    ") S
+(nonHLTTrk) str
+(", ") p
+(nonHLTGoodTrk) str
+(", ") p
+(nonHLTIsoTrk) str
+(", ") p
+(nonHLTMip) str
+() p n
+(", ") S
+(nonHLTSelect) str
+("};) p n
+() N
+(  h_nHLT        = fs->make<TH1I>\(") S
+(h_nHLT) str
+(" , ") p
+(Size of trigger Names) str
+(", 1000, 1, 1000\);) p n
+(  h_HLT         = fs->make<TH1I>\(") S
+(h_HLT) str
+("  ,  ") p
+(HLT accept) str
+(", 3, -1, 2\);) p n
+(  h_PreL1       = fs->make<TH1I>\(") S
+(h_PreL1) str
+(",  ") p
+(L1 Prescale) str
+(", 500, 0, 500\);) p n
+(  h_PreHLT      = fs->make<TH1I>\(") S
+(h_PreHLT) str
+(", ") p
+(HLT Prescale) str
+(", 50, 0, 50\);) p n
+(  h_Pre         = fs->make<TH1I>\(") S
+(h_Pre) str
+(",    ") p
+(Prescale) str
+(", 3000, 0, 3000\);) p n
+() N
+(  h_PreL1wt     = fs->make<TH1D>\(") S
+(h_PreL1wt) str
+(", ") p
+(Weighted L1 Prescale) str
+(", 500, 0, 500\);) p n
+(  h_PreHLTwt    = fs->make<TH1D>\(") S
+(h_PreHLTwt) str
+(", ") p
+(Weighted HLT Prescale) str
+(", 500, 0, 100\);) p n
+(  h_L1ObjEnergy = fs->make<TH1D>\(") S
+(h_L1ObjEnergy) str
+(", ") p
+(Energy of L1Object) str
+(", 500, 0.0, 500.) p n
+(0\);) N
+() N
+(  ) S
+(if) K
+( \(doL2L3\) {) p n
+(    h_nL3Objs     = fs->make<TH1I>\(") S
+(h_nL3Objs) str
+(", ") p
+(Number of L3 objects) str
+(", 10, 0, 10\);) p n
+(    ) N
+(    std::string pairs[6] = {") S
+(L2L3) str
+(", ") p
+(L2L3Match) str
+(", ") p
+(L2L3NoMatch) str
+(", ") p
+(L3Reco) str
+(", ") p
+(L3RecoMat) str n
+(ch) S
+(", ") p
+(L3RecoNoMatch) str
+("};) p n
+(    ) S
+(for) K
+( \() p
+(int) k
+( ipair=0; ipair<6; ipair++\) {) p n
+(      sprintf\(hname, ") S
+(h_dEta%s) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(#Delta#eta for %s) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      h_dEta[ipair]        = fs->make<TH1D>\(hname, htit, 200, -10.0, 10.0\);) N
+(      h_dEta[ipair]->GetXaxis\(\)->SetTitle\(") S
+(d#eta) str
+("\);) p n
+(      ) N
+(      sprintf\(hname, ") S
+(h_dPhi%s) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(#Delta#phi for %s) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      h_dPhi[ipair]        = fs->make<TH1D>\(hname, htit, 140, -7.0, 7.0\);) N
+(      h_dPhi[ipair]->GetXaxis\(\)->SetTitle\(") S
+(d#phi) str
+("\);) p n
+() N
+(      sprintf\(hname, ") S
+(h_dPt%s) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(#Delta dp_{T} for %s objects) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      h_dPt[ipair]         = fs->make<TH1D>\(hname, htit, 400, -200.0, 200.0\);) N
+(      h_dPt[ipair]->GetXaxis\(\)->SetTitle\(") S
+(dp_{T} \(GeV\)) str
+("\);) p n
+() N
+(      sprintf\(hname, ") S
+(h_dP%s) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(#Delta p for %s objects) str
+(", pairs[ipair].c_str\(\)\);) p n
+(IsoTrig.cc) (Page 5/13) (Nov 14, 12 0:50) title
+border
+/v 1 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(      h_dP[ipair]         = fs->make<TH1D>\(hname, htit, 400, -200.0, 200.0\);) p n
+(      h_dP[ipair]->GetXaxis\(\)->SetTitle\(") S
+(dP \(GeV\)) str
+("\);) p n
+() N
+(      sprintf\(hname, ") S
+(h_dinvPt%s) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(#Delta \(1/p_{T}\) for %s objects) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      h_dinvPt[ipair]      = fs->make<TH1D>\(hname, htit, 500, -0.4, 0.1\);) N
+(      h_dinvPt[ipair]->GetXaxis\(\)->SetTitle\(") S
+(d\(1/p_{T}\)) str
+("\);) p n
+(      sprintf\(hname, ") S
+(h_mindR%s) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(min\(#Delta R\) for %s objects) str
+(", pairs[ipair].c_str\(\)\);) p n
+(      h_mindR[ipair]       = fs->make<TH1D>\(hname, htit, 500, 0.0, 1.0\);) N
+(      h_mindR[ipair]->GetXaxis\(\)->SetTitle\(") S
+(dR) str
+("\);) p n
+(    }) N
+() N
+(    ) S
+(for) K
+( \() p
+(int) k
+( lvl=0; lvl<2; lvl++\) {) p n
+(      sprintf\(hname, ") S
+(h_dEtaL1%s) str
+(", levels[lvl+1].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(#Delta#eta for L1 and %s objects) str
+(", levels[lvl+1].c_str\(\)\);) p n
+(      h_dEtaL1[lvl] = fs->make<TH1D>\(hname, htit, 400, -10.0, 10.0\);) N
+() N
+(      sprintf\(hname, ") S
+(h_dPhiL1%s) str
+(", levels[lvl+1].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(#Delta#phi for L1 and %s objects) str
+(", levels[lvl+1].c_str\(\)\);) p n
+(      h_dPhiL1[lvl] = fs->make<TH1D>\(hname, htit, 280, -7.0, 7.0\);) N
+() N
+(      sprintf\(hname, ") S
+(h_dRL1%s) str
+(", levels[lvl+1].c_str\(\)\);) p n
+(      sprintf\(htit, ") S
+(#Delta R for L1 and %s objects) str
+(", levels[lvl+1].c_str\(\)\);) p n
+(      h_dRL1[lvl] = fs->make<TH1D>\(hname, htit, 100, 0.0, 10.0\);) N
+(    }) N
+(  }) N
+() N
+(  ) S
+(int) k
+( levmin = \(doL2L3 ? 0 : 10\);) p n
+(  ) S
+(for) K
+( \() p
+(int) k
+( ilevel=levmin; ilevel<20; ilevel++\) {) p n
+(    sprintf\(hname, ") S
+(h_p%s) str
+(", levels[ilevel].c_str\(\)\);) p n
+(    sprintf\(htit, ") S
+(p for %s objects) str
+(", levels[ilevel].c_str\(\)\);) p n
+(    h_p[ilevel] = fs->make<TH1D>\(hname, htit, 100, 0.0, 500.0\);) N
+(    h_p[ilevel]->GetXaxis\(\)->SetTitle\(") S
+(p \(GeV\)) str
+("\);) p n
+(    ) N
+(    sprintf\(hname, ") S
+(h_pt%s) str
+(", levels[ilevel].c_str\(\)\);) p n
+(    sprintf\(htit, ") S
+(p_{T} for %s objects) str
+(", levels[ilevel].c_str\(\)\);) p n
+(    h_pt[ilevel] = fs->make<TH1D>\(hname, htit, 100, 0.0, 500.0\);) N
+(    h_pt[ilevel]->GetXaxis\(\)->SetTitle\(") S
+(p_{T} \(GeV\)) str
+("\);) p n
+(    ) N
+(    sprintf\(hname, ") S
+(h_eta%s) str
+(", levels[ilevel].c_str\(\)\);) p n
+(    sprintf\(htit, ") S
+(#eta for %s objects) str
+(", levels[ilevel].c_str\(\)\);) p n
+(    h_eta[ilevel] = fs->make<TH1D>\(hname, htit, 100, -5.0, 5.0\);) N
+(    h_eta[ilevel]->GetXaxis\(\)->SetTitle\(") S
+(#eta) str
+("\);) p n
+(    ) N
+(    sprintf\(hname, ") S
+(h_phi%s) str
+(", levels[ilevel].c_str\(\)\);) p n
+(    sprintf\(htit, ") S
+(#phi for %s objects) str
+(", levels[ilevel].c_str\(\)\);) p n
+(    h_phi[ilevel] = fs->make<TH1D>\(hname, htit, 70, -3.5, 3.50\);) N
+(    h_phi[ilevel]->GetXaxis\(\)->SetTitle\(") S
+(#phi) str
+("\);) p n
+(  }) N
+(  ) N
+(  std::string cuts[2]  = {") S
+(HLTMatched) str
+(", ") p
+(HLTNotMatched) str
+("};) p n
+(  std::string cuts2[2] = {") S
+(All) str
+(", ") p
+(Away from L1) str
+("};) p n
+(  ) S
+(for) K
+( \() p
+(int) k
+( icut=0; icut<2; icut++\) {) p n
+(    sprintf\(hname, ") S
+(h_eMip%s) str
+(", cuts[icut].c_str\(\)\);) p n
+(    sprintf\(htit, ") S
+(eMip for %s tracks) str
+(", cuts[icut].c_str\(\)\);) p n
+(    h_eMip[icut]     =fs->make<TH1D>\(hname, htit, 200, 0.0, 10.0\);) N
+(    h_eMip[icut]->GetXaxis\(\)->SetTitle\(") S
+(E_{Mip} \(GeV\)) str
+("\);) p n
+() N
+(    sprintf\(hname, ") S
+(h_eMaxNearP%s) str
+(", cuts[icut].c_str\(\)\);) p n
+(    sprintf\(htit, ") S
+(eMaxNearP for %s tracks) str
+(", cuts[icut].c_str\(\)\);) p n
+(    h_eMaxNearP[icut]=fs->make<TH1D>\(hname, htit, 240, -2.0, 10.0\);) N
+(    h_eMaxNearP[icut]->GetXaxis\(\)->SetTitle\(") S
+(E_{MaxNearP} \(GeV\)) str
+("\);) p n
+() N
+(    sprintf\(hname, ") S
+(h_eNeutIso%s) str
+(", cuts[icut].c_str\(\)\);) p n
+(    sprintf\(htit, ") S
+(eNeutIso for %s ) str
+(", cuts[icut].c_str\(\)\);) p n
+(    h_eNeutIso[icut] =fs->make<TH1D>\(hname, htit, 200, 0.0, 10.0\);) N
+(    h_eNeutIso[icut]->GetXaxis\(\)->SetTitle\(") S
+(E_{NeutIso} \(GeV\)) str
+("\);) p n
+() N
+(IsoTrig.cc) (Page 6/13) (Nov 14, 12 0:50) title
+border
+grestore
+(Printed by Sunanda Banerjee) rhead
+(IsoTrig.cc) (4/8) (Tuesday November 20, 2012) footer
+end % of iso15dict
+pagesave restore
+showpage
+%%Page: (7-8) 5
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso15dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(    ) p
+(for) K
+( \() p
+(int) k
+( kcut=0; kcut<2; ++kcut\) {) p n
+(      ) S
+(for) K
+( \() p
+(int) k
+( lim=0; lim<5; ++lim\) {) p n
+() S 8 T (sprintf\(hname, ") S
+(h_etaCalibTracks%sCut%dLim%d) str
+(", cuts[icut].c_str\(\), kcut, lim) p n
+(\);) N
+() S 8 T (sprintf\(htit, ") S
+(#eta for %s isolated MIP tracks \(%4.1f < p < %5.1f Gev/c %s\)) str
+(", cuts[icut].c) p n
+(_str\(\), pLimits[lim], pLimits[lim+1], cuts2[kcut].c_str\(\)\);) N
+() S 8 T (h_etaCalibTracks[lim][icut][kcut]=fs->make<TH1D>\(hname, htit, 60, -30.0,) N
+( 30.0\);) N
+() S 8 T (h_etaCalibTracks[lim][icut][kcut]->GetXaxis\(\)->SetTitle\(") S
+(i#eta) str
+("\);) p n
+() N
+() S 8 T (sprintf\(hname, ") S
+(h_etaMipTracks%sCut%dLim%d) str
+(", cuts[icut].c_str\(\), kcut, lim\)) p n
+(;) N
+() S 8 T (sprintf\(htit, ") S
+(#eta for %s charge isolated MIP tracks \(%4.1f < p < %5.1f Gev/c %s\)) str
+(", cuts[ic) p n
+(ut].c_str\(\), pLimits[lim], pLimits[lim+1], cuts2[kcut].c_str\(\)\);) N
+() S 8 T (h_etaMipTracks[lim][icut][kcut]=fs->make<TH1D>\(hname, htit, 60, -30.0, 3) N
+(0.0\);) N
+() S 8 T (h_etaMipTracks[lim][icut][kcut]->GetXaxis\(\)->SetTitle\(") S
+(i#eta) str
+("\);) p n
+(      }) N
+(    }) N
+(  }) N
+() N
+(  std::string ecut1[3] = {") S
+(all) str
+(",") p
+(HLTMatched) str
+(",") p
+(HLTNotMatched) str
+("};) p n
+(  std::string ecut2[2] = {") S
+(without) str
+(",") p
+(with) str
+("};) p n
+(  ) S
+(int) k
+( etac[48] = {-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,-17,-18) p n
+(,-19,-20,-21,-22,-23,-24,) N
+() S 8 T () S 16 T (  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,) N
+( 19, 20, 21, 22, 23, 24};) N
+(  ) S
+(for) K
+( \() p
+(int) k
+( icut=0; icut<6; icut++\) {) p n
+(    ) S
+(int) k
+( i1 = \(icut>3 ? 1 : 0\);) p n
+(    ) S
+(int) k
+( i2 = icut - i1*3;) p n
+(    ) S
+(for) K
+( \() p
+(int) k
+( kcut=0; kcut<48; kcut++\) {) p n
+(      ) S
+(for) K
+( \() p
+(int) k
+( lim=0; lim<5; ++lim\) {) p n
+() S 8 T (sprintf\(hname, ") S
+(h_eta%dEnHcal%s%s%d) str
+(", etac[kcut], ecut1[i2].c_str\(\), ecut) p n
+(2[i1].c_str\(\), lim\);) N
+() S 8 T (sprintf\(htit, ") S
+(HCAL energy for #eta=%d for %s tracks \(p=%4.1f:%5.1f Gev\) %s neutral isolation) str
+() p n
+(", etac[kcut], ecut1[i2].c_str\(\), pLimits[lim], pLimits[lim+1], ecut2[i1].c_str\() N
+(\)\);) N
+() S 8 T (h_eHcal[lim][icut][kcut]=fs->make<TH1D>\(hname, htit, 750, 0.0, 150.0\);) N
+() S 8 T (h_eHcal[lim][icut][kcut]->GetXaxis\(\)->SetTitle\(") S
+(Energy \(GeV\)) str
+("\);) p n
+() S 8 T (sprintf\(hname, ") S
+(h_eta%dEnCalo%s%s%d) str
+(", etac[kcut], ecut1[i2].c_str\(\), ecut) p n
+(2[i1].c_str\(\), lim\);) N
+() S 8 T (sprintf\(htit, ") S
+(Calorimter energy for #eta=%d for %s tracks \(p=%4.1f:%5.1f Gev\) %s neutral isolat) str n
+(ion) S
+(", etac[kcut], ecut1[i2].c_str\(\), pLimits[lim], pLimits[lim+1], ecut2[i1].c_s) p n
+(tr\(\)\);) N
+() S 8 T (h_eCalo[lim][icut][kcut]=fs->make<TH1D>\(hname, htit, 750, 0.0, 150.0\);) N
+() S 8 T (h_eCalo[lim][icut][kcut]->GetXaxis\(\)->SetTitle\(") S
+(Energy \(GeV\)) str
+("\);) p n
+(      }) N
+(    }) N
+(  }) N
+(}) N
+(// ------------ method called once each job just after ending the event loop  --) c n
+(----------) N
+(void) k
+( IsoTrig::endJob\(\) {) p n
+(  ) S
+(unsigned) k
+( ) p
+(int) k
+( preL1, preHLT;) p n
+(  std::map<) S
+(unsigned) k
+( ) p
+(int) k
+(, ) p
+(unsigned) k
+( ) p
+(int) k
+(>::iterator itr;) p n
+(  std::map<) S
+(unsigned) k
+( ) p
+(int) k
+(, ) p
+(const) K
+( std::pair<) p
+(int) k
+(, ) p
+(int) k
+(>>::iterator itrPre;) p n
+(  std::cout << ") S
+(RunNo vs HLT accepts for) str
+(";) p n
+(  ) S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( i=0; i<trigNames.size\(\); ++i\) ) p n
+(    std::cout << ") S
+( ) str
+(" << trigNames[i];) p n
+(  std::cout << std::endl;) N
+(  ) S
+(unsigned) k
+( ) p
+(int) k
+( n = maxRunNo - minRunNo +1;) p n
+(  g_Pre = fs->make<TH1I>\(") S
+(h_PrevsRN) str
+(", ") p
+(PreScale Vs Run Number) str
+(", n, minRunNo, maxRunNo\)) p n
+(;) N
+(  g_PreL1 = fs->make<TH1I>\(") S
+(h_PreL1vsRN) str
+(", ") p
+(L1 PreScale Vs Run Number) str
+(", n, minRunNo, max) p n
+(RunNo\);) N
+(  g_PreHLT = fs->make<TH1I>\(") S
+(h_PreHLTvsRN) str
+(", ") p
+(HLT PreScale Vs Run Number) str
+(", n, minRunNo,) p n
+( maxRunNo\);) N
+(  g_Accepts = fs->make<TH1I>\(") S
+(h_HLTAcceptsvsRN) str
+(", ") p
+(HLT Accepts Vs Run Number) str
+(", n, minRu) p n
+(nNo, maxRunNo\); ) N
+(IsoTrig.cc) (Page 7/13) (Nov 14, 12 0:50) title
+border
+/v 1 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p n
+(  ) S
+(for) K
+( \(itr=TrigList.begin\(\), itrPre=TrigPreList.begin\(\); itr!=TrigList.end\(\); it) p n
+(r++, itrPre++\) {) N
+(    preL1 = \(itrPre->second\).first;) N
+(    preHLT = \(itrPre->second\).second;) N
+(    std::cout << itr->first << ") S
+( ) str
+(" << itr->second << ") p
+( ) str
+(" <<  itrPre->first << ") p
+( ) str
+(") p n
+( << preL1 << ") S
+( ) str
+(" << preHLT << std::endl;) p n
+(    g_Accepts->Fill\(itr->first, itr->second\);) N
+(    g_PreL1->Fill\(itr->first, preL1\);) N
+(    g_PreHLT->Fill\(itr->first, preHLT\);) N
+(    g_Pre->Fill\(itr->first, preL1*preHLT\);) N
+(  }) N
+(}) N
+() N
+(// ------------ method called when starting to processes a run  ------------) c n
+(void) k
+( IsoTrig::beginRun\(edm::Run ) p
+(const) K
+(& iRun, edm::EventSetup ) p
+(const) K
+(& iSetup\) {) p n
+(  std::cout  << ") S
+(Run ) str
+(" << iRun.run\(\) << ") p
+( hltconfig.init ) str
+(" ) p n
+() S 8 T (     << hltConfig_.init\(iRun,iSetup,") S
+(HLT) str
+(",changed\) << std::endl;;) p n
+(}) N
+() N
+(// ------------ method called when ending the processing of a run  ------------) c n
+(void) k
+( IsoTrig::endRun\(edm::Run ) p
+(const) K
+(&, edm::EventSetup ) p
+(const) K
+(&\) {}) p n
+() N
+(// ------------ method called when starting to processes a luminosity block  ---) c n
+(---------) N
+(void) k
+( IsoTrig::beginLuminosityBlock\(edm::LuminosityBlock ) p
+(const) K
+(&, edm::EventSetup ) p
+() K n
+(const) S
+(&\) {}) p n
+(// ------------ method called when ending the processing of a luminosity block  ) c n
+(------------) N
+(void) k
+( IsoTrig::endLuminosityBlock\(edm::LuminosityBlock ) p
+(const) K
+(&, edm::EventSetup ) p
+(co) K n
+(nst) S
+(&\) {}) p n
+(// ------------ method fills 'descriptions' with the allowed parameters for the ) c n
+(module  ------------) N
+() p n
+(void) k
+( IsoTrig::studyTrigger\(edm::Handle<reco::TrackCollection>& trkCollection,) p n
+() S 8 T () S 16 T () S 24 T (   std::vector<reco::TrackCollection::const_iterator>& g) N
+(oodTks\) {) N
+() N
+(  ) S
+(//// Filling Pt, eta, phi of L1, L2 and L3 objects) c n
+(  ) p
+(for) K
+( \() p
+(int) k
+( j=0; j<3; j++\) {) p n
+(    ) S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( k=0; k<vec[j].size\(\); k++\) {) p n
+(      ) S
+(if) K
+( \(verbosity%10 > 0\) std::cout << ") p
+(vec[) str
+(" << j << ") p
+(][) str
+(" << k << ") p
+(] pt ) str
+(" << vec[) p n
+(j][k].pt\(\) << ") S
+( eta ) str
+(" << vec[j][k].eta\(\) << ") p
+( phi ) str
+(" << vec[j][k].phi\(\) << std::endl;) p n
+(      fillHist\(j, vec[j][k]\);) N
+(    }) N
+(  }) N
+() S 8 T (  ) N
+(  ) S
+(double) k
+( deta, dphi, dr;) p n
+(  ) S
+(//// deta, dphi and dR for leading L1 object with L2 and L3 objects) c n
+(  ) p
+(for) K
+( \() p
+(int) k
+( lvl=1; lvl<3; lvl++\) {) p n
+(    ) S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( i=0; i<vec[lvl].size\(\); i++\) {) p n
+(      deta = dEta\(vec[0][0],vec[lvl][i]\);) N
+(      dphi = dPhi\(vec[0][0],vec[lvl][i]\);) N
+(      dr   = dR\(vec[0][0],vec[lvl][i]\);) N
+(      ) S
+(if) K
+( \(verbosity%10 > 0\) std::cout << ") p
+(lvl ) str
+(" <<lvl << ") p
+( i ) str
+(" << i << ") p
+( deta ) str
+(" << de) p n
+(ta << ") S
+( dphi ) str
+(" << dphi << ") p
+( dR ) str
+(" << dr << std::endl;) p n
+(      h_dEtaL1[lvl-1] -> Fill\(deta\);) N
+(      h_dPhiL1[lvl-1] -> Fill\(dphi\);) N
+(      h_dRL1[lvl-1]   -> Fill\(std::sqrt\(dr\)\);) N
+(    }) N
+(  }) N
+() N
+(  math::XYZTLorentzVector mindRvec;) N
+(  ) S
+(double) k
+( mindR;) p n
+(  ) S
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( k=0; k<vec[2].size\(\); ++k\) {) p n
+(    ) S
+(//// Find min of deta/dphi/dR for each of L3 objects with L2 objects) c n
+(    mindR=999.9;) p n
+(    ) S
+(if) K
+( \(verbosity%10 > 0\) std::cout << ") p
+(L3obj: pt ) str
+(" << vec[2][k].pt\(\) << ") p
+( eta ) str
+(" << v) p n
+(ec[2][k].eta\(\) << ") S
+( phi ) str
+(" << vec[2][k].phi\(\) << std::endl;) p n
+(IsoTrig.cc) (Page 8/13) (Nov 14, 12 0:50) title
+border
+grestore
+(Printed by Sunanda Banerjee) rhead
+(IsoTrig.cc) (5/8) (Tuesday November 20, 2012) footer
+end % of iso15dict
+pagesave restore
+showpage
+%%Page: (9-10) 6
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso15dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(    ) p
+(for) K
+( \() p
+(unsigned) k
+( ) p
+(int) k
+( j=0; j<vec[1].size\(\); j++\) {) p n
+(      dr   = dR\(vec[2][k],vec[1][j]\);) N
+(      ) S
+(if) K
+( \(dr<mindR\) {) p n
+() S 8 T (mindR=dr;) N
+() S 8 T (mindRvec=vec[1][j];) N
+(      }) N
+(    }) N
+(    fillDifferences\(0, vec[2][k], mindRvec, \(verbosity%10 >0\)\);) N
+(    ) S
+(if) K
+( \(mindR < 0.03\) {) p n
+(      fillDifferences\(1, vec[2][k], mindRvec, \(verbosity%10 >0\)\);) N
+(      fillHist\(6, mindRvec\);) N
+(      fillHist\(8, vec[2][k]\);) N
+(    } ) S
+(else) K
+( {) p n
+(      fillDifferences\(2, vec[2][k], mindRvec, \(verbosity%10 >0\)\);) N
+(      fillHist\(7, mindRvec\);) N
+(      fillHist\(9, vec[2][k]\);) N
+(    }) N
+() S 8 T (      ) S 16 T (      ) N
+(    ) S
+(////// Minimum deltaR for each of L3 objs with Reco::tracks) c n
+(    mindR=999.9;) p n
+(    ) S
+(if) K
+( \(verbosity%10 > 0\) std::cout << ") p
+(vec[2][k].eta\(\) ) str
+(" << vec[2][k].eta\(\) << ") p
+( vec[k]) str n
+([0].phi ) S
+(" << vec[2][k].phi\(\) << std::endl;) p n
+(    reco::TrackCollection::const_iterator goodTk = trkCollection->end\(\);) N
+(    ) S
+(if) K
+( \(trkCollection.isValid\(\)\) {) p n
+(      ) S
+(double) k
+( mindP = 9999.9;) p n
+(      reco::TrackCollection::const_iterator trkItr;) N
+(      ) S
+(for) K
+( \(trkItr=trkCollection->begin\(\); ) p n
+() S 8 T (   trkItr!=trkCollection->end\(\); trkItr++\) {) N
+() S 8 T (math::XYZTLorentzVector v4\(trkItr->px\(\), trkItr->py\(\), ) N
+() S 8 T () S 16 T () S 24 T () S 32 T (   trkItr->pz\(\), trkItr->p\(\)\);) N
+() S 8 T () S
+(double) k
+( deltaR = dR\(v4, vec[2][k]\);) p n
+() S 8 T () S
+(double) k
+( dp     = std::abs\(v4.r\(\)/vec[2][k].r\(\)-1.0\);) p n
+() S 8 T () S
+(if) K
+( \(deltaR<mindR\) {) p n
+() S 8 T (  mindR    = deltaR;) N
+() S 8 T (  mindP    = dp;) N
+() S 8 T (  mindRvec = v4;) N
+() S 8 T (  goodTk   = trkItr;) N
+() S 8 T (}) N
+() S 8 T () S
+(if) K
+( \(\(verbosity/10\)%10>1 && deltaR<1.0\) {) p n
+() S 8 T (  std::cout << ") S
+(track: pt ) str
+(" << v4.pt\(\) << ") p
+( eta ) str
+(" << v4.eta\(\)) p n
+() S 8 T () S 16 T (    << ") S
+( phi ) str
+(" << v4.phi\(\) << ") p
+( DR ) str
+(" << deltaR ) p n
+() S 8 T () S 16 T (    << std::endl;) N
+() S 8 T (}) N
+(      }) N
+(      ) S
+(if) K
+( \(mindR < 0.03 && mindP > 0.1\) {) p n
+() S 8 T () S
+(for) K
+( \(trkItr=trkCollection->begin\(\); ) p n
+() S 8 T (     trkItr!=trkCollection->end\(\); trkItr++\) {) N
+() S 8 T (  math::XYZTLorentzVector v4\(trkItr->px\(\), trkItr->py\(\), ) N
+() S 8 T () S 16 T () S 24 T () S 32 T (     trkItr->pz\(\), trkItr->p\(\)\);) N
+() S 8 T (  ) S
+(double) k
+( deltaR = dR\(v4, vec[2][k]\);) p n
+() S 8 T (  ) S
+(double) k
+( dp     = std::abs\(v4.r\(\)/vec[2][k].r\(\)-1.0\);) p n
+() S 8 T (  ) S
+(if) K
+( \(dp<mindP && deltaR<0.03\) {) p n
+() S 8 T (    mindR    = deltaR;) N
+() S 8 T (    mindP    = dp;) N
+() S 8 T (    mindRvec = v4;) N
+() S 8 T (    goodTk   = trkItr;) N
+() S 8 T (  }) N
+() S 8 T (}) N
+(      }) N
+(      fillDifferences\(3, vec[2][k], mindRvec, \(verbosity%10 >0\)\);) N
+(      fillHist\(3, mindRvec\);) N
+(      ) S
+(if) K
+(\(mindR < 0.03\) {) p n
+() S 8 T (fillDifferences\(4, vec[2][k], mindRvec, \(verbosity%10 >0\)\);) N
+() S 8 T (fillHist\(4, mindRvec\);) N
+(      } ) S
+(else) K
+( {) p n
+() S 8 T (fillDifferences\(5, vec[2][k], mindRvec, \(verbosity%10 >0\)\);) N
+() S 8 T (fillHist\(5, mindRvec\);) N
+(      }) N
+(      ) S
+(if) K
+( \(goodTk != trkCollection->end\(\)\) goodTks.push_back\(goodTk\);) p n
+(IsoTrig.cc) (Page 9/13) (Nov 14, 12 0:50) title
+border
+/v 1 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(    }) p n
+(  }) N
+(}) N
+() N
+(void) k
+( IsoTrig::studyIsolation\() p
+(const) K
+( edm::Event& iEvent, ) p n
+() S 8 T () S 16 T () S 24 T (     ) S
+(const) K
+( edm::EventSetup& iSetup,) p n
+() S 8 T () S 16 T () S 24 T (     edm::Handle<reco::TrackCollection>& trkCollection,) N
+() S 8 T () S 16 T () S 24 T (     std::vector<reco::TrackCollection::const_iterator>&) N
+( goodTks\) {) N
+() N
+(  ) S
+(if) K
+( \(trkCollection.isValid\(\)\) {) p n
+(    edm::ESHandle<MagneticField> bFieldH;) N
+(    iSetup.get<IdealMagneticFieldRecord>\(\).get\(bFieldH\);) N
+(    ) S
+(const) K
+( MagneticField *bField = bFieldH.product\(\);) p n
+() N
+(    ) S
+(// get handles to calogeometry and calotopology) c n
+(    edm::ESHandle<CaloGeometry> pG;) p n
+(    iSetup.get<CaloGeometryRecord>\(\).get\(pG\);) N
+(    ) S
+(const) K
+( CaloGeometry* geo = pG.product\(\);) p n
+() N
+(    ) S
+(//Define the best vertex) c n
+(    edm::Handle<reco::VertexCollection> recVtxs;) p n
+(    iEvent.getByLabel\(") S
+(offlinePrimaryVertices) str
+(",recVtxs\);  ) p n
+(    ) S
+(// Get the beamspot) c n
+(    edm::Handle<reco::BeamSpot> beamSpotH;) p n
+(    iEvent.getByLabel\(") S
+(offlineBeamSpot) str
+(", beamSpotH\);) p n
+(    math::XYZPoint leadPV\(0,0,0\);) N
+(    ) S
+(if) K
+( \(recVtxs->size\(\)>0 && !\(\(*recVtxs\)[0].isFake\(\)\)\) {) p n
+(      leadPV = math::XYZPoint\( \(*recVtxs\)[0].x\(\),\(*recVtxs\)[0].y\(\), \(*recVtxs\)[0) N
+(].z\(\) \);) N
+(    } ) S
+(else) K
+( ) p
+(if) K
+( \(beamSpotH.isValid\(\)\) {) p n
+(      leadPV = beamSpotH->position\(\);) N
+(    }) N
+(    ) S
+(if) K
+( \(\(verbosity/100\)%10>0\) {) p n
+(      std::cout << ") S
+(Primary Vertex ) str
+(" << leadPV;) p n
+(      ) S
+(if) K
+( \(beamSpotH.isValid\(\)\) std::cout << ") p
+( Beam Spot ) str
+(" ) p n
+() S 8 T () S 16 T () S 24 T () S 32 T () S 40 T ( << beamSpotH->position\(\);) N
+(      std::cout << std::endl;) N
+(    }) N
+(    std::vector<spr::propagatedTrackDirection> trkCaloDirections;) N
+(    spr::propagateCALO\(trkCollection, geo, bField, theTrackQuality, trkCaloDirec) N
+(tions, \(\(verbosity/100\)%10>2\)\);) N
+(    std::vector<spr::propagatedTrackDirection>::const_iterator trkDetItr;) N
+(  ) N
+(    edm::Handle<EcalRecHitCollection> barrelRecHitsHandle;) N
+(    edm::Handle<EcalRecHitCollection> endcapRecHitsHandle;) N
+(    iEvent.getByLabel\(") S
+(ecalRecHit) str
+(",") p
+(EcalRecHitsEB) str
+(",barrelRecHitsHandle\);) p n
+(    iEvent.getByLabel\(") S
+(ecalRecHit) str
+(",") p
+(EcalRecHitsEE) str
+(",endcapRecHitsHandle\);) p n
+(    edm::Handle<HBHERecHitCollection> hbhe;) N
+(    iEvent.getByLabel\(") S
+(hbhereco) str
+(",hbhe\);) p n
+() N
+(    ) S
+(unsigned) k
+( ) p
+(int) k
+( nTracks=0, ngoodTk=0, nselTk=0;) p n
+(    ) S
+(int) k
+(          ieta=999;) p n
+(    ) S
+(for) K
+( \(trkDetItr = trkCaloDirections.begin\(\); trkDetItr != trkCaloDirections.e) p n
+(nd\(\); trkDetItr++,nTracks++\){) N
+(      ) S
+(bool) k
+( l3Track  = \(std::find\(goodTks.begin\(\),goodTks.end\(\),trkDetItr->trkItr) p n
+(\) != goodTks.end\(\)\);) N
+(      ) S
+(const) K
+( reco::Track* pTrack = &\(*\(trkDetItr->trkItr\)\);) p n
+(      math::XYZTLorentzVector v4\(pTrack->px\(\), pTrack->py\(\), ) N
+() S 8 T () S 16 T () S 24 T () S 32 T ( pTrack->pz\(\), pTrack->p\(\)\);) N
+(      ) S
+(bool) k
+( selectTk = spr::goodTrack\(pTrack,leadPV,selectionParameters,\(\(verbosi) p n
+(ty/100\)%10>2\)\);) N
+(      ) S
+(double) k
+( eMipDR=9999., e_inCone=0, conehmaxNearP=0, mindR=999.9, hCone=0;) p n
+(      ) S
+(if) K
+( \(trkDetItr->okHCAL\) {) p n
+() S 8 T (HcalDetId detId = \(HcalDetId\)\(trkDetItr->detIdHCAL\);) N
+() S 8 T (ieta = detId.ieta\(\);) N
+(      }) N
+(      ) S
+(for) K
+( \() p
+(unsigned) k
+( k=0; k<vec[0].size\(\); ++k\) {) p n
+() S 8 T () S
+(double) k
+( deltaR = dR\(v4, vec[0][k]\);) p n
+(IsoTrig.cc) (Page 10/13) (Nov 14, 12 0:50) title
+border
+grestore
+(Printed by Sunanda Banerjee) rhead
+(IsoTrig.cc) (6/8) (Tuesday November 20, 2012) footer
+end % of iso15dict
+pagesave restore
+showpage
+%%Page: (11-12) 7
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso15dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p 8 T () S
+(if) K
+( \(deltaR<mindR\) mindR = deltaR;) p n
+(      }) N
+(      ) S
+(if) K
+( \(selectTk && trkDetItr->okECAL && trkDetItr->okHCAL\) {) p n
+() S 8 T (ngoodTk++;) N
+() S 8 T () S
+(int) k
+( nRH_eMipDR=0, nNearTRKs=0;) p n
+() S 8 T () S
+(double) k
+( e1 =  spr::eCone_ecal\(geo, barrelRecHitsHandle, endcapRecHitsHand) p n
+(le,) N
+() S 8 T () S 16 T () S 24 T () S 32 T (     trkDetItr->pointHCAL, trkDetItr->pointECAL,) N
+() S 8 T () S 16 T () S 24 T () S 32 T (     a_neutR1, trkDetItr->directionECAL, nRH_eMi) N
+(pDR\);) N
+() S 8 T () S
+(double) k
+( e2 =  spr::eCone_ecal\(geo, barrelRecHitsHandle, endcapRecHitsHand) p n
+(le,) N
+() S 8 T () S 16 T () S 24 T () S 32 T (     trkDetItr->pointHCAL, trkDetItr->pointECAL,) N
+() S 8 T () S 16 T () S 24 T () S 32 T (     a_neutR2, trkDetItr->directionECAL, nRH_eMi) N
+(pDR\);) N
+() S 8 T (eMipDR = spr::eCone_ecal\(geo, barrelRecHitsHandle, endcapRecHitsHandle,) N
+() S 8 T () S 16 T () S 24 T () S 32 T ( trkDetItr->pointHCAL, trkDetItr->pointECAL,) N
+() S 8 T () S 16 T () S 24 T () S 32 T ( a_mipR, trkDetItr->directionECAL, nRH_eMipDR\);) N
+() S 8 T (conehmaxNearP = spr::chargeIsolationCone\(nTracks, trkCaloDirections, a_c) N
+(harIsoR, nNearTRKs, \(\(verbosity/100\)%10>2\)\);) N
+() S 8 T (e_inCone = e2 - e1;) N
+() S 8 T () S
+(double) k
+(             distFromHotCell=-99.0;) p n
+() S 8 T () S
+(int) k
+(                nRecHitsCone=-99, ietaHotCell=-99, iphiHotCell=-99;) p n
+() S 8 T (GlobalPoint        gposHotCell\(0.,0.,0.\);) N
+() S 8 T (std::vector<DetId> coneRecHitDetIds;) N
+(  ) S 8 T (hCone    = spr::eCone_hcal\(geo, hbhe, trkDetItr->pointHCAL, ) N
+() S 8 T () S 16 T () S 24 T () S 32 T (   trkDetItr->pointECAL,) N
+() S 8 T () S 16 T () S 24 T () S 32 T (   a_coneR, trkDetItr->directionHCAL, ) N
+() S 8 T () S 16 T () S 24 T () S 32 T (   nRecHitsCone, coneRecHitDetIds,) N
+() S 8 T () S 16 T () S 24 T () S 32 T (   distFromHotCell, ietaHotCell, iphiHotCell,) N
+() S 8 T () S 16 T () S 24 T () S 32 T (   gposHotCell, -1\);) N
+() S 8 T () S
+(if) K
+( \(eMipDR<1.0\) nselTk++;) p n
+(      }) N
+(      ) S
+(if) K
+( \(l3Track\) {) p n
+() S 8 T (fillHist\(10,v4\);) N
+() S 8 T () S
+(if) K
+( \(selectTk\) {) p n
+() S 8 T (  fillHist\(11,v4\);) N
+() S 8 T (  fillCuts\(0, eMipDR, conehmaxNearP, e_inCone, v4, ieta, \(mindR>dr_L1\)\);) N
+() S 8 T (  ) S
+(if) K
+( \(conehmaxNearP < cutCharge\) {) p n
+() S 8 T (    fillHist\(12,v4\);) N
+() S 8 T (    ) S
+(if) K
+( \(eMipDR < cutMip\) {) p n
+() S 8 T (      fillHist\(13,v4\);) N
+() S 8 T (      fillEnergy\(1, ieta, hCone, eMipDR, v4\);) N
+() S 8 T (      fillEnergy\(0, ieta, hCone, eMipDR, v4\);) N
+() S 8 T (      ) S
+(if) K
+( \(e_inCone < cutNeutral\) {) p n
+() S 8 T () S 16 T (fillHist\(14, v4\);) N
+() S 8 T () S 16 T (fillEnergy\(4, ieta, hCone, eMipDR, v4\);) N
+() S 8 T () S 16 T (fillEnergy\(3, ieta, hCone, eMipDR, v4\);) N
+() S 8 T (      }) N
+() S 8 T (    }) N
+() S 8 T (  }) N
+() S 8 T (}) N
+(      } ) S
+(else) K
+( ) p
+(if) K
+( \(doL2L3\) {) p n
+() S 8 T (fillHist\(15,v4\);) N
+() S 8 T () S
+(if) K
+( \(selectTk\) {) p n
+() S 8 T (  fillHist\(16,v4\);) N
+() S 8 T (  fillCuts\(1, eMipDR, conehmaxNearP, e_inCone, v4, ieta, \(mindR>dr_L1\)\);) N
+() S 8 T (  ) S
+(if) K
+( \(conehmaxNearP < cutCharge\) {) p n
+() S 8 T (    fillHist\(17,v4\);) N
+() S 8 T (    ) S
+(if) K
+( \(eMipDR < cutMip\) {) p n
+() S 8 T (      fillHist\(18,v4\);) N
+() S 8 T (      fillEnergy\(2, ieta, hCone, eMipDR, v4\);) N
+() S 8 T (      fillEnergy\(0, ieta, hCone, eMipDR, v4\);) N
+() S 8 T (      ) S
+(if) K
+( \(e_inCone < cutNeutral\) {) p n
+() S 8 T () S 16 T (fillHist\(19, v4\);) N
+() S 8 T () S 16 T (fillEnergy\(5, ieta, hCone, eMipDR, v4\);) N
+() S 8 T () S 16 T (fillEnergy\(3, ieta, hCone, eMipDR, v4\);) N
+() S 8 T (      }) N
+() S 8 T (    }) N
+(IsoTrig.cc) (Page 11/13) (Nov 14, 12 0:50) title
+border
+/v 1 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p 8 T (  }) N
+() S 8 T (}) N
+(      }) N
+(    }) N
+(  }) N
+(}) N
+() N
+(void) k
+( IsoTrig::fillHist\() p
+(int) k
+( indx, math::XYZTLorentzVector& vec\) {) p n
+(  h_p[indx]->Fill\(vec.r\(\)\);) N
+(  h_pt[indx]->Fill\(vec.pt\(\)\);) N
+(  h_eta[indx]->Fill\(vec.eta\(\)\);) N
+(  h_phi[indx]->Fill\(vec.phi\(\)\);) N
+(}) N
+() N
+(void) k
+( IsoTrig::fillDifferences\() p
+(int) k
+( indx, math::XYZTLorentzVector& vec1, ) p n
+() S 8 T () S 16 T () S 24 T (      math::XYZTLorentzVector& vec2, ) S
+(bool) k
+( debug\) {) p n
+(  ) S
+(double) k
+( dr     = dR\(vec1,vec2\);) p n
+(  ) S
+(double) k
+( deta   = dEta\(vec1, vec2\);) p n
+(  ) S
+(double) k
+( dphi   = dPhi\(vec1, vec2\);) p n
+(  ) S
+(double) k
+( dpt    = dPt\(vec1, vec2\);) p n
+(  ) S
+(double) k
+( dp     = dP\(vec1, vec2\);) p n
+(  ) S
+(double) k
+( dinvpt = dinvPt\(vec1, vec2\);) p n
+(  h_dEta[indx]  ->Fill\(deta\);) N
+(  h_dPhi[indx]  ->Fill\(dphi\);) N
+(  h_dPt[indx]   ->Fill\(dpt\);) N
+(  h_dP[indx]    ->Fill\(dp\);) N
+(  h_dinvPt[indx]->Fill\(dinvpt\);) N
+(  h_mindR[indx] ->Fill\(dr\);) N
+(  ) S
+(if) K
+( \(debug\) std::cout << ") p
+(mindR for index ) str
+(" << indx << ") p
+( is ) str
+(" << dr << ") p
+( deta ) str
+(" << deta ) p n
+(<< ") S
+( dphi ) str
+(" << dphi << ") p
+( dpt ) str
+(" << dpt <<  ") p
+( dinvpt ) str
+(" << dinvpt <<std::endl;) p n
+(}) N
+() N
+(void) k
+( IsoTrig::fillCuts\() p
+(int) k
+( indx, ) p
+(double) k
+( eMipDR, ) p
+(double) k
+( conehmaxNearP, ) p
+(double) k
+( e_i) p n
+(nCone, math::XYZTLorentzVector& vec, ) S
+(int) k
+( ieta, ) p
+(bool) k
+( cut\) {) p n
+(  h_eMip[indx]     ->Fill\(eMipDR\);) N
+(  h_eMaxNearP[indx]->Fill\(conehmaxNearP\);) N
+(  h_eNeutIso[indx] ->Fill\(e_inCone\);) N
+(  ) S
+(if) K
+( \(\(conehmaxNearP < cutCharge\) && \(eMipDR < cutMip\)\) {) p n
+(    ) S
+(for) K
+( \() p
+(int) k
+( lim=0; lim<5; ++lim\) {) p n
+(      ) S
+(if) K
+( \(\(vec.r\(\)>pLimits[lim]\) && \(vec.r\(\)<=pLimits[lim+1]\)\) {) p n
+() S 8 T (h_etaMipTracks[lim][indx][0]->Fill\(\() S
+(double) k
+(\)\(ieta\)\);) p n
+() S 8 T () S
+(if) K
+( \(cut\) h_etaMipTracks[lim][indx][1]->Fill\(\() p
+(double) k
+(\)\(ieta\)\);) p n
+() S 8 T () S
+(if) K
+( \(e_inCone < cutNeutral\) {) p n
+() S 8 T (  h_etaCalibTracks[lim][indx][0]->Fill\(\() S
+(double) k
+(\)\(ieta\)\);) p n
+() S 8 T (  ) S
+(if) K
+( \(cut\) h_etaCalibTracks[lim][indx][1]->Fill\(\() p
+(double) k
+(\)\(ieta\)\);) p n
+() S 8 T (}) N
+(      }) N
+(    }) N
+(  }) N
+(}) N
+() N
+(void) k
+( IsoTrig::fillEnergy\() p
+(int) k
+( indx, ) p
+(int) k
+( ieta, ) p
+(double) k
+( hCone, ) p
+(double) k
+( eMipDR, math::) p n
+(XYZTLorentzVector& vec\) {) N
+(  ) S
+(int) k
+( kk\(-1\);) p n
+(  ) S
+(if) K
+(      \(ieta > 0 && ieta < 25\)  kk = 23 + ieta;) p n
+(  ) S
+(else) K
+( ) p
+(if) K
+( \(ieta > -25 && ieta < 0\) kk = -\(ieta + 1\);) p n
+(  ) S
+(if) K
+( \(kk >= 0\) {) p n
+(    ) S
+(for) K
+( \() p
+(int) k
+( lim=0; lim<5; ++lim\) {) p n
+(      ) S
+(if) K
+( \(\(vec.r\(\)>pLimits[lim]\) && \(vec.r\(\)<=pLimits[lim+1]\)\) {) p n
+() S 8 T (h_eHcal[lim][indx][kk]     ->Fill\(hCone\);) N
+() S 8 T (h_eCalo[lim][indx][kk]     ->Fill\(hCone+eMipDR\);) N
+(      }) N
+(    }) N
+(  }) N
+(}) N
+() N
+(double) k
+( IsoTrig::dEta\(math::XYZTLorentzVector& vec1, math::XYZTLorentzVector& vec) p n
+(2\) {) N
+(  ) S
+(return) K
+( \(vec1.eta\(\)-vec2.eta\(\)\);) p n
+(IsoTrig.cc) (Page 12/13) (Nov 14, 12 0:50) title
+border
+grestore
+(Printed by Sunanda Banerjee) rhead
+(IsoTrig.cc) (7/8) (Tuesday November 20, 2012) footer
+end % of iso15dict
+pagesave restore
+showpage
+%%Page: (13) 8
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso15dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.147420 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(}) p n
+() N
+(double) k
+( IsoTrig::dPhi\(math::XYZTLorentzVector& vec1, math::XYZTLorentzVector& vec) p n
+(2\) {) N
+() N
+(  ) S
+(double) k
+( phi1 = vec1.phi\(\);) p n
+(  ) S
+(if) K
+( \(phi1 < 0\) phi1 += 2.0*M_PI;) p n
+(  ) S
+(double) k
+( phi2 = vec2.phi\(\);) p n
+(  ) S
+(if) K
+( \(phi2 < 0\) phi2 += 2.0*M_PI;) p n
+(  ) S
+(double) k
+( dphi = phi1-phi2;) p n
+(  ) S
+(if) K
+( \(dphi > M_PI\)       dphi -= 2.*M_PI;) p n
+(  ) S
+(else) K
+( ) p
+(if) K
+( \(dphi < -M_PI\) dphi += 2.*M_PI;) p n
+(  ) S
+(return) K
+( dphi;) p n
+(}) N
+() N
+(double) k
+( IsoTrig::dR\(math::XYZTLorentzVector& vec1, math::XYZTLorentzVector& vec2\)) p n
+( {) N
+(  ) S
+(double) k
+( deta = dEta\(vec1,vec2\);) p n
+(  ) S
+(double) k
+( dphi = dPhi\(vec1,vec2\);) p n
+(  ) S
+(return) K
+( std::sqrt\(deta*deta + dphi*dphi\);) p n
+(}) N
+() N
+(double) k
+( IsoTrig::dPt\(math::XYZTLorentzVector& vec1, math::XYZTLorentzVector& vec2) p n
+(\) {) N
+(  ) S
+(return) K
+( \(vec1.pt\(\)-vec2.pt\(\)\);) p n
+(}) N
+() N
+(double) k
+( IsoTrig::dP\(math::XYZTLorentzVector& vec1, math::XYZTLorentzVector& vec2\)) p n
+( {) N
+(  ) S
+(return) K
+( \(std::abs\(vec1.r\(\)-vec2.r\(\)\)\);) p n
+(}) N
+() N
+(double) k
+( IsoTrig::dinvPt\(math::XYZTLorentzVector& vec1, math::XYZTLorentzVector& v) p n
+(ec2\) {) N
+(  ) S
+(return) K
+( \(\(1/vec1.pt\(\)\)-\(1/vec2.pt\(\)\)\);) p n
+(}) N
+() N
+(//define this as a plug-in) c n
+(DEFINE_FWK_MODULE\(IsoTrig\);) p n
+(IsoTrig.cc) (Page 13/13) (Nov 14, 12 0:50) title
+border
+grestore
+(Printed by Sunanda Banerjee) rhead
+(IsoTrig.cc) (8/8) (Tuesday November 20, 2012) footer
+end % of iso15dict
+pagesave restore
+showpage
+
+%%Trailer
+end
+%%EOF
