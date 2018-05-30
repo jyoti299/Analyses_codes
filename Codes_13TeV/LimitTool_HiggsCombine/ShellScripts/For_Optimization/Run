@@ -1,0 +1,36 @@
+#!/bin/bash
+
+model=Qstar
+coupling=f1p0
+Opti=DEta_Opti  ##DPhi_Opti  ##PhId_Opti  ##JetId_Opti  ##CSVDisc_Opti 
+
+for cut in  DEta_1.0  DEta_1.2  DEta_1.5  DEta_1.8  DEta_2.0  DEta_2.2  DEta_2.5  NoDEta
+#for cut in  DPhi_1.5  DPhi_2.0  DPhi_2.5  NoDPhi
+#for cut in PhId_Loose  PhId_Medium  PhId_Tight
+#for cut in JetId_Tight  JetId_TightLepVeto
+#for cut in CSVL  CSVM  CSVT
+do
+
+boxName=ExcitedQuarks2016  ##ExcitedQuarks2016  ##Excited1btagQuarks2016
+
+##NO change below
+inDir=inputs/Optimization_80X_ReReco/${Opti}/${cut}/
+
+outDir=Cards_Optimization/Opti_usingReReco/${Opti}/${cut}/
+
+if [ ! -d ${outDir} ]; then
+echo "--------- Making Directory ${outDir} -----------"
+mkdir -pv ${outDir}
+chmod 775 ${outDir}
+fi
+
+#Sigfile=$(find inputs/Optimization_80X/${Opti}/${cut}/ -name "*${cut}.root")
+#Datafile=$(find inputs/Optimization_80X/${Opti}/${cut}/ -name "Data*.root")
+Sigfile=${inDir}/ResonanceShapes_Qstar_f-1p0_13TeV_PhLID-JetTID-Pt190-nodeta-nodphi-CSVM_mass695_80X_Spring16.root
+Datafile=${inDir}/PseudoData_80X_36813pb_Cut-PhLID_JetTID_nodphi_CSVL_Mass695_QstarInvtMass_Spring16.root
+
+python python/BinnedFit.py -c config/Qstar.config -l 36813 --mass 1000 -m ${model} -s ${Sigfile} ${Datafile} -b ${boxName} -d ${outDir} --fit-spectrum
+
+
+echo "DONE FOR ${cut}"
+done

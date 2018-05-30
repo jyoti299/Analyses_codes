@@ -1,0 +1,31 @@
+Combination of Excited1btagQuarks2016=ExcitedQuarks_combine_Bstar_3650_lumi-35.866_Excited1btagQuarks2016.txt  Excited0btagQuarks2016=ExcitedQuarks_combine_Bstar_3650_lumi-35.866_Excited0btagQuarks2016.txt
+imax 2 number of bins
+jmax 3 number of processes minus 1
+kmax 7 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *                       Excited0btagQuarks2016  Cards_Bstar_f1p0_Excited1btagQuarks2016_Excited0btagQuarks2016_LimitsFromData_LatestBinning//ExcitedQuarks_combine_Bstar_3650_lumi-35.866_Excited0btagQuarks2016.root wExcited0btagQuarks2016:$PROCESS wExcited0btagQuarks2016:$PROCESS_$SYSTEMATIC
+shapes *                       Excited1btagQuarks2016  Cards_Bstar_f1p0_Excited1btagQuarks2016_Excited0btagQuarks2016_LimitsFromData_LatestBinning//ExcitedQuarks_combine_Bstar_3650_lumi-35.866_Excited1btagQuarks2016.root wExcited1btagQuarks2016:$PROCESS wExcited1btagQuarks2016:$PROCESS_$SYSTEMATIC
+----------------------------------------------------------------------------------------------------------------------------------
+bin          Excited1btagQuarks2016  Excited0btagQuarks2016
+observation  25572.0                 97702.0               
+----------------------------------------------------------------------------------------------------------------------------------
+bin                               Excited1btagQuarks2016        Excited1btagQuarks2016        Excited0btagQuarks2016        Excited0btagQuarks2016      
+process                           Excited1btagQuarks2016_Bstar  Excited1btagQuarks2016_bkg    Excited0btagQuarks2016_Bstar  Excited0btagQuarks2016_bkg  
+process                           -1                            1                             0                             2                           
+rate                              358.2240                      25572.0000                    358.2240                      97702.0000                  
+----------------------------------------------------------------------------------------------------------------------------------
+bsf                     shape     1.0                           -                             1.0                           -                           
+jer                     shape     1.0                           -                             1.0                           -                           
+jes                     shape     1.0                           -                             1.0                           -                           
+lumi                    lnN       1.026                         1.0                           1.026                         1.0                         
+per                     shape     1.0                           -                             1.0                           -                           
+pes                     shape     1.0                           -                             1.0                           -                           
+trig                    lnN       1.05                          1.0                           1.05                          1.0                         
+Excited1btagQuarks2016_bkg_norm  flatParam
+p3_Excited0btagQuarks2016  flatParam
+p2_Excited1btagQuarks2016  flatParam
+p1_Excited1btagQuarks2016  flatParam
+p1_Excited0btagQuarks2016  flatParam
+p3_Excited1btagQuarks2016  flatParam
+p2_Excited0btagQuarks2016  flatParam
+Excited0btagQuarks2016_bkg_norm  flatParam

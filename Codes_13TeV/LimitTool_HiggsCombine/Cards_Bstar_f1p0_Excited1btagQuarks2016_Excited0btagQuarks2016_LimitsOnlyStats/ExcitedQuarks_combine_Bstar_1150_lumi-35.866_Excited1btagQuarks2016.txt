@@ -1,0 +1,15 @@
+imax 1 number of channels
+jmax 1 number of processes minus 1
+kmax * number of nuisance parameters
+------------------------------------------------------------
+observation	26230.000
+------------------------------------------------------------
+shapes * * Cards_Bstar_f1p0_Excited1btagQuarks2016_Excited0btagQuarks2016_LimitsOnlyStats//ExcitedQuarks_combine_Bstar_1150_lumi-35.866_Excited1btagQuarks2016.root wExcited1btagQuarks2016:$PROCESS wExcited1btagQuarks2016:$PROCESS_$SYSTEMATIC
+------------------------------------------------------------
+bin	Excited1btagQuarks2016	Excited1btagQuarks2016
+process	Excited1btagQuarks2016_Bstar	Excited1btagQuarks2016_bkg
+process	0	1
+rate	350.656	26230.000
+------------------------------------------------------------
+lumi	lnN	1.026	1.000
+trig	lnN	1.050	1.000

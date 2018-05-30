@@ -1,0 +1,18 @@
+Combination of Excited1btagQuarks2016=ExcitedQuarks_combine_Bstar_1500_lumi-35.866_Excited1btagQuarks2016.txt  Excited0btagQuarks2016=ExcitedQuarks_combine_Bstar_1500_lumi-35.866_Excited0btagQuarks2016.txt
+imax 2 number of bins
+jmax 3 number of processes minus 1
+kmax 2 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *                       Excited0btagQuarks2016  Cards_Bstar_f1p0_Excited1btagQuarks2016_Excited0btagQuarks2016_LimitsOnlyStats//ExcitedQuarks_combine_Bstar_1500_lumi-35.866_Excited0btagQuarks2016.root wExcited0btagQuarks2016:$PROCESS wExcited0btagQuarks2016:$PROCESS_$SYSTEMATIC
+shapes *                       Excited1btagQuarks2016  Cards_Bstar_f1p0_Excited1btagQuarks2016_Excited0btagQuarks2016_LimitsOnlyStats//ExcitedQuarks_combine_Bstar_1500_lumi-35.866_Excited1btagQuarks2016.root wExcited1btagQuarks2016:$PROCESS wExcited1btagQuarks2016:$PROCESS_$SYSTEMATIC
+----------------------------------------------------------------------------------------------------------------------------------
+bin          Excited1btagQuarks2016  Excited0btagQuarks2016
+observation  26230.0                 100662.0              
+----------------------------------------------------------------------------------------------------------------------------------
+bin                             Excited1btagQuarks2016        Excited1btagQuarks2016        Excited0btagQuarks2016        Excited0btagQuarks2016      
+process                         Excited1btagQuarks2016_Bstar  Excited1btagQuarks2016_bkg    Excited0btagQuarks2016_Bstar  Excited0btagQuarks2016_bkg  
+process                         -1                            1                             0                             2                           
+rate                            355.8370                      26230.0000                    355.8370                      100661.9990                 
+----------------------------------------------------------------------------------------------------------------------------------
+lumi                    lnN     1.026                         1.0                           1.026                         1.0                         
+trig                    lnN     1.05                          1.0                           1.05                          1.0                         

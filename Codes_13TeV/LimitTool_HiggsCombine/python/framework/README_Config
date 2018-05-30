@@ -1,0 +1,27 @@
+******BRIEF DESCRIPTION OF THE DIFFERENT FUNCTIONS DEFINED IN Config.py*****
+****************************************************************************
+
+1. __init__(self, fileName):
+Here self refers to call the config file instance. This function simply read the config file using configparser instance with given filename.
+2. __checkBox(self, box):
+This checks if the config file has the section with name referred by box.
+3. get(self, box, var):
+This function returns the value for key var in the section box, if exists.
+4. has_option(self, box, var):
+This just checks if the section with name box has a key with name var.
+5. getVariables(self, box, lineTag='variables'):
+It will return the value for the key with name lineTag under section box. 
+6. getVariablesRange(self, box, lineTag, workspace):
+It will return the range of the variables in key lineTag inside section box. 
+7. getRCuts(self, box):
+This function retruns the value for the key with name rcuts in section box.
+8. getBoxes(self):
+Returns name of all the sections inside the given config.
+9. hasBinning(self, box):
+Checks if a given section with name box has a key for signal binning in it. For this, it first takes the key 'variables' and take its value which is
+['mjj[453.,453.,2037.]','th1x[0,0,26]'], then it splits this at the occurance of '[', and take only the 0th one that is mjj. Then it checks if the 
+box (section) contains a key with name signal_mjj or not.
+10. getBinning(self, box):
+It will check the bining like above function and retrune the value of signal_mjj key.
+11. getPdfs(self, box, lineTag, workspace):
+If used for lineTag='combine_pdfs', it will return all the pdfs defined in config. 

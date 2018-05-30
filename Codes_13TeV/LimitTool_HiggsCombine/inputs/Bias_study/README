@@ -1,0 +1,8 @@
+For Bias calculation::
+Initially I am taking the total MC: Gjet + QCD after overlap removal (Outof_dR0p05) + EWK(old) 
+I have taken the prompt reco samples of PhLID_JetTID_Pt190_Nodeta_Nodphi_NoMassCut_CSVM which is with lumi = 24.478 pb-1
+so for complete data, right now i am reweighing it with 36.46/24.487 to take into consideration the full lumi.
+since it is MC and the same spring 16 one, so rereco and prompt reco does not effect it . only the lumi 
+reweighing is different.
+
+and for signal, I am taking the latest one generated with full lumi.
