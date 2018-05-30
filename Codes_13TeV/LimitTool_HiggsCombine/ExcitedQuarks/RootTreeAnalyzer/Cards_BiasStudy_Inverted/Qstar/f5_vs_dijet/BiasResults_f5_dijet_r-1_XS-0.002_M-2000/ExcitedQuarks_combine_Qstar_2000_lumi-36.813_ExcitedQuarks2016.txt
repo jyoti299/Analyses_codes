@@ -1,0 +1,36 @@
+imax 1 number of channels
+jmax 1 number of processes minus 1
+kmax * number of nuisance parameters
+------------------------------------------------------------
+observation	223486.369
+------------------------------------------------------------
+shapes * * Cards_BiasStudy_Inverted/f5_vs_dijet/BiasResults_f5_dijet_r-1_XS-0.002_M-2000//ExcitedQuarks_combine_Qstar_2000_lumi-36.813_ExcitedQuarks2016.root wExcitedQuarks2016:$PROCESS wExcitedQuarks2016:$PROCESS_$SYSTEMATIC
+------------------------------------------------------------
+bin	ExcitedQuarks2016	ExcitedQuarks2016
+process	ExcitedQuarks2016_Qstar	ExcitedQuarks2016_multi
+process	0	1
+rate	73.431	223486.366
+------------------------------------------------------------
+lumi	lnN	1.026	1.000
+p1_ExcitedQuarks2016	flatParam
+p2_ExcitedQuarks2016	flatParam
+p3_ExcitedQuarks2016	flatParam
+pF11_ExcitedQuarks2016	flatParam
+pF12_ExcitedQuarks2016	flatParam
+pF13_ExcitedQuarks2016	flatParam
+pF21_ExcitedQuarks2016	flatParam
+pF22_ExcitedQuarks2016	flatParam
+pF23_ExcitedQuarks2016	flatParam
+pF31_ExcitedQuarks2016	flatParam
+pF32_ExcitedQuarks2016	flatParam
+pF41_ExcitedQuarks2016	flatParam
+pF42_ExcitedQuarks2016	flatParam
+pF51_ExcitedQuarks2016	flatParam
+pF52_ExcitedQuarks2016	flatParam
+pF53_ExcitedQuarks2016	flatParam
+pF61_ExcitedQuarks2016	flatParam
+pF62_ExcitedQuarks2016	flatParam
+pF63_ExcitedQuarks2016	flatParam
+sqrtsf6	flatParam
+ExcitedQuarks2016_multi_norm	flatParam
+pdf_index	discrete

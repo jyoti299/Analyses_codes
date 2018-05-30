@@ -1,0 +1,22 @@
+imax 1 number of channels
+jmax 1 number of processes minus 1
+kmax * number of nuisance parameters
+------------------------------------------------------------
+observation	1533.000
+------------------------------------------------------------
+shapes * * Cards_Optimization/CSVDisc_Opti/CSVT//ExcitedQuarks_combine_Bstar_2900_lumi-24.487_Excited1btagQuarks2016.root wExcited1btagQuarks2016:$PROCESS wExcited1btagQuarks2016:$PROCESS_$SYSTEMATIC
+------------------------------------------------------------
+bin	Excited1btagQuarks2016	Excited1btagQuarks2016
+process	Excited1btagQuarks2016_Bstar	Excited1btagQuarks2016_bkg
+process	0	1
+rate	244.532	1533.000
+------------------------------------------------------------
+lumi	lnN	1.062	1.000
+jer	lnN	1.100	-
+jes	shape		1.0	-
+pes	shape		1.0	-
+bsf	shape		1.0	-
+p1_Excited1btagQuarks2016	flatParam
+p2_Excited1btagQuarks2016	flatParam
+p3_Excited1btagQuarks2016	flatParam
+Excited1btagQuarks2016_bkg_norm	flatParam

@@ -1,0 +1,22 @@
+imax 1 number of channels
+jmax 1 number of processes minus 1
+kmax * number of nuisance parameters
+------------------------------------------------------------
+observation	223218.000
+------------------------------------------------------------
+shapes * * Cards_Optimization/Opti_usingReReco/DEta_Opti/NoDEta//ExcitedQuarks_combine_Qstar_3100_lumi-36.813_ExcitedQuarks2016.root wExcitedQuarks2016:$PROCESS wExcitedQuarks2016:$PROCESS_$SYSTEMATIC
+------------------------------------------------------------
+bin	ExcitedQuarks2016	ExcitedQuarks2016
+process	ExcitedQuarks2016_Qstar	ExcitedQuarks2016_bkg
+process	0	1
+rate	367.876	223218.000
+------------------------------------------------------------
+lumi	lnN	1.062	1.000
+jes	shape		1.0	-
+jer	shape		1.0	-
+pes	shape		1.0	-
+per	shape		1.0	-
+p1_ExcitedQuarks2016	flatParam
+p2_ExcitedQuarks2016	flatParam
+p3_ExcitedQuarks2016	flatParam
+ExcitedQuarks2016_bkg_norm	flatParam

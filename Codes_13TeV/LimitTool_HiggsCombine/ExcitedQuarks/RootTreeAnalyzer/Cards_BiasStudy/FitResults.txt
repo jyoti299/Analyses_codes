@@ -1,0 +1,51 @@
+FOR DIJET::::
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Ntot_bkg_ExcitedQuarks2016    1.0000e+04    2.2134e+05 +/-  4.70e+02  <none>
+  p1_ExcitedQuarks2016   -1.4000e+01   -1.3769e+00 +/-  1.24e+00  <none>
+  p2_ExcitedQuarks2016    1.3000e+01    1.2210e+01 +/-  5.25e-01  <none>
+  p3_ExcitedQuarks2016    1.2000e+00    1.5367e+00 +/-  8.24e-02  <none>
+
+
+
+FOR F1::::::
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Ntot_bkg_ExcitedQuarks2016    1.0000e+04    2.2134e+05 +/-  4.70e+02  <none>
+  pF11_ExcitedQuarks2016   -1.4000e+01    4.0485e+00 +/-  2.80e+00  <none>
+  pF12_ExcitedQuarks2016    1.3000e+01    1.2781e+01 +/-  7.92e-01  <none>
+  pF13_ExcitedQuarks2016    1.2000e+00    1.6135e+00 +/-  1.15e-01  <none>
+
+
+FOR F2:::::
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Ntot_bkg_ExcitedQuarks2016    1.0000e+05    2.2134e+05 +/-  4.70e+02  <none>
+  pF21_ExcitedQuarks2016    1.4000e-01    8.7862e-03 +/-  1.70e-03  <none>
+  pF22_ExcitedQuarks2016    1.2200e+01    1.1184e-01 +/-  3.06e-02  <none>
+  pF23_ExcitedQuarks2016    1.2000e+01    4.7897e+00 +/-  2.78e-01  <none>
+
+
+FOR F3::::
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Ntot_bkg_ExcitedQuarks2016    1.0000e+05    2.2134e+05 +/-  4.70e+02  <none>
+  pF31_ExcitedQuarks2016    1.4800e-01    1.4844e-01 +/-  5.59e-03  <none>
+  pF32_ExcitedQuarks2016    1.2200e+01    1.2283e+01 +/-  2.88e-01  <none>
+
+
+FOR F4:::::
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Ntot_bkg_ExcitedQuarks2016    1.0000e+06    2.2134e+05 +/-  4.70e+02  <none>
+  pF41_ExcitedQuarks2016    2.6650e+02    2.8723e+03 +/-  1.57e+06  <none>
+  pF42_ExcitedQuarks2016   -4.5000e+00   -4.5690e+00 +/-  7.66e-03  <none>
+
+
+FOR F5::::
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Ntot_bkg_ExcitedQuarks2016    1.0000e+05    2.2134e+05 +/-  4.70e+02  <none>
+  pF51_ExcitedQuarks2016   -9.1960e-01   -9.1968e-01 +/-  1.00e-01  <none>
+  pF52_ExcitedQuarks2016   -4.9300e+01   -4.9389e+01 +/-  1.81e+00  <none>
+  pF53_ExcitedQuarks2016    4.6000e+01    4.6074e+01 +/-  3.63e+00  <none>
