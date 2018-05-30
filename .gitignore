@@ -26,9 +26,15 @@
 *.a
 *.lib
 
+## unused log files
+*.log
+*.stderr
+*.stdout
+*.pyc
+*~
+
 # Executables
 *.exe
 *.out
 *.app
 
-*.root
