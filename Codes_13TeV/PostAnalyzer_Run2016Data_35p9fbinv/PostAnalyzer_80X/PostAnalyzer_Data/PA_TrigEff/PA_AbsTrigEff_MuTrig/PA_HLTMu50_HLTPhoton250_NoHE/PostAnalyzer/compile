@@ -1,0 +1,2 @@
+g++ -Wno-deprecated PostAnalyzer_Data.C -o PostAnalyzer_Data.exe -I$ROOTSYS/include -L$ROOTSYS/lib `root-config --cflags` `root-config --libs`
+

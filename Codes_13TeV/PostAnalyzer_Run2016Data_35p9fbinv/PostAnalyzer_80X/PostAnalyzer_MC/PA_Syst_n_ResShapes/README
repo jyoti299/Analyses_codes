@@ -1,0 +1,27 @@
+THE STANDARD CUTS ARE:
+
+   Cut_Vtx_z = 24.0;
+   Cut_Vtx_ndof = 4.0;
+   Cut_Vtx_rho = 2.0;
+
+   Cut_Photon_pt = 190.0; // GeV                                                                                                             
+   Cut_Photon_eta = 1.4442;
+
+   Cut_Jet_pt = 190.0; // GeV
+   Cut_Jet_eta = 2.4;
+
+   Cut_GJdPhi = 1.5;
+   Cut_GJdEta = 1.8;
+   
+   Cut_GJInvtMass = 695.0;
+
+   Cut_PhId = "loose";
+   Cut_JetId = "tight";
+   Cut_CSV = "Medium";
+
+FOR OPTIMIZATION, THE DIFFERNT CUTS ON DETA, DPHI, PHOTONID, JETID, CSV HAS BEEN VERIED.
+FOR DETA = 1.0, 1.2, 1.5, 1.8, 2.0, 2.2, 2.5, NoDeta
+FOR DPHI = 1.5, 2.0, 2.5, NoDphi
+FOR PHOTONID = LOOSE, MEDIUM, TIGHT
+FOR JETID = TIGHT, TIGHTLEPVETO
+FOR CSV = L, M, T

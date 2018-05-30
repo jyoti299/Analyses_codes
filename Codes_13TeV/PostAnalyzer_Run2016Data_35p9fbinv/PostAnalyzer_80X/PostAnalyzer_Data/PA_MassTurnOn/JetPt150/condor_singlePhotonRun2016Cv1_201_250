@@ -1,0 +1,12 @@
+universe = vanilla
+Executable = Job_singlePhotonRun2016Cv1_201_250.csh
+Requirements = OpSys == "LINUX" && (Arch != "DUMMY" )
+request_disk = 1000000
+request_memory = 2100
+Should_Transfer_Files = YES
+WhenToTransferOutput = ON_EXIT
+transfer_input_files = /uscms_data/d3/rocky86/13TeV/PostAnalyzer_2015+2016/PostAnalyzer_80X/PostAnalyzer_Data/PA_MassTurnOn/JetPt150/singlePhotonRun2016Cv1_201_250.exe
+Output = condor_$(Cluster)_singlePhotonRun2016Cv1_201_250.stdout
+Error = condor_$(Cluster)_singlePhotonRun2016Cv1_201_250.stderr
+Log = condor_$(Cluster)_singlePhotonRun2016Cv1_201_250.log
+Queue 1

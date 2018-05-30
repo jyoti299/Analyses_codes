@@ -1,0 +1,42 @@
+TWO CHECKES HAVE BEEN PERFORMED IN THIS AREA:::::::
+::::::::::::::::::::::::::1::::::::::::::::::::::::
+First is just to check for QCD, if the lumi event wts are applied properly. After applying the lumi evt wt for different mass bins and hadding, the 
+spectrum should be continuous falling. In my distributions, It seemed like some adjecent bins have flat distribution. So to check that, I have
+filled the photon and jet pt histograms with and without applying lumi evt wt. Without wt, on hadding the different mass bins, we should see spikes.
+To check if the distribution is fine, I have also filled the gen photon, gen jet and get parton pt distributions with and without applying lumi
+evt wt. No pileup evt wt are applied here.
+:::::::::::::::::::::::::::::::::::::::::::::::::::
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+::::::::::::::::::::::::::2::::::::::::::::::::::::
+2nd check is performed to find out if gamma+Jet and QCD dijet MCs has any overlappling. That is, In gamma+Jet (and since this one is Madgraph with 
+gamma+upto 4 jets as well), since each MC has many jets in each event (most of them from soft collisons), So it is possible that a jet is being 
+identified as a jet. And so it is a dijet type event in gamma+Jet sample. But since we are explicitly using QCD dijet, so it is possible that we 
+are doing some double counting. Similarly for QCD dijet, since each event can have many photons, so possiblity is that, there are some photons 
+which are getting selected whose effect should be removed.
+
+Actually, in QCD, since we are applying the ID and isolation cuts, so rare chances that the selected photon is not actually a photon. And we should
+not have any problem with it being a photon. The only thing that we want is that this photon should not be a final state. It means that if the photon
+is coming from jet FSR, or any other decay then we are fine with that. But if the photon is the prompt photon (that is directly from collision) then
+we should remove this.
+
+So to do this, we have considered the mcStatusFlag variable defined in analyzer. This flag definition is defined in ggNtuplizer_genparticle.cc class.
+IN that class, setbit(tmpStatusFlag, 0) = 1, definition of setbit fun is in ggNtuplizer.cc. and so the mcStatusFlag is 
+mcStatusFlag = 1 ==> FromHardProcessFinalState() => this particle is the final state direct descendent of a hard process particle.
+mcStatusFlag = 2 ==> isPromptFinalState() => particle is prompt (that is not from hadron, muon or tau decay) and final state.
+mcStatusFlag = 4 ==> isHardProcess() => This particle is part of hard process.
+mcStatusFlag = 3 ==> 1+2
+mcStatusFlag = 4 ==> 1+4
+mcStatusFlag = 6 ==> 2+4
+mcStatusFlag = 7 ==> 1+2+4
+mcStatusFlag = 8-64 are for W and Z decay products.
+mcStatusFlag = 0 => undefined which means that any other mode of particle status other than above.
+
+So in Gamma+Jet => We select a photon, we don't bother about its PID, as if its PID = 22, then it means it is a real photon and if not 22, then
+misidentified photon. IN both cases, we are fine as misidentifiation is a detector resolution effect which is there for data and mc both and is 
+taken into account. So we consider about its status flag, and we want that the photons in gamma+jet should always be the final state particles. SO 
+we required that the mcStatusFlag of photon (after dR matching with gen paritcles) should be 2. So all photons with mcStatusFlag = 2 are our true
+gamma+Jet bkg.
+And in QCD, we do the opposite. Here also we do not consider PID as above. We require the photon should not be prompt one. so here we required 
+mcStatusFlag to be not equal to 2. 
+We have filled photon and jet pt and eta histogram for these two different categories (mcStatusFlag = 2 and not equal to 2).
+:::::::::::::::::::::::::::::::::::::::::::::::::::

@@ -1,0 +1,3 @@
+g++ -Wno-deprecated -c BTagCalibrationStandalone.cc -o BTagCalibrationStandalone.o -I$ROOTSYS/include -L$ROOTSYS/lib `root-config --cflags` `root-config --libs`
+
+

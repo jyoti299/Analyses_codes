@@ -1,0 +1,1 @@
+g++ -Wno-deprecated PostAnalyzer_MC.C /uscms_data/d3/rocky86/13TeV/PostAnalyzer_2015+2016/PostAnalyzer_80X/PostAnalyzer_MC/PA_Main/BtagSF/BTagCalibrationStandalone.o -o PostAnalyzer_MC.exe -I$ROOTSYS/include -L$ROOTSYS/lib `root-config --cflags` `root-config --libs`
