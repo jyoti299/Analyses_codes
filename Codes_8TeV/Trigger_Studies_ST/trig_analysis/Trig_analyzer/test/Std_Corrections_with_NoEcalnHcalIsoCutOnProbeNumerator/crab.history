@@ -1,0 +1,6 @@
+140721_014055: /uscmst1/prod/grid/CRAB_2_10_6/python/crab.py -create
+140721_014915: /uscmst1/prod/grid/CRAB_2_10_6/python/crab.py -submit 1-400 -c Crab_Std_HLTLevel_Corrections_with_NoEcalnHcalIsoCut_InWP80/
+140721_015136: /uscmst1/prod/grid/CRAB_2_10_6/python/crab.py -submit 401-596 -c Crab_Std_HLTLevel_Corrections_with_NoEcalnHcalIsoCut_InWP80/
+140722_004331: /uscmst1/prod/grid/CRAB_2_10_6/python/crab.py -status -c Crab_Std_HLTLevel_Corrections_with_NoEcalnHcalIsoCut_InWP80/
+140722_004357: /uscmst1/prod/grid/CRAB_2_10_6/python/crab.py -getoutput -c Crab_Std_HLTLevel_Corrections_with_NoEcalnHcalIsoCut_InWP80/
+140722_004623: /uscmst1/prod/grid/CRAB_2_10_6/python/crab.py -status -c Crab_Std_HLTLevel_Corrections_with_NoEcalnHcalIsoCut_InWP80/

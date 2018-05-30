@@ -1,0 +1,8 @@
+140627_055529: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -create
+140627_055621: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -submit 1-400 -c Crab_Laser_Corrections_perRing_1Week/
+140627_055849: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -submit 401-596 -c Crab_Laser_Corrections_perRing_1Week/
+140627_055947: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Laser_Corrections_perRing_1Week/
+140627_060328: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Laser_Corrections_perRing_1Week/
+140628_010724: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Laser_Corrections_perRing_1Week/
+140628_010737: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -getoutput -c Crab_Laser_Corrections_perRing_1Week/
+140628_011250: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Laser_Corrections_perRing_1Week/

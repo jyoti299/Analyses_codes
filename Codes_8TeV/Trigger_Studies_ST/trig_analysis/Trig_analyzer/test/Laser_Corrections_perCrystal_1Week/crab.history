@@ -1,0 +1,8 @@
+140627_054804: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -create
+140627_054920: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -submit 1-400 -c Crab_Laser_Corrections_perCrystal_1Week/
+140627_055109: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -submit 401-596 -c Crab_Laser_Corrections_perCrystal_1Week/
+140627_055239: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Laser_Corrections_perCrystal_1Week/
+140627_060156: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Laser_Corrections_perCrystal_1Week/
+140628_005013: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Laser_Corrections_perCrystal_1Week/
+140628_005036: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -getoutput -c Crab_Laser_Corrections_perCrystal_1Week/
+140628_005235: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Laser_Corrections_perCrystal_1Week/

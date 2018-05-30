@@ -1,0 +1,24 @@
+140627_053855: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -create
+140627_054109: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -create
+140627_054159: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -submit 1-400 -c Crab_Standard_HLTLevel_Corrections/
+140627_054358: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -submit 401-596 -c Crab_Standard_HLTLevel_Corrections/
+140627_054542: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Standard_HLTLevel_Corrections/
+140627_060015: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Standard_HLTLevel_Corrections/
+140628_002717: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Standard_HLTLevel_Corrections/
+140628_002741: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -getoutput -c Crab_Standard_HLTLevel_Corrections/
+140628_003845: /uscmst1/prod/grid/CRAB_2_10_5_patch1/python/crab.py -status -c Crab_Standard_HLTLevel_Corrections/
+141014_013913: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -create
+141014_014004: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -create
+141014_021138: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -create
+141014_021537: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -submit 1-400 -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141014_021811: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -submit 401-596 -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141014_022446: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -status -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141015_010131: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -status -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141015_010158: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -getoutput -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141015_010325: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -status -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141015_022328: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -create
+141015_022425: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -submit 1-400 -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141015_022725: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -submit 401-596 -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141015_022821: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -status -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141015_063058: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -status -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
+141015_063327: /uscmst1/prod/grid/CRAB_2_10_7/python/crab.py -getoutput -c Crab_Standard_HLTLevel_Corr_OnlyPtCutForPassProbes/
