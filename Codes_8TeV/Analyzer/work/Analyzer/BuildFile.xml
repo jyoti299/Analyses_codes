@@ -1,0 +1,31 @@
+<use name="root"/>
+<use name="FWCore/Framework"/>
+<use name="FWCore/PluginManager"/>
+<use name="FWCore/ParameterSet"/>
+<use name="FWCore/Utilities"/>
+<use name="FWCore/ServiceRegistry"/>
+<use name="DataFormats/Common"/>
+<use name="DataFormats/Luminosity"/>
+<use name="SimDataFormats/PileupSummaryInfo"/>
+<use name="DataFormats/PatCandidates"/>
+<use name="CommonTools/Utils"/>
+<use name="EgammaAnalysis/ElectronTools"/>
+<use name="RecoEgamma/EgammaTools"/>
+<use name="DataFormats/EcalRecHit"/>
+<use name="RecoLocalCalo/EcalRecAlgos"/>
+<use name="Geometry/CaloTopology"/>
+<use name="Geometry/CaloEventSetup"/>
+<use name="Geometry/CaloGeometry"/>
+<use name="Geometry/Records"/>
+<use name="DataFormats/JetReco"/>
+<use name="JetMETCorrections/Objects"/>
+<use name="CondFormats/JetMETObjects"/>
+<use name="CMGTools/External"/>
+<use name="HLTrigger/HLTcore"/>
+<use name="DataFormats/L1GlobalTrigger"/>
+<use name="DataFormats/HLTReco"/>
+<use name="FWCore/Common"/>
+<flags EDM_PLUGIN="1"/>
+<export>
+   <lib name="1"/>
+</export>

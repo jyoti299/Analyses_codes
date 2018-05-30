@@ -1,0 +1,161 @@
+Total files in this set = 201
+no. of entries 158308
+****************************************************************************************************
+ Total no. of events = 158308,0.209024
+****************************************************************************************************
+No. of events passing HLT = 158308,0.209024
+No. of events passing PrimaryVtx = 158308,0.209024
+No. of events passing Scraping = 158307,0.209022
+No. of events passing PhotonID = 105910,0.140396
+No. of events passing PhotonPt = 105219,0.139539
+No. of events passing PhotonEta = 100793,0.1336
+No. of events passing JetID = 100793,0.1336
+No. of events passing JetPt = 100602,0.133351
+No. of events passing JetEta = 100465,0.133161
+No. of events passing DPhiCut = 100379,0.133047
+No. of events passing DetaCut = 88969,0.117817
+No. of events passing InvtMass Cut = 88774,0.11755
+*****************************************************************************************************
+No. of events passing CSVL BTag = 32240,0.0427286
+No. of events passing CSVL BTag with noErr_0bTag weight = 0.0761626
+No. of events passing CSVL BTag with noErr_1bTag weight = 0.0413871
+No. of events passing CSVL BTag with pErr_0bTag weight = 0.0735557
+No. of events passing CSVL BTag with pErr_1bTag weight = 0.0439941
+No. of events passing CSVL BTag with nErr_0bTag weight = 0.0787692
+No. of events passing CSVL BTag with nErr_1bTag weight = 0.0387805
+*****************************************************************************************************
+No. of events passing CSVM BTag = 15901,0.0210291
+No. of events passing CSVM BTag with noErr_0bTag weight = 0.0983394
+No. of events passing CSVM BTag with noErr_1bTag weight = 0.0192104
+No. of events passing CSVM BTag with pErr_0bTag weight = 0.0961994
+No. of events passing CSVM BTag with pErr_1bTag weight = 0.0213503
+No. of events passing CSVM BTag with nErr_0bTag weight = 0.100479
+No. of events passing CSVM BTag with nErr_1bTag weight = 0.0170705
+*****************************************************************************************************
+No. of events passing CSVT BTag = 4790,0.00631949
+No. of events passing CSVT BTag with noErr_0bTag weight = 0.112254
+No. of events passing CSVT BTag with noErr_1bTag weight = 0.0052953
+No. of events passing CSVT BTag with pErr_0bTag weight = 0.111192
+No. of events passing CSVT BTag with pErr_1bTag weight = 0.00635786
+No. of events passing CSVT BTag with nErr_0bTag weight = 0.113317
+No. of events passing CSVT BTag with nErr_1bTag weight = 0.00423279
+*****************************************************************************************************
+No. of True BJets = 82631,0.109434
+No. of True BJets passing CSVL = 31547,0.0428274
+No. of True BJets passing CSVM = 15684,0.0209688
+No. of True BJets passing CSVT = 4759,0.00629696
+No.of Non BJets =6143,0.0081162
+No.of Non BJets passing CSVL = 693,0.00116672
+No. of Non BJets passing CSVM = 217,0.000381483
+No. of Non BJets passing CSVT = 31,6.08991e-05
+*****************************************************************************************************
+No. of events passing with LICTD cut = 0.11755
+No. of events passing without LICTD cut without weight = 91862
+No. of events passing without LICTD cut with weight = 0.121253
+*****************************************************************************************************
+*********Number of events for Pileup syst corresponding to 5% less XS***********
+****************************************************************************************************
+ Total no. of events = 0.208984
+No. of events passing HLT = 0.208984
+No. of events passing PrimaryVtx =0.208984
+No. of events passing Scraping = 0.208983
+No. of events passing PhotonID = 0.140551
+No. of events passing PhotonPt = 0.139707
+No. of events passing PhotonEta = 0.133703
+No. of events passing JetID = 0.133703
+No. of events passing JetPt = 0.133451
+No. of events passing JetEta = 0.133259
+No. of events passing DPhiCut = 0.133144
+No. of events passing DetaCut = 0.117895
+No. of events passing InvtMass = 0.117627
+No. of events passing CSVL_noErr_0bTag = 0.0762142
+No. of events passing CSVL_noErr_1bTag = 0.0414127
+****************************************************************************************************
+*********Number of events for Pileup syst corresponding to 5% more XS***********
+****************************************************************************************************
+ Total no. of events = 0.209063
+No. of events passing HLT = 0.209063
+No. of events passing PrimaryVtx =0.209063
+No. of events passing Scraping = 0.209061
+No. of events passing PhotonID = 0.140233
+No. of events passing PhotonPt = 0.139362
+No. of events passing PhotonEta = 0.133479
+No. of events passing JetID = 0.133479
+No. of events passing JetPt = 0.133233
+No. of events passing JetEta = 0.133046
+No. of events passing DPhiCut = 0.132933
+No. of events passing DetaCut = 0.117734
+No. of events passing InvtMass = 0.117469
+No. of events passing CSVL_noErr_0bTag = 0.0761165
+No. of events passing CSVL_noErr_1bTag = 0.0413523
+*****************************************************************************************************
+*********************************Efficiency of various cuts******************************************
+Eff_PassHLT         = 100%
+Eff_PassScraping    = 100%
+Eff_PassPrimaryVtx  = 99.9993%
+Eff_PassPhotonID    = 67.1681%
+Eff_PassPhotonPt    = 99.3895%
+Eff_PassPhotonEta   = 95.7433%
+Eff_PassJetID       = 100%
+Eff_PassJetPt       = 99.8136%
+Eff_PassJetEta      = 99.8581%
+Eff_PassDPhi        = 99.9143%
+Eff_PassDEta        = 88.5528%
+Eff_PassGJInvtMass  = 99.7732%
+Eff_PassCSVLBTag_Expected                                             = 36.3494%
+Eff_PassCSVLBTag_noErr_0bTag(CSVL_MistagRate_noErr)                   = 64.7918%
+Eff_PassCSVLBTag_noErr_1bTag(CSVL_TrueEff_noErr)                      = 35.2082%
+Eff_PassCSVLBTag_pErr_0bTag(CSVL_MistagRate_pErr)                     = 62.5741%
+Eff_PassCSVLBTag_pErr_1bTag(CSVL_TrueEff_pErr)                        = 37.4259%
+Eff_PassCSVLBTag_nErr_0bTag(CSVL_MistagRate_nErr)                     = 67.0092%
+Eff_PassCSVLBTag_nErr_1bTag(CSVL_TrueEff_nErr)                        = 32.9908%
+Eff_PassCSVMBTag_Expected                                             = 17.8895%
+Eff_PassCSVMBTag_noErr_0bTag(CSVM_MistagRate_noErr)                   = 83.6577%
+Eff_PassCSVMBTag_noErr_1bTag(CSVM_TrueEff_noErr)                      = 16.3423%
+Eff_PassCSVMBTag_pErr_0bTag(CSVM_MistagRate_pErr)                     = 81.8372%
+Eff_PassCSVMBTag_pErr_1bTag(CSVM_TrueEff_pErr)                        = 18.1628%
+Eff_PassCSVMBTag_nErr_0bTag(CSVM_MistagRate_nErr)                     = 85.4781%
+Eff_PassCSVMBTag_nErr_1bTag(CSVM_TrueEff_nErr)                        = 14.5219%
+Eff_PassCSVTBTag_Expected                                             = 5.37601%
+Eff_PassCSVTBTag_noErr_0bTag(CSVT_MistagRate_noErr)                   = 95.4953%
+Eff_PassCSVTBTag_noErr_1bTag(CSVT_TrueEff_noErr)                      = 4.50474%
+Eff_PassCSVTBTag_pErr_0bTag(CSVT_MistagRate_pErr)                     = 94.5913%
+Eff_PassCSVTBTag_pErr_1bTag(CSVT_TrueEff_pErr)                        = 5.40866%
+Eff_PassCSVTBTag_nErr_0bTag(CSVT_MistagRate_nErr)                     = 96.3992%
+Eff_PassCSVTBTag_nErr_1bTag(CSVT_TrueEff_nErr)                        = 3.60085%
+Eff_TrueBJets                                                         = 93.0955%
+Eff_TrueBJetsPassingCSVL(CSVL_TrueEff_FromMCTruth)                    = 39.1355%
+Eff_TrueBJetsPassingCSVM(CSVM_TrueEff_FromMCTruth)                    = 19.1613%
+Eff_TrueBJetsPassingCSVT(CSVT_TrueEff_FromMCTruth)                    = 5.75415%
+Eff_NonBJets                                                          = 6.90448%
+Eff_NonBJetsPassingCSVL(CSVL_MistagRate_FromMCTruth)                  = 14.3752%
+Eff_NonBJetsPassingCSVM(CSVM_MistagRate_FromMCTruth)                  = 4.70026%
+Eff_NonBJetsPassingCSVT(CSVT_MistagRate_FromMCTruth)                  = 0.75034%
+Eff_LICTD           = 96.9459%
+******************************************************************************************************
+*********Efficiency and Eff Error Parameters required for Tagging Eff plots and Limit setting*********
+**Relative Error = (Evts_pErr-Evts_noErr)/Evts_noErr or (Eff_pErr-Eff_noErr)/Eff_noErr (This one is wrong , not required)**
+**Absolute Error = (Eff_pErr-Eff_noErr) (Required for Tagging Eff plots and for limit setting**
+******************************************************************************************************
+Eff_PassCSVLBTag_noErr_0bTag    = 0.647918
+Relative Efferr_PassCSVL_0bTag     = 0.0342284
+Absolute Efferr_PassCSVL_0bTag     = 0.0221772
+Eff_PassCSVLBTag_noErr_1bTag    = 0.352082
+Relative Efferr_PassCSVL_1bTag     = 0.0629888
+Absolute Efferr_PassCSVL_1bTag     = 0.0221772
+                                                                              
+Eff_PassCSVMBTag_noErr_0bTag    = 0.836577
+Relative Efferr_PassCSVM_0bTag     = 0.021761
+Absolute Efferr_PassCSVM_0bTag     = 0.0182047
+Eff_PassCSVMBTag_noErr_1bTag    = 0.163423
+Relative Efferr_PassCSVM_1bTag     = 0.111396
+Absolute Efferr_PassCSVM_1bTag     = 0.0182047
+                                                                              
+Eff_PassCSVTBTag_noErr_0bTag    = 0.954953
+Relative Efferr_PassCSVT_0bTag     = 0.00946564
+Absolute Efferr_PassCSVT_0bTag     = 0.00903924
+Eff_PassCSVTBTag_noErr_1bTag    = 0.0450474
+Relative Efferr_PassCSVT_1bTag     = 0.200661
+Absolute Efferr_PassCSVT_1bTag     = 0.00903924
+******************************************************************************************************
+

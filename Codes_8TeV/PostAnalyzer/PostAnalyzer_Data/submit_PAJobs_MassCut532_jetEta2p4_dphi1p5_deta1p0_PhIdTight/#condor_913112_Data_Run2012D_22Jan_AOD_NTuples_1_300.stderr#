@@ -1,0 +1,7 @@
+
+
+SysError in <TFile::ReadBuffer>: error reading from file /eos/uscms/store/user/lpcqstar/NTuples/Data/Data22Jan2013ReReco/Data_Run2012D_22Jan_AOD_NTuples/Data_Run2012D_22Jan_AOD_NTuples_225_1_COF.root (No such file or directory)
+
+
+
+Error in <TFile::Init>: /eos/uscms/store/user/lpcqstar/NTuples/Data/Data22Jan2013ReReco/Data_Run2012D_22Jan_AOD_NTuples/Data_Run2012D_22Jan_AOD_NTuples_225_1_COF.root not a ROOT file
