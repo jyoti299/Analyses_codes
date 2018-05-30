@@ -1,0 +1,104 @@
+[?1034h[#1] INFO:Eval -- RooRealVar::setRange(mjj) new range named 'Low' created with bounds [453,649]
+[#1] INFO:Eval -- RooRealVar::setRange(mjj) new range named 'Blind' created with bounds [649,838]
+[#1] INFO:Eval -- RooRealVar::setRange(mjj) new range named 'High' created with bounds [838,2037]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing RooDijetBinPdf::CaloDijet2016_bkg
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing RooConstVar::-1
+
+RooWorkspace(wCaloDijet2016) wCaloDijet2016 contents
+
+variables
+---------
+(CaloDijet2016_bkg_norm,Ntot_bkg_CaloDijet2016,meff_CaloDijet2016,mjj,p0_CaloDijet2016,p1_CaloDijet2016,p2_CaloDijet2016,p3_CaloDijet2016,seff_CaloDijet2016,sqrts,th1x)
+
+p.d.f.s
+-------
+RooDijetBinPdf::CaloDijet2016_bkg[ th1x=th1x p1=p1_CaloDijet2016 p2=p2_CaloDijet2016 p3=p3_CaloDijet2016 sqrts=sqrts meff=-1 seff=-1 ] = 6.00056e+14
+RooGenericPdf::CaloDijet2016_bkg_unbin[ actualVars=(mjj,p0_CaloDijet2016,p1_CaloDijet2016,p2_CaloDijet2016,p3_CaloDijet2016,sqrts) formula="p0_CaloDijet2016*(pow(1-mjj/sqrts,p1_CaloDijet2016)/pow(mjj/sqrts,p2_CaloDijet2016+p3_CaloDijet2016*log(mjj/sqrts)))" ] = 1.97324e+13
+RooAddPdf::extDijetPdf[ Ntot_bkg_CaloDijet2016 * CaloDijet2016_bkg ] = 6.00056e+14
+
+named sets
+----------
+variables:(mjj,th1x)
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(data_obs): fit range of variable th1x expanded to nearest bin boundaries: [0,26] --> [0,26]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing dataset data_obs
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(CaloDijet2016_gg): fit range of variable th1x expanded to nearest bin boundaries: [0,26] --> [0,26]
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(CaloDijet2016_gg_mjj): fit range of variable mjj expanded to nearest bin boundaries: [453,2037] --> [453,2037]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing dataset CaloDijet2016_gg
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing dataset CaloDijet2016_gg_mjj
+restoring parameters from fit
+
+  RooFitResult: minimized FCN value: -8.43241e+08, estimated distance to minimum: 4.15397e-05
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+                 sqrts    1.3000e+04
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Ntot_bkg_CaloDijet2016    1.0000e+07    3.3249e+08 +/-  1.82e+04  <none>
+      p1_CaloDijet2016   -1.4000e+01    5.8814e+00 +/-  7.88e-02  <none>
+      p2_CaloDijet2016    1.3000e+01    6.8208e+00 +/-  2.07e-02  <none>
+      p3_CaloDijet2016    1.2000e+00    2.9817e-01 +/-  2.76e-03  <none>
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(CaloDijet2016_gg_jesUp): fit range of variable th1x expanded to nearest bin boundaries: [0,26] --> [0,26]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing dataset CaloDijet2016_gg_jesUp
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(CaloDijet2016_gg_jesDown): fit range of variable th1x expanded to nearest bin boundaries: [0,26] --> [0,26]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing dataset CaloDijet2016_gg_jesDown
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(CaloDijet2016_gg_jerUp): fit range of variable th1x expanded to nearest bin boundaries: [0,26] --> [0,26]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing dataset CaloDijet2016_gg_jerUp
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(CaloDijet2016_gg_jerDown): fit range of variable th1x expanded to nearest bin boundaries: [0,26] --> [0,26]
+[#1] INFO:ObjectHandling -- RooWorkspace::import(wCaloDijet2016) importing dataset CaloDijet2016_gg_jerDown
+
+RooWorkspace(wCaloDijet2016) wCaloDijet2016 contents
+
+variables
+---------
+(CaloDijet2016_bkg_norm,Ntot_bkg_CaloDijet2016,meff_CaloDijet2016,mjj,p0_CaloDijet2016,p1_CaloDijet2016,p2_CaloDijet2016,p3_CaloDijet2016,seff_CaloDijet2016,sqrts,th1x)
+
+p.d.f.s
+-------
+RooDijetBinPdf::CaloDijet2016_bkg[ th1x=th1x p1=p1_CaloDijet2016 p2=p2_CaloDijet2016 p3=p3_CaloDijet2016 sqrts=sqrts meff=-1 seff=-1 ] = 7.37808e+09
+RooGenericPdf::CaloDijet2016_bkg_unbin[ actualVars=(mjj,p0_CaloDijet2016,p1_CaloDijet2016,p2_CaloDijet2016,p3_CaloDijet2016,sqrts) formula="p0_CaloDijet2016*(pow(1-mjj/sqrts,p1_CaloDijet2016)/pow(mjj/sqrts,p2_CaloDijet2016+p3_CaloDijet2016*log(mjj/sqrts)))" ] = 2.47683e+08
+RooAddPdf::extDijetPdf[ Ntot_bkg_CaloDijet2016 * CaloDijet2016_bkg ] = 7.37808e+09
+
+datasets
+--------
+RooDataHist::data_obs(th1x)
+RooDataHist::CaloDijet2016_gg(th1x)
+RooDataHist::CaloDijet2016_gg_mjj(mjj)
+RooDataHist::CaloDijet2016_gg_jesUp(th1x)
+RooDataHist::CaloDijet2016_gg_jesDown(th1x)
+RooDataHist::CaloDijet2016_gg_jerUp(th1x)
+RooDataHist::CaloDijet2016_gg_jerDown(th1x)
+
+named sets
+----------
+variables:(mjj,th1x)
+
+imax 1 number of channels
+jmax 1 number of processes minus 1
+kmax * number of nuisance parameters
+------------------------------------------------------------
+observation	332487408.000
+------------------------------------------------------------
+shapes * * cards_gg_freq//dijet_combine_gg_500_lumi-12.910_CaloDijet2016.root wCaloDijet2016:$PROCESS wCaloDijet2016:$PROCESS_$SYSTEMATIC
+------------------------------------------------------------
+bin	CaloDijet2016	CaloDijet2016
+process	CaloDijet2016_gg	CaloDijet2016_bkg
+process	0	1
+rate	41495.546	332487425.879
+------------------------------------------------------------
+lumi	lnN	1.062	1.000
+jes	shape		1.0	-
+jer	shape		1.0	-
+p1_CaloDijet2016	flatParam
+p2_CaloDijet2016	flatParam
+p3_CaloDijet2016	flatParam
+CaloDijet2016_bkg_norm	flatParam
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> method used to hint where the upper limit is ProfileLikelihood
+>>> random number generator seed is 123456

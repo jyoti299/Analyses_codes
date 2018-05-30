@@ -1,0 +1,27 @@
+imax 1 number of channels
+jmax 1 number of processes minus 1
+kmax * number of nuisance parameters
+------------------------------------------------------------
+observation	332487408.000
+------------------------------------------------------------
+shapes * * signal_bias//dijet_combine_gg_750_lumi-12.910_CaloDijet2016.root wCaloDijet2016:$PROCESS wCaloDijet2016:$PROCESS_$SYSTEMATIC
+------------------------------------------------------------
+bin	CaloDijet2016	CaloDijet2016
+process	CaloDijet2016_gg	CaloDijet2016_multi
+process	0	1
+rate	94950.357	332487408.000
+------------------------------------------------------------
+lumi	lnN	1.062	1.000
+p1_CaloDijet2016	flatParam
+p2_CaloDijet2016	flatParam
+p3_CaloDijet2016	flatParam
+pa1_CaloDijet2016	flatParam
+pa2_CaloDijet2016	flatParam
+pa3_CaloDijet2016	flatParam
+pa4_CaloDijet2016	flatParam
+pm1_CaloDijet2016	flatParam
+pm2_CaloDijet2016	flatParam
+pm3_CaloDijet2016	flatParam
+pm4_CaloDijet2016	flatParam
+CaloDijet2016_multi_norm	flatParam
+pdf_index	discrete
