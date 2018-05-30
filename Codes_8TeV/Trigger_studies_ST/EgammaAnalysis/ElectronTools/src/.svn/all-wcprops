@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src
+END
+EGammaCutBasedEleIdAnalyzer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/EGammaCutBasedEleIdAnalyzer.cc
+END
+ElectronEnergyRegressionEvaluate.cc
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/ElectronEnergyRegressionEvaluate.cc
+END
+ElectronEPcombinator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/ElectronEPcombinator.cc
+END
+PFIsolationEstimator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/PFIsolationEstimator.cc
+END
+SuperClusterHelper.cc
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/SuperClusterHelper.cc
+END
+EGammaCutBasedEleId.cc
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/EGammaCutBasedEleId.cc
+END
+EpCombinationTool.cc
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/EpCombinationTool.cc
+END
+ElectronEnergyCalibrator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/ElectronEnergyCalibrator.cc
+END
+EGammaMvaEleEstimator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/EGammaMvaEleEstimator.cc
+END
+EcalIsolationCorrector.cc
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/src/EcalIsolationCorrector.cc
+END

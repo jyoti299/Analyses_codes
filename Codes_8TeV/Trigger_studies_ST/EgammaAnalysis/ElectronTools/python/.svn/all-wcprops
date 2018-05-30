@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/python
+END
+calibratedElectrons_cfi.py
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/python/calibratedElectrons_cfi.py
+END
+electronRegressionEnergyProducer_cfi.py
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/python/electronRegressionEnergyProducer_cfi.py
+END
+calibratedPatElectrons_cfi.py
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/python/calibratedPatElectrons_cfi.py
+END
+electronIdMVAProducer_cfi.py
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/python/electronIdMVAProducer_cfi.py
+END
+electronIsolatorFromEffectiveArea_cfi.py
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/python/electronIsolatorFromEffectiveArea_cfi.py
+END

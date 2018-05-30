@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface
+END
+EGammaMvaEleEstimator.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/EGammaMvaEleEstimator.h
+END
+EcalIsolationCorrector.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/EcalIsolationCorrector.h
+END
+ElectronEnergyRegressionEvaluate.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/ElectronEnergyRegressionEvaluate.h
+END
+ElectronEPcombinator.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/ElectronEPcombinator.h
+END
+PFIsolationEstimator.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/PFIsolationEstimator.h
+END
+SuperClusterHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/SuperClusterHelper.h
+END
+EGammaCutBasedEleId.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/EGammaCutBasedEleId.h
+END
+ElectronEffectiveArea.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/ElectronEffectiveArea.h
+END
+EpCombinationTool.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/EpCombinationTool.h
+END
+SimpleElectron.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/SimpleElectron.h
+END
+ElectronEnergyCalibrator.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/interface/ElectronEnergyCalibrator.h
+END

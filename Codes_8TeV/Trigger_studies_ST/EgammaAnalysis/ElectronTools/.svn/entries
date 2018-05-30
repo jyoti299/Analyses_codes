@@ -1,0 +1,80 @@
+10
+
+dir
+141430
+https://github.com/rockybala/cmssw/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools
+https://github.com/rockybala/cmssw
+
+
+
+2014-03-26T21:28:57.000000Z
+134418
+malik.shahzad.muzaffar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a84ec34a-f508-d06d-ef34-ce57b7db7bff
+
+test
+dir
+
+interface
+dir
+
+plugins
+dir
+
+python
+dir
+
+src
+dir
+
+data
+dir
+
+BuildFile.xml
+file
+
+
+
+
+2014-04-04T11:15:30.000000Z
+a84ba12848e6aabe18979e1f292b4f80
+2014-03-26T21:28:57.000000Z
+134418
+malik.shahzad.muzaffar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+848
+

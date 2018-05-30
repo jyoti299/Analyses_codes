@@ -1,0 +1,4 @@
+This package EgammaAnalysis/ElectronTools is not present in CMSSW_5_3_8_patch3 so i have checked it out from CMSSW_5_3_X from github.
+This package in CMSSW_5_3_X is present in only CMSSW_5_3_12. So due to checking out from a later release, some modules in this package requires
+later verison on some codes (some of the functions that are not present in CMSSW_5_3_8 and implemented later). SO i have removed those codes, the 
+codes that i removed are SuperClusterHelper.cc and ElectronEnergyRegressionValue.cc and there corresponding .h files. 

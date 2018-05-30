@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins
+END
+CalibratedElectronProducer.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/CalibratedElectronProducer.h
+END
+CalibratedPatElectronProducer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/CalibratedPatElectronProducer.cc
+END
+RegressionEnergyPatElectronProducer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/RegressionEnergyPatElectronProducer.cc
+END
+ElectronIdMVAProducer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/ElectronIdMVAProducer.cc
+END
+CalibratedPatElectronProducer.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/CalibratedPatElectronProducer.h
+END
+RegressionEnergyPatElectronProducer.h
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/RegressionEnergyPatElectronProducer.h
+END
+ElectronPATIdMVAProducer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/ElectronPATIdMVAProducer.cc
+END
+ElectronIsolatorFromEffectiveArea.cc
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/ElectronIsolatorFromEffectiveArea.cc
+END
+PhotonIsoProducer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/PhotonIsoProducer.cc
+END
+BuildFile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/BuildFile.xml
+END
+CalibratedElectronProducer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/CalibratedElectronProducer.cc
+END
+ElectronRegressionEnergyProducer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/rockybala/cmssw/!svn/ver/134418/branches/CMSSW_5_3_X/EgammaAnalysis/ElectronTools/plugins/ElectronRegressionEnergyProducer.cc
+END
